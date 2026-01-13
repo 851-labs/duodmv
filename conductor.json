@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "setup": "bun ci",
+    "run": "bun dev"
+  },
+  "runScriptMode": "nonconcurrent"
+}
