@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+	/* Duolingo-inspired colors */
+	--color-primary-50: #f0fdf4;
+	--color-primary-100: #dcfce7;
+	--color-primary-200: #bbf7d0;
+	--color-primary-300: #86efac;
+	--color-primary-400: #4ade80;
+	--color-primary-500: #58cc02;
+	--color-primary-600: #4caf00;
+	--color-primary-700: #3d8c00;
+	--color-primary-800: #2d6600;
+	--color-primary-900: #1a4000;
+
+	/* Secondary blue for XP */
+	--color-secondary-50: #eff6ff;
+	--color-secondary-100: #dbeafe;
+	--color-secondary-200: #bfdbfe;
+	--color-secondary-300: #93c5fd;
+	--color-secondary-400: #60a5fa;
+	--color-secondary-500: #1cb0f6;
+	--color-secondary-600: #0ea5e9;
+	--color-secondary-700: #0284c7;
+	--color-secondary-800: #075985;
+	--color-secondary-900: #0c4a6e;
+
+	/* Hearts red */
+	--color-hearts-400: #f87171;
+	--color-hearts-500: #ff4b4b;
+	--color-hearts-600: #dc2626;
+
+	/* Streak orange */
+	--color-streak-400: #fb923c;
+	--color-streak-500: #ff9600;
+	--color-streak-600: #ea580c;
+
+	/* Correct green */
+	--color-correct-100: #d1fae5;
+	--color-correct-500: #58cc02;
+	--color-correct-600: #059669;
+
+	/* Incorrect red */
+	--color-incorrect-100: #fee2e2;
+	--color-incorrect-500: #ff4b4b;
+	--color-incorrect-600: #dc2626;
+
+	/* Surface colors for cards */
+	--color-surface-50: #fafafa;
+	--color-surface-100: #f4f4f5;
+	--color-surface-200: #e4e4e7;
+	--color-surface-300: #d4d4d8;
+	--color-surface-800: #27272a;
+	--color-surface-900: #18181b;
+
+	/* Animation durations */
+	--animate-bounce-in: bounce-in 0.5s ease-out;
+	--animate-xp-float: xp-float 1s ease-out forwards;
+	--animate-pulse-success: pulse-success 0.5s ease-in-out;
+}
+
+@keyframes bounce-in {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes xp-float {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-30px);
+		opacity: 0;
+	}
+}
+
+@keyframes pulse-success {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+}
+
+body {
+	@apply m-0 bg-surface-50 text-zinc-900 antialiased;
+	font-family:
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		"Roboto",
+		"Oxygen",
+		"Ubuntu",
+		"Cantarell",
+		"Fira Sans",
+		"Droid Sans",
+		"Helvetica Neue",
+		sans-serif;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--color-surface-100);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-surface-300);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-surface-400);
+}
