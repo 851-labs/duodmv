@@ -1,4 +1,6 @@
 import { HeadContent, Outlet, Scripts, createRootRoute } from "@tanstack/react-router";
+import { configure } from "onedollarstats";
+import { useEffect } from "react";
 
 import { ProgressProvider } from "../store/progress-context";
 import appCss from "../styles.css?url";
@@ -33,6 +35,10 @@ export const Route = createRootRoute({
 });
 
 function RootComponent() {
+  useEffect(() => {
+    configure();
+  }, []);
+
   return (
     <RootDocument>
       <ProgressProvider>

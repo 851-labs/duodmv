@@ -10,6 +10,7 @@
         "clsx": "^2.1.1",
         "date-fns": "^4.1.0",
         "lucide-react": "^0.561.0",
+        "onedollarstats": "^0.0.11",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
       },
@@ -596,6 +597,8 @@
     "ofetch": ["ofetch@2.0.0-alpha.3", "", {}, "sha512-zpYTCs2byOuft65vI3z43Dd6iSdFbOZZLb9/d21aCpx2rGastVU9dOCv0lu4ykc1Ur1anAYjDi3SUvR0vq50JA=="],
 
     "ohash": ["ohash@2.0.11", "", {}, "sha512-RdR9FQrFwNBNXAr4GixM8YaRZRJ5PUWbKYbE5eOsrwAjJW0q2REGcf79oYPsLyskQCZG1PLN+S/K1V00joZAoQ=="],
+
+    "onedollarstats": ["onedollarstats@0.0.11", "", {}, "sha512-GboD/AZdfQB9Bhs0uupp40jG/F+yI4ed7rkUI6zbtXXqqKdo8qlT1ZqGATXF4zccBXnPylUvG7bYpiDyaONpjg=="],
 
     "oxc-minify": ["oxc-minify@0.108.0", "", { "optionalDependencies": { "@oxc-minify/binding-android-arm-eabi": "0.108.0", "@oxc-minify/binding-android-arm64": "0.108.0", "@oxc-minify/binding-darwin-arm64": "0.108.0", "@oxc-minify/binding-darwin-x64": "0.108.0", "@oxc-minify/binding-freebsd-x64": "0.108.0", "@oxc-minify/binding-linux-arm-gnueabihf": "0.108.0", "@oxc-minify/binding-linux-arm-musleabihf": "0.108.0", "@oxc-minify/binding-linux-arm64-gnu": "0.108.0", "@oxc-minify/binding-linux-arm64-musl": "0.108.0", "@oxc-minify/binding-linux-ppc64-gnu": "0.108.0", "@oxc-minify/binding-linux-riscv64-gnu": "0.108.0", "@oxc-minify/binding-linux-riscv64-musl": "0.108.0", "@oxc-minify/binding-linux-s390x-gnu": "0.108.0", "@oxc-minify/binding-linux-x64-gnu": "0.108.0", "@oxc-minify/binding-linux-x64-musl": "0.108.0", "@oxc-minify/binding-openharmony-arm64": "0.108.0", "@oxc-minify/binding-wasm32-wasi": "0.108.0", "@oxc-minify/binding-win32-arm64-msvc": "0.108.0", "@oxc-minify/binding-win32-ia32-msvc": "0.108.0", "@oxc-minify/binding-win32-x64-msvc": "0.108.0" } }, "sha512-vZUwyWpVS0b94OJDy+t9lKQV0ABkHMrBRjTgTKTyDMLXj90c+ELQeoRzPn6rFlRXDtvjrB/C5McgevDzVIEkHg=="],
 
