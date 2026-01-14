@@ -50,6 +50,38 @@ export const section7Lessons: Lesson[] = [
         ],
       },
       {
+        id: "row-mobility-wheelchair",
+        type: "image",
+        title: "Manual Wheelchair",
+        content:
+          "Users of manual wheelchairs are pedestrians. Always yield to them at crosswalks and give them time to cross safely.",
+        imageUrl: "/images/mobility-wheelchair.png",
+      },
+      {
+        id: "row-mobility-motorized",
+        type: "image",
+        title: "Motorized Wheelchair",
+        content:
+          "Motorized wheelchairs travel faster than manual ones but users still have pedestrian rights. Watch for them at intersections.",
+        imageUrl: "/images/mobility-motorized-wheelchair.png",
+      },
+      {
+        id: "row-mobility-scooter",
+        type: "image",
+        title: "Mobility Scooter",
+        content:
+          "Four-wheeled mobility scooters are common among seniors and people with disabilities. They have full pedestrian protections.",
+        imageUrl: "/images/mobility-scooter.png",
+      },
+      {
+        id: "row-mobility-tricycle",
+        type: "image",
+        title: "Three-Wheeled Mobility Device",
+        content:
+          "Hand-powered tricycles and similar three-wheeled devices are used by people with mobility challenges. Yield to them as pedestrians.",
+        imageUrl: "/images/mobility-tricycle.png",
+      },
+      {
         id: "row-emergency",
         type: "warning",
         title: "Emergency Vehicles",
@@ -73,6 +105,46 @@ export const section7Lessons: Lesson[] = [
           "When a school bus displays flashing red lights and a stop sign arm, ALL traffic in BOTH directions must stop. Wait until the lights stop flashing before proceeding.",
         imageUrl: "/images/school-bus-stop.png",
         highlight: "Stop for school buses with red lights flashing - it's the law!",
+      },
+      {
+        id: "row-two-cars",
+        type: "image",
+        title: "Two Vehicles at Intersection",
+        content:
+          "When two vehicles approach an uncontrolled intersection at the same time, the driver on the left must yield to the driver on the right.",
+        imageUrl: "/images/intersection-two-cars.png",
+      },
+      {
+        id: "row-bus-intersection",
+        type: "image",
+        title: "Buses at Intersections",
+        content:
+          "Large vehicles like buses need extra space to turn. Give them room and don't try to pass them in an intersection.",
+        imageUrl: "/images/intersection-bus.png",
+      },
+      {
+        id: "row-bus-turning",
+        type: "image",
+        title: "Bus Making Turn",
+        content:
+          "Buses and large trucks make wide turns. Stay back and don't squeeze between them and the curb when they're turning.",
+        imageUrl: "/images/intersection-bus-turning.png",
+      },
+      {
+        id: "row-bus-wide-turn",
+        type: "image",
+        title: "Large Vehicle Wide Turn",
+        content:
+          "Large vehicles swing wide when turning. The rear wheels track inside the front wheels, so they may start a turn from the left lane to turn right.",
+        imageUrl: "/images/intersection-bus-turning-2.png",
+      },
+      {
+        id: "row-right-of-way-scenario",
+        type: "image",
+        title: "Right of Way Scenario",
+        content:
+          "This shows a typical intersection scenario. The vehicle that arrived first proceeds, or if arriving together, yield to the vehicle on your right.",
+        imageUrl: "/images/intersection-right-of-way-2.png",
       },
     ],
     questions: [

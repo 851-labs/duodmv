@@ -53,6 +53,22 @@ export const section8Lessons: Lesson[] = [
         imageUrl: "/images/bicycle-on-road.png",
       },
       {
+        id: "bicycle-beside",
+        type: "image",
+        title: "Passing Bicyclists Safely",
+        content:
+          "When passing a cyclist, give at least 3 feet of clearance. If the lane is too narrow, wait until you can safely move into the next lane to pass.",
+        imageUrl: "/images/bicycle-beside-car.png",
+      },
+      {
+        id: "construction-vehicles",
+        type: "image",
+        title: "Construction Vehicles",
+        content:
+          "Be extra cautious around construction vehicles. They move slowly, make wide turns, and operators may have limited visibility. Give them plenty of space.",
+        imageUrl: "/images/vehicle-construction.png",
+      },
+      {
         id: "check-behind",
         type: "text",
         title: "Know What's Behind You",
@@ -205,6 +221,46 @@ export const section8Lessons: Lesson[] = [
         title: "Handling Tailgaters",
         content:
           "If someone is tailgating you, don't speed up or brake-check them. Maintain your speed, then safely merge right and let them pass.",
+      },
+      {
+        id: "hazmat-intro",
+        type: "text",
+        title: "Hazardous Materials Vehicles",
+        content:
+          "Trucks carrying hazardous materials display diamond-shaped placards. Keep extra distance from these vehicles and never follow them into tunnels or enclosed areas.",
+        highlight: "If a hazmat vehicle is in an accident, move away and call 911 immediately.",
+      },
+      {
+        id: "hazmat-flammable",
+        type: "image",
+        title: "Flammable Materials",
+        content:
+          "Red placards indicate flammable liquids or gases. Keep extra distance - these materials can ignite or explode in an accident.",
+        imageUrl: "/images/hazmat-flammable.png",
+      },
+      {
+        id: "hazmat-explosives",
+        type: "image",
+        title: "Explosives",
+        content:
+          "Orange placards with '1' indicate explosives. Give these vehicles maximum following distance and never tailgate.",
+        imageUrl: "/images/hazmat-explosives.png",
+      },
+      {
+        id: "hazmat-radioactive",
+        type: "image",
+        title: "Radioactive Materials",
+        content:
+          "Yellow and white placards with the trefoil symbol indicate radioactive materials. If involved in an accident, stay far away.",
+        imageUrl: "/images/hazmat-radioactive.png",
+      },
+      {
+        id: "hazmat-toxic",
+        type: "image",
+        title: "Toxic/Poison Materials",
+        content:
+          "White placards with skull symbol indicate toxic or poisonous materials. Avoid breathing fumes if you see a spill.",
+        imageUrl: "/images/hazmat-toxic.png",
       },
     ],
     questions: [

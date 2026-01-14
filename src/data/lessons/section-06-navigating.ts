@@ -504,6 +504,14 @@ export const section6Lessons: Lesson[] = [
         highlight: "Don't turn wide into another lane!",
       },
       {
+        id: "right-turn-curb",
+        type: "image",
+        title: "Right Turn Position",
+        content:
+          "Position your vehicle close to the right curb when preparing for a right turn. This prevents other vehicles from squeezing between you and the curb.",
+        imageUrl: "/images/turn-right-curb.png",
+      },
+      {
         id: "right-on-red",
         type: "text",
         title: "Right Turn on Red",
@@ -730,6 +738,86 @@ export const section6Lessons: Lesson[] = [
         content:
           "Traffic is merging from the right. Be prepared to adjust your speed or position to allow vehicles to merge safely.",
         imageUrl: "/images/warning-merge.png",
+      },
+      {
+        id: "warning-stop-ahead",
+        type: "image",
+        title: "Stop Sign Ahead",
+        content:
+          "This sign warns that a stop sign is ahead. Begin slowing down and prepare to make a complete stop.",
+        imageUrl: "/images/warning-stop-ahead.png",
+      },
+      {
+        id: "warning-yield-ahead",
+        type: "image",
+        title: "Yield Sign Ahead",
+        content:
+          "A yield sign is ahead. Prepare to slow down and yield to traffic on the road you're entering.",
+        imageUrl: "/images/warning-yield-ahead.png",
+      },
+      {
+        id: "warning-left-curve",
+        type: "image",
+        title: "Left Curve Ahead",
+        content:
+          "The road curves to the left ahead. Reduce your speed before entering the curve and stay in your lane.",
+        imageUrl: "/images/warning-left-curve.png",
+      },
+      {
+        id: "warning-side-road",
+        type: "image",
+        title: "Side Road Ahead",
+        content:
+          "A side road enters the highway from the right. Watch for vehicles entering or crossing your path.",
+        imageUrl: "/images/warning-side-road.png",
+      },
+      {
+        id: "warning-intersection-sign",
+        type: "image",
+        title: "Intersection Ahead",
+        content:
+          "An intersection is ahead. Be prepared for cross traffic and vehicles entering from side roads.",
+        imageUrl: "/images/warning-intersection.png",
+      },
+      {
+        id: "warning-divided-ends",
+        type: "image",
+        title: "Divided Highway Ends",
+        content:
+          "The divided highway is ending. Prepare for two-way traffic ahead with no median barrier.",
+        imageUrl: "/images/warning-divided-highway-ends.png",
+      },
+      {
+        id: "sign-road-machinery",
+        type: "image",
+        title: "Road Machinery Ahead",
+        content:
+          "Construction or maintenance equipment may be operating on or near the road. Slow down and be prepared to stop.",
+        imageUrl: "/images/sign-road-machinery.png",
+      },
+      {
+        id: "sign-shoulder-work",
+        type: "image",
+        title: "Shoulder Work Ahead",
+        content:
+          "Workers may be on the road shoulder. Move over to give them space and watch for equipment entering the roadway.",
+        imageUrl: "/images/sign-shoulder-work.png",
+      },
+      {
+        id: "sign-emergency-parking",
+        type: "image",
+        title: "Emergency Parking Only",
+        content:
+          "This sign marks areas reserved for emergency stops only. Don't park here unless your vehicle is disabled.",
+        imageUrl: "/images/sign-emergency-parking.png",
+      },
+      {
+        id: "sign-recreation",
+        type: "image",
+        title: "Recreation Area Sign",
+        content:
+          "Brown signs indicate recreation areas, parks, or points of interest. They help you find hiking, camping, and outdoor activities.",
+        imageUrl: "/images/sign-skiing-recreation.png",
       },
       {
         id: "wrong-way",
