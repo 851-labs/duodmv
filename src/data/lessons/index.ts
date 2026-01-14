@@ -3,6 +3,7 @@ import type { Lesson } from "../../types";
 import { section1Lessons } from "./section-01-license";
 import { section2Lessons } from "./section-02-permit";
 import { section3Lessons } from "./section-03-testing";
+import { section4Lessons } from "./section-04-changing-license";
 import { section5Lessons } from "./section-05-intro-driving";
 import { section6Lessons } from "./section-06-navigating";
 import { section7Lessons } from "./section-07-laws-rules";
@@ -10,11 +11,14 @@ import { section8Lessons } from "./section-08-safe-driving";
 import { section9Lessons } from "./section-09-alcohol-drugs";
 import { section10Lessons } from "./section-10-financial";
 import { section11Lessons } from "./section-11-registration";
+import { section12Lessons } from "./section-12-driver-safety";
+import { section13Lessons } from "./section-13-seniors";
 
 export const allLessons: Lesson[] = [
   ...section1Lessons,
   ...section2Lessons,
   ...section3Lessons,
+  ...section4Lessons,
   ...section5Lessons,
   ...section6Lessons,
   ...section7Lessons,
@@ -22,6 +26,8 @@ export const allLessons: Lesson[] = [
   ...section9Lessons,
   ...section10Lessons,
   ...section11Lessons,
+  ...section12Lessons,
+  ...section13Lessons,
 ];
 
 export function getLessonsBySectionId(sectionId: string): Lesson[] {
@@ -42,6 +48,7 @@ export {
   section1Lessons,
   section2Lessons,
   section3Lessons,
+  section4Lessons,
   section5Lessons,
   section6Lessons,
   section7Lessons,
@@ -49,4 +56,6 @@ export {
   section9Lessons,
   section10Lessons,
   section11Lessons,
+  section12Lessons,
+  section13Lessons,
 };
