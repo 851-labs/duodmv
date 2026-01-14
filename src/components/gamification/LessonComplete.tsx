@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { Trophy, Star, Zap } from "lucide-react";
+import { useEffect } from "react";
 
 interface LessonCompleteProps {
   lessonTitle: string;
@@ -16,6 +17,16 @@ export function LessonComplete({
   isPerfect,
   onContinue,
 }: LessonCompleteProps) {
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Enter") {
+        onContinue();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onContinue]);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary-500 to-primary-600 flex flex-col items-center justify-center px-4 py-8">
       <div className="max-w-md w-full text-center">
