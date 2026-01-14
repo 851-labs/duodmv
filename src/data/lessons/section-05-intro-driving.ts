@@ -273,4 +273,265 @@ export const section5Lessons: Lesson[] = [
       },
     ],
   },
+  {
+    id: "headlights-safety",
+    sectionId: "intro-driving",
+    order: 3,
+    title: "Headlights & Vehicle Safety",
+    description: "Headlight rules, horn use, and health factors affecting driving",
+    type: "lesson",
+    xpReward: 30,
+    requiredLessons: ["steering"],
+    learnContent: [
+      {
+        id: "headlight-basics",
+        type: "text",
+        title: "When to Use Headlights",
+        content:
+          "California law requires headlights to be on in several situations, not just at night.",
+        bulletPoints: [
+          "When too dark to see a person 1,000 feet ahead",
+          "From 30 minutes after sunset to 30 minutes before sunrise",
+          "When using your windshield wipers (law requires it)",
+          "On mountain roads and tunnels even on sunny days",
+          "In fog, rain, snow, or other low-visibility conditions",
+        ],
+        highlight: "If your wipers are on, your headlights must be on too!",
+      },
+      {
+        id: "high-low-beams",
+        type: "text",
+        title: "High and Low Beams",
+        content:
+          "Use high beams on dark roads when no other vehicles are near. Switch to low beams when other vehicles are present.",
+        bulletPoints: [
+          "Dim to low beams within 500 feet of oncoming vehicles",
+          "Dim to low beams within 300 feet when following another vehicle",
+          "Use low beams in fog (high beams reflect back at you)",
+          "Flash high beams briefly to warn others of hazards",
+        ],
+      },
+      {
+        id: "horn-use",
+        type: "text",
+        title: "Horn Use",
+        content:
+          "Your horn is a safety device to warn others. Use it appropriately.",
+        bulletPoints: [
+          "Use to avoid a collision with another vehicle or pedestrian",
+          "Use on mountain roads when you cannot see at least 200 feet ahead",
+          "Do NOT use to express anger or frustration",
+          "Do NOT use around horses (can startle them)",
+        ],
+        highlight: "The horn should be audible from at least 200 feet.",
+      },
+      {
+        id: "emergency-flashers",
+        type: "text",
+        title: "Emergency Flashers",
+        content:
+          "Use your emergency flashers (hazard lights) to warn other drivers of a problem.",
+        bulletPoints: [
+          "Use when your vehicle is disabled on the road",
+          "Tap your brakes 3-4 times to alert drivers behind you of sudden slowing",
+          "Use when traveling much slower than traffic flow",
+          "Do NOT use while driving normally—illegal in some situations",
+        ],
+      },
+      {
+        id: "health-vision",
+        type: "text",
+        title: "Vision Requirements",
+        content:
+          "Good vision is essential for safe driving. California has specific vision requirements for drivers.",
+        bulletPoints: [
+          "Must have 20/40 vision or better (with or without correction)",
+          "Clean your windshield and mirrors regularly",
+          "Don't wear dark glasses at night",
+          "Get regular eye exams, especially as you age",
+        ],
+      },
+      {
+        id: "health-hearing",
+        type: "warning",
+        title: "Hearing Rules",
+        content:
+          "California law prohibits wearing headphones or earbuds covering BOTH ears while driving. You may wear a single earbud in one ear, but you must be able to hear sirens, horns, and traffic sounds.",
+      },
+      {
+        id: "health-fatigue",
+        type: "text",
+        title: "Fatigue and Driving",
+        content:
+          "Drowsy driving is dangerous and causes thousands of crashes each year.",
+        bulletPoints: [
+          "Get enough sleep before long trips",
+          "Take breaks every 2 hours or 100 miles",
+          "If drowsy, pull over and rest—don't push through",
+          "Coffee and energy drinks are NOT substitutes for sleep",
+          "Signs of fatigue: yawning, drifting, missing exits",
+        ],
+      },
+      {
+        id: "health-medications",
+        type: "warning",
+        title: "Medications",
+        content:
+          "Many medications can impair driving ability, including prescription drugs, over-the-counter medicines, and herbal supplements. Always check warning labels and ask your doctor if it's safe to drive while taking medication.",
+      },
+      {
+        id: "child-safety-seats",
+        type: "text",
+        title: "Child Passenger Safety",
+        content:
+          "California law requires children to be properly restrained based on age, weight, and height:",
+        bulletPoints: [
+          "Under 2 years old: Must ride rear-facing in the back seat",
+          "Under 8 years old OR under 4'9\" tall: Must use car seat or booster",
+          "Children under 8 must ride in the back seat (unless no back seat)",
+          "All passengers under 16 must be buckled—driver is responsible",
+        ],
+        highlight: "Under 8 years OR under 4'9\" = car seat or booster required!",
+      },
+      {
+        id: "child-safety-tips",
+        type: "tip",
+        title: "Car Seat Safety Tips",
+        content:
+          "Never place a rear-facing car seat in front of an active airbag. Have your car seat installation checked—many are installed incorrectly. CHP and fire stations often offer free car seat inspections.",
+      },
+    ],
+    questions: [
+      {
+        id: "head-001",
+        type: "multiple-choice",
+        sectionId: "intro-driving",
+        lessonId: "headlights-safety",
+        difficulty: 1,
+        xpValue: 10,
+        question: "When must you have your headlights on while driving?",
+        options: [
+          "When using windshield wipers",
+          "Only after 8 PM",
+          "Only on highways",
+          "Only in heavy traffic",
+        ],
+        correctIndex: 0,
+        explanation:
+          "California law requires headlights to be on whenever your windshield wipers are in continuous use due to weather conditions.",
+        handbookReference: "Section 5 - Headlights",
+      },
+      {
+        id: "head-002",
+        type: "multiple-choice",
+        sectionId: "intro-driving",
+        lessonId: "headlights-safety",
+        difficulty: 2,
+        xpValue: 15,
+        question:
+          "Within how many feet of an oncoming vehicle should you dim your high beams?",
+        options: ["500 feet", "200 feet", "1,000 feet", "100 feet"],
+        correctIndex: 0,
+        explanation:
+          "Dim your high beams to low beams within 500 feet of an oncoming vehicle to avoid blinding the other driver.",
+        handbookReference: "Section 5 - Headlights",
+      },
+      {
+        id: "head-003",
+        type: "multiple-choice",
+        sectionId: "intro-driving",
+        lessonId: "headlights-safety",
+        difficulty: 2,
+        xpValue: 15,
+        question:
+          "When following another vehicle at night, within how many feet should you dim to low beams?",
+        options: ["300 feet", "500 feet", "100 feet", "1,000 feet"],
+        correctIndex: 0,
+        explanation:
+          "Dim your high beams within 300 feet when following another vehicle to avoid blinding them through their mirrors.",
+        handbookReference: "Section 5 - Headlights",
+      },
+      {
+        id: "head-004",
+        type: "true-false",
+        sectionId: "intro-driving",
+        lessonId: "headlights-safety",
+        difficulty: 1,
+        xpValue: 10,
+        statement:
+          "You can legally wear headphones covering both ears while driving in California.",
+        isTrue: false,
+        explanation:
+          "California law prohibits wearing headphones or earbuds covering both ears while driving. You may only use a single earbud in one ear.",
+        handbookReference: "Section 5 - Health Factors",
+      },
+      {
+        id: "head-005",
+        type: "multiple-choice",
+        sectionId: "intro-driving",
+        lessonId: "headlights-safety",
+        difficulty: 2,
+        xpValue: 15,
+        question:
+          "When should you use your horn on mountain roads?",
+        options: [
+          "When you cannot see at least 200 feet ahead",
+          "To say hello to other drivers",
+          "Every time you go around a curve",
+          "Never—it disturbs wildlife",
+        ],
+        correctIndex: 0,
+        explanation:
+          "On mountain roads, use your horn when you cannot see at least 200 feet ahead (around curves or hills) to warn other drivers of your presence.",
+        handbookReference: "Section 5 - Horn Use",
+      },
+      {
+        id: "head-006",
+        type: "true-false",
+        sectionId: "intro-driving",
+        lessonId: "headlights-safety",
+        difficulty: 1,
+        xpValue: 10,
+        statement: "High beams work better than low beams in fog.",
+        isTrue: false,
+        explanation:
+          "In fog, use low beams. High beams reflect off fog particles and actually reduce your visibility by bouncing light back at you.",
+        handbookReference: "Section 5 - Headlights",
+      },
+      {
+        id: "head-007",
+        type: "multiple-choice",
+        sectionId: "intro-driving",
+        lessonId: "headlights-safety",
+        difficulty: 1,
+        xpValue: 10,
+        question:
+          "Children must use a car seat or booster seat until they are:",
+        options: [
+          "8 years old OR 4 feet 9 inches tall",
+          "6 years old OR 4 feet tall",
+          "10 years old OR 5 feet tall",
+          "5 years old OR 3 feet 6 inches tall",
+        ],
+        correctIndex: 0,
+        explanation:
+          "California law requires children under 8 years old OR under 4 feet 9 inches tall to use a car seat or booster seat.",
+        handbookReference: "Section 5 - Child Safety Seats",
+      },
+      {
+        id: "head-008",
+        type: "true-false",
+        sectionId: "intro-driving",
+        lessonId: "headlights-safety",
+        difficulty: 2,
+        xpValue: 15,
+        statement:
+          "Children under 2 years old must ride in a rear-facing car seat.",
+        isTrue: true,
+        explanation:
+          "California law requires children under 2 years old to ride in a rear-facing car seat in the back seat. This is the safest position for infants.",
+        handbookReference: "Section 5 - Child Safety Seats",
+      },
+    ],
+  },
 ];

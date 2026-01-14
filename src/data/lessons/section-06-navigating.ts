@@ -909,4 +909,234 @@ export const section6Lessons: Lesson[] = [
       },
     ],
   },
+  {
+    id: "parking-maneuvers",
+    sectionId: "navigating-roads",
+    order: 6,
+    title: "Parking & Maneuvers",
+    description: "Parallel parking, hill parking, and highway merging",
+    type: "lesson",
+    xpReward: 35,
+    requiredLessons: ["road-signs"],
+    learnContent: [
+      {
+        id: "parallel-parking",
+        type: "text",
+        title: "Parallel Parking Steps",
+        content:
+          "Parallel parking requires practice. Follow these steps for a safe, legal park:",
+        bulletPoints: [
+          "1. Find a space at least 3 feet longer than your vehicle",
+          "2. Pull alongside the car in front, about 2 feet away",
+          "3. Turn your wheel sharply toward the curb, back slowly at 45-degree angle",
+          "4. When your front bumper clears the other car's rear, straighten wheels",
+          "5. Continue backing, then turn wheel away from curb to straighten",
+          "6. Finish within 18 inches of the curb",
+        ],
+        highlight: "Your wheels must be within 18 inches of the curb!",
+      },
+      {
+        id: "backing-straight",
+        type: "text",
+        title: "Backing Straight",
+        content:
+          "When backing straight (like out of a driveway), turn and look over your RIGHT shoulder through the rear window. Use mirrors to help, but primarily look where you're going.",
+        bulletPoints: [
+          "Back slowly - no faster than walking speed",
+          "Keep your foot near the brake",
+          "Check both sides frequently",
+          "Stop and get out to check if unsure about clearance",
+        ],
+      },
+      {
+        id: "hill-parking-down",
+        type: "text",
+        title: "Parking Downhill",
+        content:
+          "When parking facing DOWNHILL (with or without a curb), turn your wheels TOWARD the curb (to the right). If your brakes fail, your car will roll into the curb instead of into traffic.",
+        highlight: "Downhill = wheels TO the curb (right)",
+      },
+      {
+        id: "hill-parking-up",
+        type: "text",
+        title: "Parking Uphill with Curb",
+        content:
+          "When parking facing UPHILL with a curb, turn your wheels AWAY from the curb (to the left). Let your car roll back slightly until the back of the front wheel touches the curb.",
+        highlight: "Uphill with curb = wheels AWAY from curb (left)",
+      },
+      {
+        id: "hill-parking-no-curb",
+        type: "text",
+        title: "Parking Uphill without Curb",
+        content:
+          "When parking facing UPHILL with NO curb, turn your wheels to the RIGHT. If brakes fail, the car will roll off the road, not into traffic.",
+        highlight: "No curb = always turn wheels RIGHT (toward shoulder)",
+      },
+      {
+        id: "hill-parking-always",
+        type: "warning",
+        title: "Always Set Parking Brake",
+        content:
+          "Always set your parking brake when parking on a hill, regardless of transmission type. Shift to PARK (automatic) or leave in gear (manual).",
+      },
+      {
+        id: "highway-entering",
+        type: "text",
+        title: "Entering a Highway",
+        content:
+          "Freeways have on-ramps (acceleration lanes) to help you match traffic speed:",
+        bulletPoints: [
+          "Use the full length of the on-ramp to accelerate",
+          "Match or be close to freeway traffic speed BEFORE merging",
+          "Signal and check mirrors and blind spots",
+          "Merge smoothly when there's a safe gap",
+          "Maintain at least 3-second following distance after merging",
+          "Do NOT cross solid lines - wait for broken lines",
+        ],
+      },
+      {
+        id: "highway-exiting",
+        type: "text",
+        title: "Exiting a Highway",
+        content:
+          "Plan your exit well in advance and follow these steps:",
+        bulletPoints: [
+          "Move to the exit lane EARLY - don't wait until the last moment",
+          "Signal at least 5 seconds (or 400 feet) before exiting",
+          "Do NOT slow down on the freeway - wait for the exit ramp",
+          "Most exit ramps have speed limits lower than the freeway",
+          "If you miss your exit, take the next one - never back up!",
+        ],
+      },
+      {
+        id: "entering-traffic",
+        type: "text",
+        title: "Crossing or Entering Traffic",
+        content:
+          "When entering or crossing a road from a driveway or side street, you need enough space to accelerate safely:",
+        bulletPoints: [
+          "In city traffic: need about 150 feet (half a block) of clearance",
+          "On highways: need about 300 feet (full block) of clearance",
+          "Always look left-right-left before proceeding",
+          "If unsure, wait for a bigger gap - it's not worth the risk",
+        ],
+      },
+    ],
+    questions: [
+      {
+        id: "park-001",
+        type: "multiple-choice",
+        sectionId: "navigating-roads",
+        lessonId: "parking-maneuvers",
+        difficulty: 1,
+        xpValue: 10,
+        question:
+          "When parallel parked, your wheels must be within how many inches of the curb?",
+        options: ["18 inches", "12 inches", "24 inches", "6 inches"],
+        correctIndex: 0,
+        explanation:
+          "When parallel parked, your wheels must be within 18 inches of the curb. Farther than that is illegal and creates a hazard.",
+        handbookReference: "Section 6 - Parallel Parking",
+      },
+      {
+        id: "park-002",
+        type: "multiple-choice",
+        sectionId: "navigating-roads",
+        lessonId: "parking-maneuvers",
+        difficulty: 2,
+        xpValue: 15,
+        question:
+          "When parking facing DOWNHILL, which way should you turn your wheels?",
+        options: [
+          "Toward the curb (right)",
+          "Away from the curb (left)",
+          "Keep them straight",
+          "It doesn't matter",
+        ],
+        correctIndex: 0,
+        explanation:
+          "When parking downhill, turn your wheels toward the curb (right). If your brakes fail, the car will roll into the curb, not into traffic.",
+        handbookReference: "Section 6 - Parking on Hills",
+      },
+      {
+        id: "park-003",
+        type: "multiple-choice",
+        sectionId: "navigating-roads",
+        lessonId: "parking-maneuvers",
+        difficulty: 2,
+        xpValue: 15,
+        question:
+          "When parking facing UPHILL with a curb, which way should you turn your wheels?",
+        options: [
+          "Away from the curb (left)",
+          "Toward the curb (right)",
+          "Keep them straight",
+          "It doesn't matter",
+        ],
+        correctIndex: 0,
+        explanation:
+          "When parking uphill with a curb, turn your wheels away from the curb (left). If brakes fail, the car rolls back and the tire catches the curb.",
+        handbookReference: "Section 6 - Parking on Hills",
+      },
+      {
+        id: "park-004",
+        type: "multiple-choice",
+        sectionId: "navigating-roads",
+        lessonId: "parking-maneuvers",
+        difficulty: 2,
+        xpValue: 15,
+        question:
+          "When parking uphill or downhill with NO curb, which way should you turn your wheels?",
+        options: [
+          "To the right (toward the shoulder)",
+          "To the left",
+          "Keep them straight",
+          "It depends on the slope",
+        ],
+        correctIndex: 0,
+        explanation:
+          "When there's no curb, always turn wheels to the right (toward the shoulder). This way the car will roll off the road, not into traffic.",
+        handbookReference: "Section 6 - Parking on Hills",
+      },
+      {
+        id: "park-005",
+        type: "multiple-choice",
+        sectionId: "navigating-roads",
+        lessonId: "parking-maneuvers",
+        difficulty: 2,
+        xpValue: 15,
+        question: "When entering a freeway, you should:",
+        options: [
+          "Match freeway speed before merging",
+          "Stop at the end of the on-ramp and wait",
+          "Merge immediately at any speed",
+          "Drive slowly until you find an opening",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Use the acceleration lane to reach or match the speed of freeway traffic before merging. This allows for a safe, smooth merge.",
+        handbookReference: "Section 6 - Entering a Freeway",
+      },
+      {
+        id: "park-006",
+        type: "multiple-choice",
+        sectionId: "navigating-roads",
+        lessonId: "parking-maneuvers",
+        difficulty: 2,
+        xpValue: 15,
+        question:
+          "How far before exiting a freeway should you signal?",
+        options: [
+          "At least 5 seconds or 400 feet",
+          "At least 2 seconds or 100 feet",
+          "Right when you reach the exit",
+          "No signal is required",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Signal at least 5 seconds (or approximately 400 feet) before exiting a freeway to give other drivers time to react.",
+        handbookReference: "Section 6 - Exiting a Freeway",
+      },
+    ],
+  },
 ];

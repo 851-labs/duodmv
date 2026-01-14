@@ -760,14 +760,357 @@ export const section7Lessons: Lesson[] = [
     ],
   },
   {
-    id: "laws-checkpoint",
+    id: "law-enforcement",
     sectionId: "laws-rules",
     order: 5,
+    title: "Law Enforcement Stops",
+    description: "What to do when pulled over by police",
+    type: "lesson",
+    xpReward: 30,
+    requiredLessons: ["lane-usage"],
+    learnContent: [
+      {
+        id: "stop-procedure",
+        type: "text",
+        title: "When You're Pulled Over",
+        content:
+          "If law enforcement signals you to stop, follow these steps:",
+        bulletPoints: [
+          "Use your turn signal and pull to the RIGHT side of the road",
+          "Find a safe, well-lit location if possible",
+          "Turn off your engine",
+          "Roll down your window BEFORE the officer approaches",
+          "Keep your hands visible (on the steering wheel)",
+          "Wait for instructions from the officer",
+        ],
+        highlight: "Stay calm and keep your hands visible at all times.",
+      },
+      {
+        id: "required-documents",
+        type: "text",
+        title: "Required Documents",
+        content:
+          "When asked by law enforcement, you must provide:",
+        bulletPoints: [
+          "Your driver's license",
+          "Proof of insurance",
+          "Vehicle registration",
+        ],
+        highlight:
+          "Don't reach for documents until the officer asks - tell them where the documents are first.",
+      },
+      {
+        id: "your-rights",
+        type: "text",
+        title: "Your Rights During a Stop",
+        content:
+          "You have certain rights during a traffic stop:",
+        bulletPoints: [
+          "You have the right to record the encounter (First Amendment)",
+          "You may remain silent beyond providing required documents",
+          "In California, only federal officers can ask about immigration status",
+          "You don't have to consent to a vehicle search (but police may still search with probable cause)",
+        ],
+      },
+      {
+        id: "evading-warning",
+        type: "warning",
+        title: "Never Evade Police",
+        content:
+          "Evading or fleeing from law enforcement is a serious crime. If you're unsure whether a vehicle is a real police car, turn on your hazard lights, slow down, and drive to a well-lit public area.",
+      },
+    ],
+    questions: [
+      {
+        id: "stop-001",
+        type: "multiple-choice",
+        sectionId: "laws-rules",
+        lessonId: "law-enforcement",
+        difficulty: 1,
+        xpValue: 10,
+        question: "When pulled over by police, you should pull to:",
+        options: [
+          "The right side of the road",
+          "The left side of the road",
+          "The nearest parking lot",
+          "Stop immediately where you are",
+        ],
+        correctIndex: 0,
+        explanation:
+          "When law enforcement signals you to stop, use your turn signal and pull over to the RIGHT side of the road in a safe location.",
+        handbookReference: "Section 7 - Law Enforcement",
+      },
+      {
+        id: "stop-002",
+        type: "multiple-choice",
+        sectionId: "laws-rules",
+        lessonId: "law-enforcement",
+        difficulty: 1,
+        xpValue: 10,
+        question: "What documents must you provide when asked by police?",
+        options: [
+          "License, insurance, and registration",
+          "Only your license",
+          "License and registration only",
+          "No documents are required",
+        ],
+        correctIndex: 0,
+        explanation:
+          "You must provide your driver's license, proof of insurance, and vehicle registration when asked by law enforcement.",
+        handbookReference: "Section 7 - Law Enforcement",
+      },
+      {
+        id: "stop-003",
+        type: "true-false",
+        sectionId: "laws-rules",
+        lessonId: "law-enforcement",
+        difficulty: 2,
+        xpValue: 15,
+        statement:
+          "You have the right to record a police encounter under the First Amendment.",
+        isTrue: true,
+        explanation:
+          "The First Amendment protects your right to record police encounters in public. However, don't interfere with their duties.",
+        handbookReference: "Section 7 - Law Enforcement",
+      },
+      {
+        id: "stop-004",
+        type: "multiple-choice",
+        sectionId: "laws-rules",
+        lessonId: "law-enforcement",
+        difficulty: 2,
+        xpValue: 15,
+        question: "What should you do with your hands during a traffic stop?",
+        options: [
+          "Keep them visible, preferably on the steering wheel",
+          "Immediately reach for your documents",
+          "Hide them under your legs",
+          "Wave them to get the officer's attention",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Keep your hands visible at all times during a traffic stop. Place them on the steering wheel and wait for instructions before reaching for anything.",
+        handbookReference: "Section 7 - Law Enforcement",
+      },
+    ],
+  },
+  {
+    id: "work-zones-points",
+    sectionId: "laws-rules",
+    order: 6,
+    title: "Work Zones & Violations",
+    description: "Construction zones, the points system, and special rules",
+    type: "lesson",
+    xpReward: 30,
+    requiredLessons: ["law-enforcement"],
+    learnContent: [
+      {
+        id: "work-zones",
+        type: "text",
+        title: "Work Zone Safety",
+        content:
+          "Work zones (construction areas) require extra caution. Workers may be present near traffic, and road conditions change.",
+        bulletPoints: [
+          "Slow down when entering work zones",
+          "Follow posted speed limits and signs",
+          "Watch for flaggers directing traffic",
+          "Merge early when lanes are closed",
+          "Expect sudden stops and lane shifts",
+        ],
+        highlight: "Fines are DOUBLED when workers are present!",
+      },
+      {
+        id: "work-zone-fines",
+        type: "warning",
+        title: "Work Zone Fines",
+        content:
+          "Traffic violations in work zones carry fines of $1,000 or more. When workers are present, fines are doubled. Hitting a worker can result in criminal charges.",
+      },
+      {
+        id: "move-over-law",
+        type: "text",
+        title: "Move Over, Slow Down Law",
+        content:
+          "California's 'Move Over' law requires you to safely move over a lane when approaching:",
+        bulletPoints: [
+          "Stopped emergency vehicles with flashing lights",
+          "Tow trucks with amber lights",
+          "Caltrans vehicles with flashing lights",
+          "Garbage trucks",
+          "If you can't move over, slow down and pass carefully",
+        ],
+      },
+      {
+        id: "points-system",
+        type: "text",
+        title: "The Points System",
+        content:
+          "California uses a points system to track driving violations. Too many points leads to license suspension.",
+        bulletPoints: [
+          "Most violations: 1 point (speeding, running red light)",
+          "Serious violations: 2 points (DUI, reckless driving, hit and run)",
+          "Points stay on your record for 3-7 years",
+        ],
+      },
+      {
+        id: "points-suspension",
+        type: "warning",
+        title: "License Suspension Thresholds",
+        content:
+          "Your license will be suspended if you accumulate too many points:",
+        bulletPoints: [
+          "4 points in 12 months = suspension",
+          "6 points in 24 months = suspension",
+          "8 points in 36 months = suspension",
+        ],
+      },
+      {
+        id: "traffic-school",
+        type: "tip",
+        title: "Traffic Violator School",
+        content:
+          "For minor violations, you may attend traffic school to prevent a point from appearing on your record. This option is available once every 18 months.",
+      },
+      {
+        id: "mountain-road",
+        type: "text",
+        title: "Mountain Road Rules",
+        content:
+          "On steep mountain roads where vehicles can't pass, special right-of-way rules apply:",
+        bulletPoints: [
+          "The vehicle going UPHILL has the right of way",
+          "The downhill vehicle must yield (backing up is easier going downhill)",
+          "Use lower gears when descending - don't ride your brakes",
+        ],
+        highlight: "Vehicle facing UPHILL has the right of way!",
+      },
+      {
+        id: "blind-intersections",
+        type: "text",
+        title: "Blind Intersections",
+        content:
+          "At a 'blind' intersection where you can't see traffic from 100 feet away in either direction, the speed limit is 15 mph. These are common in areas with buildings, fences, or vegetation blocking the view.",
+      },
+      {
+        id: "towing-rules",
+        type: "text",
+        title: "Towing & Large Vehicles",
+        content:
+          "If you're towing a trailer or driving a vehicle with 3 or more axles, you must:",
+        bulletPoints: [
+          "Stay in the far right lane on highways",
+          "Not drive in the left lane (except to pass or turn)",
+          "Follow posted lower speed limits for trucks",
+        ],
+      },
+    ],
+    questions: [
+      {
+        id: "wzp-001",
+        type: "multiple-choice",
+        sectionId: "laws-rules",
+        lessonId: "work-zones-points",
+        difficulty: 2,
+        xpValue: 15,
+        question: "How many points in 12 months will result in license suspension?",
+        options: ["4 points", "3 points", "6 points", "2 points"],
+        correctIndex: 0,
+        explanation:
+          "Accumulating 4 points in 12 months, 6 points in 24 months, or 8 points in 36 months will result in license suspension.",
+        handbookReference: "Section 7 - Points System",
+      },
+      {
+        id: "wzp-002",
+        type: "true-false",
+        sectionId: "laws-rules",
+        lessonId: "work-zones-points",
+        difficulty: 2,
+        xpValue: 15,
+        statement: "Traffic fines are doubled in work zones when workers are present.",
+        isTrue: true,
+        explanation:
+          "Traffic violations in work zones carry fines of $1,000 or more, and fines are doubled when workers are present.",
+        handbookReference: "Section 7 - Work Zones",
+      },
+      {
+        id: "wzp-003",
+        type: "multiple-choice",
+        sectionId: "laws-rules",
+        lessonId: "work-zones-points",
+        difficulty: 2,
+        xpValue: 15,
+        question:
+          "On a steep mountain road where vehicles can't pass, who has the right of way?",
+        options: [
+          "The vehicle going uphill",
+          "The vehicle going downhill",
+          "The larger vehicle",
+          "The vehicle that arrived first",
+        ],
+        correctIndex: 0,
+        explanation:
+          "On steep mountain roads, the vehicle going uphill has the right of way. The downhill vehicle must yield because backing up is easier going downhill.",
+        handbookReference: "Section 7 - Mountain Roads",
+      },
+      {
+        id: "wzp-004",
+        type: "multiple-choice",
+        sectionId: "laws-rules",
+        lessonId: "work-zones-points",
+        difficulty: 2,
+        xpValue: 15,
+        question: "How often can you attend traffic school to mask a point?",
+        options: [
+          "Once every 18 months",
+          "Once every 12 months",
+          "Once every 24 months",
+          "Unlimited times",
+        ],
+        correctIndex: 0,
+        explanation:
+          "You may attend traffic violator school to prevent a point from appearing on your record once every 18 months.",
+        handbookReference: "Section 7 - Traffic School",
+      },
+      {
+        id: "wzp-005",
+        type: "multiple-choice",
+        sectionId: "laws-rules",
+        lessonId: "work-zones-points",
+        difficulty: 2,
+        xpValue: 15,
+        question:
+          "What is the speed limit at a 'blind' intersection where you can't see 100 feet in either direction?",
+        options: ["15 mph", "25 mph", "10 mph", "20 mph"],
+        correctIndex: 0,
+        explanation:
+          "At blind intersections where buildings, fences, or vegetation block your view beyond 100 feet, the speed limit is 15 mph.",
+        handbookReference: "Section 7 - Blind Intersections",
+      },
+      {
+        id: "wzp-006",
+        type: "true-false",
+        sectionId: "laws-rules",
+        lessonId: "work-zones-points",
+        difficulty: 1,
+        xpValue: 10,
+        statement:
+          "You must move over or slow down when approaching a stopped emergency vehicle with flashing lights.",
+        isTrue: true,
+        explanation:
+          "California's 'Move Over' law requires you to safely change lanes away from stopped emergency vehicles, or slow down if changing lanes isn't possible.",
+        handbookReference: "Section 7 - Move Over Law",
+      },
+    ],
+  },
+  {
+    id: "laws-checkpoint",
+    sectionId: "laws-rules",
+    order: 7,
     title: "Laws & Rules Review",
     description: "Test your knowledge of California traffic laws",
     type: "checkpoint",
     xpReward: 40,
-    requiredLessons: ["lane-usage"],
+    requiredLessons: ["work-zones-points"],
     questions: [
       {
         id: "chk-001",

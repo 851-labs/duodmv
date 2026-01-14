@@ -58,8 +58,8 @@ export const sections: Section[] = [
     description: "Road signs, lane markings, turns, and highway driving",
     icon: "map",
     color: "#ff4b4b",
-    totalLessons: 5,
-    estimatedMinutes: 25,
+    totalLessons: 6,
+    estimatedMinutes: 30,
   },
   {
     id: "laws-rules",
@@ -68,8 +68,8 @@ export const sections: Section[] = [
     description: "Speed limits, right of way, and traffic laws",
     icon: "scale",
     color: "#58cc02",
-    totalLessons: 5,
-    estimatedMinutes: 25,
+    totalLessons: 7,
+    estimatedMinutes: 35,
   },
   {
     id: "safe-driving",
@@ -78,8 +78,8 @@ export const sections: Section[] = [
     description: "Defensive driving, hazards, and emergency situations",
     icon: "shield",
     color: "#1cb0f6",
-    totalLessons: 4,
-    estimatedMinutes: 20,
+    totalLessons: 5,
+    estimatedMinutes: 25,
   },
   {
     id: "alcohol-drugs",

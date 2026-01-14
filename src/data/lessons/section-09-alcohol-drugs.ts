@@ -9,6 +9,77 @@ export const section9Lessons: Lesson[] = [
     description: "Blood alcohol limits and DUI consequences",
     type: "lesson",
     xpReward: 25,
+    learnContent: [
+      {
+        id: "bac-limits",
+        type: "text",
+        title: "Blood Alcohol Concentration (BAC) Limits",
+        content:
+          "California has strict limits on how much alcohol you can have in your system while driving:",
+        bulletPoints: [
+          "0.08% BAC: Legal limit for drivers 21 and older",
+          "0.04% BAC: Limit for commercial vehicle drivers",
+          "0.01% BAC: Limit for drivers under 21 (zero tolerance)",
+          "0.01% BAC: Limit for anyone on DUI probation",
+        ],
+        highlight: "You can be charged with DUI even below these limits if your driving is impaired!",
+      },
+      {
+        id: "implied-consent",
+        type: "text",
+        title: "Implied Consent Law",
+        content:
+          "By driving in California, you automatically consent to chemical testing (breath, blood, or urine) if lawfully arrested for DUI.",
+        bulletPoints: [
+          "Refusing a test results in automatic 1-year license suspension",
+          "Refusal can be used against you in court",
+          "Second refusal = 2-year suspension",
+          "Third refusal = 3-year suspension",
+        ],
+        highlight: "Refusing the test doesn't prevent a DUI conviction!",
+      },
+      {
+        id: "dui-penalties",
+        type: "warning",
+        title: "First DUI Penalties",
+        content:
+          "A first DUI conviction carries serious consequences: up to 6 months in jail, $390-$1,000 in fines (plus fees totaling $2,000+), 4-month license suspension, and a required DUI program. DUI convictions stay on your record for 10 years.",
+      },
+      {
+        id: "open-container",
+        type: "text",
+        title: "Open Container Laws",
+        content:
+          "It's illegal to have an open container of alcohol in your vehicle:",
+        bulletPoints: [
+          "All alcohol must be sealed and unopened",
+          "Open containers must be in the trunk",
+          "Or stored where passengers don't sit",
+          "This applies to drivers AND passengers",
+        ],
+      },
+      {
+        id: "cannabis-rules",
+        type: "text",
+        title: "Cannabis Laws for Drivers",
+        content:
+          "Even though cannabis is legal in California, strict rules apply:",
+        bulletPoints: [
+          "Never smoke or consume cannabis while driving",
+          "Cannabis containers must be sealed/unopened in the vehicle",
+          "Open containers must be in the trunk",
+          "Driving under the influence of cannabis is DUI",
+          "No cannabis in commercial vehicles - ever",
+        ],
+      },
+      {
+        id: "boat-dui",
+        type: "tip",
+        title: "Boating Under the Influence",
+        content:
+          "The same BAC limits apply when operating boats and watercraft. A BUI (boating under influence) conviction counts against your driving record.",
+      },
+    ],
     questions: [
       {
         id: "dui-001",
@@ -111,6 +182,64 @@ export const section9Lessons: Lesson[] = [
     type: "lesson",
     xpReward: 25,
     requiredLessons: ["dui-laws"],
+    learnContent: [
+      {
+        id: "alcohol-effects",
+        type: "text",
+        title: "How Alcohol Affects Driving",
+        content:
+          "Alcohol impairs driving ability in many ways, starting with judgment - often before you 'feel' drunk:",
+        bulletPoints: [
+          "Judgment and decision-making impaired FIRST",
+          "Slowed reaction time",
+          "Reduced coordination",
+          "Blurred or double vision",
+          "Difficulty concentrating",
+          "Overconfidence in abilities",
+        ],
+        highlight: "Your judgment is impaired before you feel drunk!",
+      },
+      {
+        id: "sobering-myths",
+        type: "warning",
+        title: "Sobering Up Myths",
+        content:
+          "Nothing speeds up the sobering process - only time works. Coffee, cold showers, fresh air, food, and exercise do NOT help. Your liver processes about one standard drink per hour.",
+      },
+      {
+        id: "drug-impairment",
+        type: "text",
+        title: "Drug Impairment",
+        content:
+          "Many substances impair driving, not just alcohol:",
+        bulletPoints: [
+          "Marijuana: Slowed reaction time, impaired judgment",
+          "Prescription drugs: May cause drowsiness, dizziness",
+          "Over-the-counter medicines: Antihistamines cause drowsiness",
+          "Combination of drugs and alcohol: Effects multiply",
+        ],
+      },
+      {
+        id: "minor-consequences",
+        type: "text",
+        title: "Consequences for Minors",
+        content:
+          "If you're under 21 and caught with alcohol in your vehicle:",
+        bulletPoints: [
+          "Vehicle may be impounded for 30 days",
+          "License suspended for 1 year",
+          "This applies even if you weren't drinking",
+          "You don't have to be driving - possession is enough",
+        ],
+      },
+      {
+        id: "designated-driver",
+        type: "tip",
+        title: "Always Have a Plan",
+        content:
+          "Before drinking, always plan a safe way home: use a designated driver, call a taxi or rideshare, stay overnight, or use public transit. Never let impaired friends drive.",
+      },
+    ],
     questions: [
       {
         id: "imp-001",

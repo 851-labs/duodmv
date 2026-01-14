@@ -618,4 +618,262 @@ export const section8Lessons: Lesson[] = [
       },
     ],
   },
+  {
+    id: "emergency-procedures",
+    sectionId: "safe-driving",
+    order: 5,
+    title: "Emergency Procedures",
+    description: "What to do in tire blowouts, skids, and vehicle emergencies",
+    type: "lesson",
+    xpReward: 40,
+    requiredLessons: ["adverse-conditions"],
+    learnContent: [
+      {
+        id: "tire-blowout",
+        type: "text",
+        title: "Tire Blowout",
+        content:
+          "A tire blowout can happen suddenly. Stay calm and follow these steps:",
+        bulletPoints: [
+          "Grip the steering wheel firmly",
+          "Don't slam on the brakes - maintain speed initially",
+          "Gradually slow down by easing off the accelerator",
+          "Steer in the direction of the blowout to maintain control",
+          "Pull safely off the road when speed is manageable",
+          "Turn on hazard lights",
+        ],
+        highlight: "Don't brake suddenly - it can cause you to lose control!",
+      },
+      {
+        id: "off-pavement",
+        type: "text",
+        title: "Driving Off the Pavement",
+        content:
+          "If your wheels drift off the pavement onto the shoulder:",
+        bulletPoints: [
+          "Grip the steering wheel firmly",
+          "Remove your foot from the accelerator - don't brake hard",
+          "Brake gently to slow down",
+          "When slow enough, check traffic and steer carefully back onto the road",
+          "Never jerk the steering wheel back - this can cause a rollover",
+        ],
+      },
+      {
+        id: "skid-types",
+        type: "text",
+        title: "Skid Recovery - ABS vs Non-ABS",
+        content:
+          "Recovery technique depends on your braking system:",
+        bulletPoints: [
+          "Four-wheel ABS: Apply firm, steady brake pressure",
+          "Rear-wheel ABS only: Ease up on brake, let front wheels roll",
+          "Front-wheel ABS only: Take foot off brake, steer",
+          "No ABS: Pump brakes quickly and repeatedly",
+        ],
+        highlight: "Know what type of braking system your vehicle has!",
+      },
+      {
+        id: "stuck-vehicle",
+        type: "text",
+        title: "Stuck in Snow or Mud",
+        content:
+          "If your vehicle gets stuck:",
+        bulletPoints: [
+          "Shift to a low gear",
+          "Apply gentle accelerator pressure",
+          "Rock the vehicle forward and backward",
+          "Don't spin the tires - it makes it worse",
+          "Use sand, cat litter, or floor mats for traction",
+        ],
+      },
+      {
+        id: "flooded-roads",
+        type: "warning",
+        title: "Flooded Roads",
+        content:
+          "Never drive through deep water. If you must cross a flooded area: drive slowly and steadily, don't stop in the middle, and test your brakes immediately after exiting the water.",
+        highlight: "Turn Around, Don't Drown!",
+      },
+      {
+        id: "high-winds",
+        type: "text",
+        title: "High Winds",
+        content:
+          "Strong winds can push your vehicle unexpectedly:",
+        bulletPoints: [
+          "Reduce your speed",
+          "Keep a firm grip on the steering wheel",
+          "Do NOT use cruise control in high winds",
+          "Watch for debris on the road",
+          "Be extra careful on bridges and overpasses",
+        ],
+      },
+      {
+        id: "disabled-freeway",
+        type: "text",
+        title: "Vehicle Disabled on Freeway",
+        content:
+          "If your vehicle breaks down on a freeway:",
+        bulletPoints: [
+          "Try to pull completely off the road onto the right shoulder",
+          "Turn on hazard lights immediately",
+          "Exit the vehicle on the side AWAY from traffic",
+          "Call 511 for roadside assistance",
+          "Stay away from the vehicle if safely possible",
+          "CHP Freeway Service Patrol offers FREE help (gas, jump starts, flat changes, towing)",
+        ],
+      },
+      {
+        id: "disabled-railroad",
+        type: "warning",
+        title: "Vehicle Stuck on Railroad Tracks",
+        content:
+          "If your vehicle stalls on railroad tracks: Get out immediately! Run diagonally AWAY from the tracks in the direction a train is coming from (so debris won't hit you). Call 911 and the railroad emergency number on the crossing sign.",
+      },
+      {
+        id: "overheating",
+        type: "text",
+        title: "Engine Overheating",
+        content:
+          "Watch your temperature gauge. If it moves toward hot:",
+        bulletPoints: [
+          "Turn off the air conditioning",
+          "Turn ON the heater to draw heat from engine",
+          "Pull over safely if temperature keeps rising",
+          "Don't open the radiator cap when hot - serious burns!",
+        ],
+      },
+      {
+        id: "traffic-break",
+        type: "text",
+        title: "Law Enforcement Traffic Breaks",
+        content:
+          "Officers sometimes use 'traffic breaks' to slow traffic or clear hazards:",
+        bulletPoints: [
+          "The officer weaves across lanes with lights flashing",
+          "Turn on your hazard lights",
+          "Slow to match the officer's speed",
+          "Do NOT pass the officer",
+          "Wait for the officer to speed up before resuming normal speed",
+        ],
+      },
+      {
+        id: "carbon-monoxide",
+        type: "warning",
+        title: "Carbon Monoxide Poisoning",
+        content:
+          "Carbon monoxide is a deadly, odorless gas from exhaust. Symptoms include: tiredness, dizziness, nausea, and headache. Never run your engine in enclosed spaces. If you feel these symptoms while driving, open windows and get fresh air immediately.",
+      },
+    ],
+    questions: [
+      {
+        id: "emrg-001",
+        type: "multiple-choice",
+        sectionId: "safe-driving",
+        lessonId: "emergency-procedures",
+        difficulty: 2,
+        xpValue: 15,
+        question: "If you have a tire blowout, you should:",
+        options: [
+          "Maintain speed, then gradually slow down without braking hard",
+          "Slam on the brakes immediately",
+          "Accelerate to maintain control",
+          "Shift into neutral immediately",
+        ],
+        correctIndex: 0,
+        explanation:
+          "During a blowout, grip the wheel firmly, maintain speed initially, then gradually slow down. Don't brake suddenly - it can cause loss of control.",
+        handbookReference: "Section 8 - Tire Blowout",
+      },
+      {
+        id: "emrg-002",
+        type: "multiple-choice",
+        sectionId: "safe-driving",
+        lessonId: "emergency-procedures",
+        difficulty: 2,
+        xpValue: 15,
+        question: "If your vehicle has four-wheel ABS and you start to skid, you should:",
+        options: [
+          "Apply firm, steady brake pressure",
+          "Pump the brakes quickly",
+          "Take your foot off the brake completely",
+          "Turn the steering wheel sharply",
+        ],
+        correctIndex: 0,
+        explanation:
+          "With four-wheel ABS, apply firm, steady brake pressure. The ABS system will prevent wheel lockup. Do NOT pump the brakes.",
+        handbookReference: "Section 8 - Skid Recovery",
+      },
+      {
+        id: "emrg-003",
+        type: "multiple-choice",
+        sectionId: "safe-driving",
+        lessonId: "emergency-procedures",
+        difficulty: 2,
+        xpValue: 15,
+        question: "If your vehicle stalls on railroad tracks, you should:",
+        options: [
+          "Get out and run diagonally away in the direction a train is coming from",
+          "Stay in the vehicle and call for help",
+          "Try to push the vehicle off the tracks",
+          "Run straight away from the tracks",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Exit immediately and run diagonally away from the tracks toward an oncoming train. This way, debris from impact won't hit you.",
+        handbookReference: "Section 8 - Vehicle Stuck on Tracks",
+      },
+      {
+        id: "emrg-004",
+        type: "true-false",
+        sectionId: "safe-driving",
+        lessonId: "emergency-procedures",
+        difficulty: 1,
+        xpValue: 10,
+        statement: "You should use cruise control when driving in high winds.",
+        isTrue: false,
+        explanation:
+          "Never use cruise control in high winds. You need full control of acceleration to respond to sudden wind gusts pushing your vehicle.",
+        handbookReference: "Section 8 - High Winds",
+      },
+      {
+        id: "emrg-005",
+        type: "multiple-choice",
+        sectionId: "safe-driving",
+        lessonId: "emergency-procedures",
+        difficulty: 1,
+        xpValue: 10,
+        question: "What are symptoms of carbon monoxide poisoning?",
+        options: [
+          "Tiredness, dizziness, nausea, and headache",
+          "Itchy eyes and sneezing",
+          "Chest pain and shortness of breath only",
+          "Hunger and thirst",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Carbon monoxide poisoning symptoms include tiredness, dizziness, nausea, and headache. If you feel these while driving, get fresh air immediately.",
+        handbookReference: "Section 8 - Carbon Monoxide",
+      },
+      {
+        id: "emrg-006",
+        type: "multiple-choice",
+        sectionId: "safe-driving",
+        lessonId: "emergency-procedures",
+        difficulty: 2,
+        xpValue: 15,
+        question: "During a CHP traffic break, you should:",
+        options: [
+          "Turn on hazard lights and slow to match the officer's speed",
+          "Speed up and pass the officer on the right",
+          "Stop completely in your lane",
+          "Exit the freeway immediately",
+        ],
+        correctIndex: 0,
+        explanation:
+          "During a traffic break, turn on your hazard lights, slow to match the officer's speed, and do not pass the officer until they speed up.",
+        handbookReference: "Section 8 - Traffic Breaks",
+      },
+    ],
+  },
 ];

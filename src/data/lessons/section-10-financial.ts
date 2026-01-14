@@ -45,6 +45,27 @@ export const section10Lessons: Lesson[] = [
         content:
           "Can't afford insurance? California offers a Low Cost Automobile Insurance Program. Visit mylowcostauto.com or call 1-866-602-8861.",
       },
+      {
+        id: "sr22-certificate",
+        type: "text",
+        title: "SR 22 Certificate",
+        content:
+          "An SR 22 is a certificate of financial responsibility. You may be required to file one if you:",
+        bulletPoints: [
+          "Were convicted of DUI",
+          "Were in a collision without insurance",
+          "Had your license suspended for too many points",
+          "Were convicted of reckless driving",
+        ],
+        highlight: "SR 22 must be maintained for 3 years - cancellation means license suspension!",
+      },
+      {
+        id: "sr1p-certificate",
+        type: "text",
+        title: "SR 1P Certificate",
+        content:
+          "An SR 1P is proof of insurance from your insurance company that's filed with DMV. It proves you have the minimum required coverage. Your insurance company typically files this automatically.",
+      },
     ],
     questions: [
       {
@@ -141,6 +162,28 @@ export const section10Lessons: Lesson[] = [
         title: "Report to DMV",
         content:
           "You must report to DMV within 10 days if: damage exceeds $1,000 OR anyone was injured/killed. File the SR 1 report at dmv.ca.gov/accidentreport.",
+      },
+      {
+        id: "animal-collision",
+        type: "text",
+        title: "Collision with an Animal",
+        content:
+          "If you hit an animal while driving:",
+        bulletPoints: [
+          "Stop safely if possible",
+          "Don't touch or move the injured animal - it may bite",
+          "Call local humane society or animal control",
+          "If it's a dog, cat, or horse, you must try to locate the owner",
+          "Call law enforcement for livestock or wild animals",
+          "Don't leave a domestic animal suffering on the road",
+        ],
+      },
+      {
+        id: "animal-avoid",
+        type: "tip",
+        title: "Avoiding Animal Collisions",
+        content:
+          "Be especially alert at dawn, dusk, and night when animals are most active. If an animal is in the road, brake firmly but don't swerve - swerving into traffic or off the road is more dangerous.",
       },
     ],
     questions: [

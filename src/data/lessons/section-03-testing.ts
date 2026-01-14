@@ -154,6 +154,42 @@ export const section3Lessons: Lesson[] = [
         ],
       },
       {
+        id: "adas-not-allowed",
+        type: "warning",
+        title: "ADAS Not Allowed",
+        content:
+          "Advanced Driver Assistance Systems (ADAS) are NOT permitted during the drive test. These must be turned off:",
+        bulletPoints: [
+          "Automated parking assist",
+          "Lane departure warning/correction",
+          "Adaptive cruise control",
+          "Collision avoidance that takes control",
+        ],
+      },
+      {
+        id: "foot-brake",
+        type: "text",
+        title: "Foot Brake Requirement",
+        content:
+          "When you push the brake pedal, there must be at least 1 inch of clearance between the pedal and the floor. This ensures your brakes can fully engage.",
+        highlight:
+          "The examiner will check this during the pre-drive inspection.",
+      },
+      {
+        id: "interpreter-rules",
+        type: "tip",
+        title: "Interpreter Rules",
+        content:
+          "If you need an interpreter, they may assist only during the pre-drive vehicle inspection. During the actual drive test, all instructions will be given in English by the examiner.",
+      },
+      {
+        id: "recording-rules",
+        type: "warning",
+        title: "Recording Devices",
+        content:
+          "Any recording devices in your vehicle (dashcam, phone, etc.) must be turned off or blocked during the drive test for privacy reasons.",
+      },
+      {
         id: "test-failure",
         type: "warning",
         title: "If You Fail",
@@ -220,6 +256,55 @@ export const section3Lessons: Lesson[] = [
         isTrue: false,
         explanation:
           "The use of a donut tire is not allowed during a drive test. Your tires must have at least 1/32 inch of tread depth.",
+        handbookReference: "Section 3 - Behind-the-Wheel Drive Test",
+      },
+      {
+        id: "test-008",
+        type: "true-false",
+        sectionId: "testing-process",
+        lessonId: "drive-test",
+        difficulty: 2,
+        xpValue: 15,
+        statement:
+          "You can use lane departure warning systems during your drive test.",
+        isTrue: false,
+        explanation:
+          "Advanced Driver Assistance Systems (ADAS) like lane departure warning, automated parking, and adaptive cruise control must be turned off during the drive test.",
+        handbookReference: "Section 3 - Behind-the-Wheel Drive Test",
+      },
+      {
+        id: "test-009",
+        type: "multiple-choice",
+        sectionId: "testing-process",
+        lessonId: "drive-test",
+        difficulty: 2,
+        xpValue: 15,
+        question:
+          "When can an interpreter assist you during the drive test process?",
+        options: [
+          "Only during the pre-drive vehicle inspection",
+          "Throughout the entire drive test",
+          "Only when you make a mistake",
+          "Interpreters are never allowed",
+        ],
+        correctIndex: 0,
+        explanation:
+          "An interpreter may only assist during the pre-drive vehicle inspection. During the actual drive test, all instructions are given in English by the examiner.",
+        handbookReference: "Section 3 - Behind-the-Wheel Drive Test",
+      },
+      {
+        id: "test-010",
+        type: "multiple-choice",
+        sectionId: "testing-process",
+        lessonId: "drive-test",
+        difficulty: 2,
+        xpValue: 15,
+        question:
+          "How much clearance must there be between the brake pedal and floor when pressed?",
+        options: ["At least 1 inch", "At least 2 inches", "At least 3 inches", "No minimum required"],
+        correctIndex: 0,
+        explanation:
+          "When the brake pedal is pushed, there must be at least 1 inch of clearance between the pedal and the floor to ensure proper braking ability.",
         handbookReference: "Section 3 - Behind-the-Wheel Drive Test",
       },
     ],
