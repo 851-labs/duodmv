@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 
 import type { MultipleChoiceQuestion } from "../../types";
 
@@ -10,9 +10,25 @@ interface MultipleChoiceProps {
   disabled?: boolean;
 }
 
+function shuffleOptions(options: string[], correctIndex: number): { shuffledOptions: string[]; newCorrectIndex: number } {
+  const indices = options.map((_, i) => i);
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+  const shuffledOptions = indices.map(i => options[i]);
+  const newCorrectIndex = indices.indexOf(correctIndex);
+  return { shuffledOptions, newCorrectIndex };
+}
+
 export function MultipleChoice({ question, onAnswer, disabled = false }: MultipleChoiceProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [hasAnswered, setHasAnswered] = useState(false);
+
+  const { shuffledOptions, newCorrectIndex } = useMemo(
+    () => shuffleOptions(question.options, question.correctIndex),
+    [question.id]
+  );
 
   const handleSelect = useCallback(
     (index: number) => {
@@ -21,10 +37,10 @@ export function MultipleChoice({ question, onAnswer, disabled = false }: Multipl
       setSelectedIndex(index);
       setHasAnswered(true);
 
-      const isCorrect = index === question.correctIndex;
+      const isCorrect = index === newCorrectIndex;
       onAnswer(isCorrect);
     },
-    [disabled, hasAnswered, question.correctIndex, onAnswer],
+    [disabled, hasAnswered, newCorrectIndex, onAnswer],
   );
 
   // Keyboard shortcuts: A/B/C/D or 1/2/3/4
@@ -48,21 +64,21 @@ export function MultipleChoice({ question, onAnswer, disabled = false }: Multipl
       }
 
       // Check if valid index for this question
-      if (index >= 0 && index < question.options.length) {
+      if (index >= 0 && index < shuffledOptions.length) {
         handleSelect(index);
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [question.options.length, handleSelect]);
+  }, [shuffledOptions.length, handleSelect]);
 
   const getOptionState = (index: number) => {
     if (!hasAnswered) {
       return selectedIndex === index ? "selected" : "default";
     }
 
-    if (index === question.correctIndex) {
+    if (index === newCorrectIndex) {
       return "correct";
     }
 
@@ -88,13 +104,13 @@ export function MultipleChoice({ question, onAnswer, disabled = false }: Multipl
       )}
 
       <div className="grid grid-cols-1 gap-3 mt-6">
-        {question.options.map((option, index) => (
+        {shuffledOptions.map((option, index) => (
           <OptionButton
             key={index}
             onClick={() => handleSelect(index)}
             disabled={
               disabled ||
-              (hasAnswered && index !== selectedIndex && index !== question.correctIndex)
+              (hasAnswered && index !== selectedIndex && index !== newCorrectIndex)
             }
             state={getOptionState(index)}
             optionLabel={String.fromCharCode(65 + index)}
