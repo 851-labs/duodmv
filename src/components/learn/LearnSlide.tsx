@@ -59,7 +59,7 @@ export function LearnSlide({ content }: LearnSlideProps) {
 
 			{/* Tip box */}
 			{content.type === "tip" && (
-				<div className="flex items-start gap-3 p-4 bg-secondary-50 border border-secondary-200 rounded-xl">
+				<div className="flex items-start gap-3 p-4 bg-secondary-50 border-2 border-secondary-400 rounded-xl">
 					<Lightbulb className="w-6 h-6 text-secondary-500 flex-shrink-0 mt-0.5" />
 					<div>
 						<p className="font-medium text-secondary-700">Tip</p>
@@ -70,10 +70,10 @@ export function LearnSlide({ content }: LearnSlideProps) {
 
 			{/* Warning box */}
 			{content.type === "warning" && (
-				<div className="flex items-start gap-3 p-4 bg-streak-50 border border-streak-200 rounded-xl">
+				<div className="flex items-start gap-3 p-4 bg-streak-50 border-2 border-streak-400 rounded-xl">
 					<AlertTriangle className="w-6 h-6 text-streak-500 flex-shrink-0 mt-0.5" />
 					<div>
-						<p className="font-medium text-streak-700">Important</p>
+						<p className="font-medium text-streak-600">Important</p>
 						<p className="text-streak-600">{content.content}</p>
 					</div>
 				</div>
@@ -81,12 +81,12 @@ export function LearnSlide({ content }: LearnSlideProps) {
 
 			{/* Key highlight box */}
 			{content.highlight && (
-				<div className="p-4 bg-primary-50 border-2 border-primary-200 rounded-xl">
-					<p className="font-medium text-primary-700 flex items-center gap-2">
-						<span className="text-xl">💡</span>
-						Remember:
-					</p>
-					<p className="text-primary-800 font-medium mt-1">{content.highlight}</p>
+				<div className="flex items-start gap-3 p-4 bg-primary-50 border-2 border-primary-400 rounded-xl">
+					<Lightbulb className="w-6 h-6 text-primary-500 flex-shrink-0 mt-0.5" />
+					<div>
+						<p className="font-medium text-primary-700">Remember</p>
+						<p className="text-primary-600">{content.highlight}</p>
+					</div>
 				</div>
 			)}
 		</div>

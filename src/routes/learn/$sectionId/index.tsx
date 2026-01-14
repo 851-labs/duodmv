@@ -116,10 +116,10 @@ function SectionPage() {
 										className={clsx(
 											"w-full flex items-center gap-4 p-4 rounded-xl border-2 transition-all text-left",
 											isCompleted
-												? "bg-primary-50 border-primary-200"
+												? "bg-primary-50 border-primary-400 shadow-[0_2px_0_0_var(--color-primary-400)] active:translate-y-0.5 active:shadow-none"
 												: isUnlocked
-													? "bg-white border-surface-200 hover:border-primary-300 hover:shadow-md"
-													: "bg-surface-100 border-surface-200 opacity-60 cursor-not-allowed"
+													? "bg-white border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)] hover:border-primary-300 hover:shadow-[0_2px_0_0_var(--color-primary-300)] active:translate-y-0.5 active:shadow-none"
+													: "bg-surface-100 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)] opacity-60 cursor-not-allowed"
 										)}
 									>
 										{/* Lesson icon */}

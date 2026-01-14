@@ -64,10 +64,10 @@ function LearnPage() {
 								params={{ sectionId: section.id }}
 								disabled={isLocked}
 								className={clsx(
-									"block bg-white rounded-xl border-2 p-4 transition-all",
+									"block bg-white rounded-xl border-2 p-4 transition-all shadow-[0_2px_0_0_var(--color-surface-200)]",
 									isLocked
 										? "opacity-60 cursor-not-allowed border-surface-200"
-										: "hover:border-primary-300 border-surface-200 hover:shadow-md"
+										: "hover:border-primary-300 hover:shadow-[0_2px_0_0_var(--color-primary-300)] active:translate-y-0.5 active:shadow-none border-surface-200"
 								)}
 							>
 								<div className="flex items-start gap-4">

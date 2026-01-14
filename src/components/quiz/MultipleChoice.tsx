@@ -1,6 +1,6 @@
-import { useState } from "react";
-import clsx from "clsx";
+import { useState, useEffect, useCallback } from "react";
 import type { MultipleChoiceQuestion } from "../../types";
+import { OptionButton } from "../ui/OptionButton";
 
 interface MultipleChoiceProps {
 	question: MultipleChoiceQuestion;
@@ -16,7 +16,7 @@ export function MultipleChoice({
 	const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 	const [hasAnswered, setHasAnswered] = useState(false);
 
-	const handleSelect = (index: number) => {
+	const handleSelect = useCallback((index: number) => {
 		if (disabled || hasAnswered) return;
 
 		setSelectedIndex(index);
@@ -24,24 +24,52 @@ export function MultipleChoice({
 
 		const isCorrect = index === question.correctIndex;
 		onAnswer(isCorrect);
-	};
+	}, [disabled, hasAnswered, question.correctIndex, onAnswer]);
 
-	const getOptionClass = (index: number) => {
+	// Keyboard shortcuts: A/B/C/D or 1/2/3/4
+	useEffect(() => {
+		const handleKeyDown = (e: KeyboardEvent) => {
+			// Ignore if user is typing in an input
+			if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+				return;
+			}
+
+			const key = e.key.toUpperCase();
+			let index = -1;
+
+			// A-D keys
+			if (key >= "A" && key <= "D") {
+				index = key.charCodeAt(0) - 65; // A=0, B=1, C=2, D=3
+			}
+			// 1-4 number keys
+			else if (key >= "1" && key <= "4") {
+				index = parseInt(key) - 1; // 1=0, 2=1, 3=2, 4=3
+			}
+
+			// Check if valid index for this question
+			if (index >= 0 && index < question.options.length) {
+				handleSelect(index);
+			}
+		};
+
+		window.addEventListener("keydown", handleKeyDown);
+		return () => window.removeEventListener("keydown", handleKeyDown);
+	}, [question.options.length, handleSelect]);
+
+	const getOptionState = (index: number) => {
 		if (!hasAnswered) {
-			return selectedIndex === index
-				? "border-primary-500 bg-primary-50"
-				: "border-surface-200 bg-white hover:border-surface-300 hover:bg-surface-50";
+			return selectedIndex === index ? "selected" : "default";
 		}
 
 		if (index === question.correctIndex) {
-			return "border-correct-500 bg-correct-100";
+			return "correct";
 		}
 
 		if (index === selectedIndex) {
-			return "border-incorrect-500 bg-incorrect-100";
+			return "incorrect";
 		}
 
-		return "border-surface-200 bg-surface-100 opacity-50";
+		return "disabled";
 	};
 
 	return (
@@ -62,33 +90,15 @@ export function MultipleChoice({
 
 			<div className="grid grid-cols-1 gap-3 mt-6">
 				{question.options.map((option, index) => (
-					<button
+					<OptionButton
 						key={index}
 						onClick={() => handleSelect(index)}
-						disabled={disabled || hasAnswered}
-						className={clsx(
-							"w-full p-4 text-left rounded-xl border-2 transition-all duration-200",
-							"font-medium text-zinc-800",
-							"disabled:cursor-not-allowed",
-							getOptionClass(index)
-						)}
+						disabled={disabled || (hasAnswered && index !== selectedIndex && index !== question.correctIndex)}
+						state={getOptionState(index)}
+						optionLabel={String.fromCharCode(65 + index)}
 					>
-						<span className="flex items-center gap-3">
-							<span
-								className={clsx(
-									"flex items-center justify-center w-8 h-8 rounded-lg text-sm font-bold",
-									hasAnswered && index === question.correctIndex
-										? "bg-correct-500 text-white"
-										: hasAnswered && index === selectedIndex
-											? "bg-incorrect-500 text-white"
-											: "bg-surface-200 text-zinc-600"
-								)}
-							>
-								{String.fromCharCode(65 + index)}
-							</span>
-							<span>{option}</span>
-						</span>
-					</button>
+						{option}
+					</OptionButton>
 				))}
 			</div>
 		</div>

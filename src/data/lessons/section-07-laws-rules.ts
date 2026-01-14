@@ -9,6 +9,55 @@ export const section7Lessons: Lesson[] = [
 		description: "Learn who goes first at intersections and crossings",
 		type: "lesson",
 		xpReward: 25,
+		learnContent: [
+			{
+				id: "row-intro",
+				type: "text",
+				title: "What is Right of Way?",
+				content:
+					"Right of way rules determine who goes first when drivers, pedestrians, and cyclists meet. These rules prevent collisions and keep traffic flowing safely.",
+				highlight:
+					"Right of way is given, not taken. Even if you have the right of way, always be prepared to yield to avoid an accident.",
+			},
+			{
+				id: "row-intersection-example",
+				type: "image",
+				title: "Right of Way at Intersections",
+				content:
+					"At intersections, the vehicle that arrives first has the right of way. If two vehicles arrive at the same time, yield to the vehicle on your right.",
+				imageUrl: "/images/chapter7/intersection-right-of-way.png",
+			},
+			{
+				id: "row-pedestrians",
+				type: "image",
+				title: "Pedestrians Have Priority",
+				content:
+					"Drivers must always yield to pedestrians in crosswalks. This includes people using wheelchairs, tricycles, and other mobility devices.",
+				imageUrl: "/images/chapter7/warning-pedestrian-crossing.png",
+				highlight: "Pedestrians ALWAYS have the right of way in crosswalks.",
+			},
+			{
+				id: "row-mobility-devices",
+				type: "text",
+				title: "Pedestrian Mobility Devices",
+				content:
+					"People using wheelchairs, motorized wheelchairs, tricycles, and mobility scooters are considered pedestrians and have the same right of way protections.",
+				bulletPoints: [
+					"Wheelchairs (manual and motorized)",
+					"Three-wheeled mobility devices (tricycles)",
+					"Four-wheeled mobility scooters",
+					"Electric personal assistive mobility devices",
+				],
+			},
+			{
+				id: "row-emergency",
+				type: "warning",
+				title: "Emergency Vehicles",
+				content:
+					"When an emergency vehicle approaches with sirens and flashing lights, pull to the right edge of the road and stop. Wait until the emergency vehicle has passed before resuming.",
+				highlight: "Pull RIGHT, stop, and wait.",
+			},
+		],
 		questions: [
 			{
 				id: "row-001",
@@ -126,6 +175,55 @@ export const section7Lessons: Lesson[] = [
 		type: "lesson",
 		xpReward: 25,
 		requiredLessons: ["right-of-way"],
+		learnContent: [
+			{
+				id: "speed-intro",
+				type: "text",
+				title: "California Speed Limits",
+				content:
+					"Speed limits are set to protect you and others on the road. Always obey posted limits and adjust your speed based on conditions.",
+				bulletPoints: [
+					"65 mph: Maximum on most highways",
+					"55 mph: Two-lane undivided highways",
+					"25 mph: Residential and business districts",
+					"15 mph: Alleys, railroad crossings (limited view)",
+				],
+			},
+			{
+				id: "speed-basic-law",
+				type: "warning",
+				title: "The Basic Speed Law",
+				content:
+					"California's Basic Speed Law states you may never drive faster than is safe for current conditions, regardless of the posted speed limit.",
+				highlight:
+					"Even if the limit is 65 mph, you must slow down in fog, rain, heavy traffic, or road hazards.",
+			},
+			{
+				id: "speed-school-zones",
+				type: "text",
+				title: "School Zones",
+				content:
+					"When children are present near schools, the speed limit is 25 mph. Some school zones have flashing lights indicating when the lower limit is in effect.",
+				highlight: "Watch for children - they may not watch for you!",
+			},
+			{
+				id: "speed-railroad",
+				type: "image",
+				title: "Railroad Crossings",
+				content:
+					"At railroad crossings where you cannot see 400 feet in both directions, you must not exceed 15 mph. Use the posted emergency number if your vehicle gets stuck on tracks.",
+				imageUrl: "/images/chapter7/sign-railroad-emergency.png",
+			},
+			{
+				id: "speed-construction",
+				type: "image",
+				title: "Construction Zones",
+				content:
+					"Slow down in construction zones. Workers may be present, and fines are doubled in these areas. Watch for flaggers directing traffic.",
+				imageUrl: "/images/chapter7/sign-flagger-ahead.png",
+				highlight: "Fines are DOUBLED in construction zones!",
+			},
+		],
 		questions: [
 			{
 				id: "spd-001",
@@ -224,6 +322,72 @@ export const section7Lessons: Lesson[] = [
 		type: "lesson",
 		xpReward: 25,
 		requiredLessons: ["speed-limits"],
+		learnContent: [
+			{
+				id: "signals-intro",
+				type: "text",
+				title: "Traffic Light Colors",
+				content:
+					"Traffic lights use three colors to control traffic flow. Understanding what each color means is essential for safe driving.",
+				bulletPoints: [
+					"RED: Stop and remain stopped",
+					"YELLOW: Light is about to turn red - stop if safe",
+					"GREEN: Go if the intersection is clear",
+				],
+			},
+			{
+				id: "signals-red-variations",
+				type: "text",
+				title: "Red Light Variations",
+				content:
+					"Red lights come in different forms, each with specific rules.",
+				bulletPoints: [
+					"Solid Red: Stop and wait for green",
+					"Red Arrow: Stop, no turn in arrow direction",
+					"Flashing Red: Stop, then proceed when safe (like a stop sign)",
+				],
+				highlight: "You may turn right on red after stopping, unless a sign prohibits it.",
+			},
+			{
+				id: "signals-yellow-variations",
+				type: "text",
+				title: "Yellow Light Variations",
+				content:
+					"Yellow lights warn you that the signal is changing.",
+				bulletPoints: [
+					"Solid Yellow: Light is about to turn red - stop if safe",
+					"Yellow Arrow: Protected turn is ending",
+					"Flashing Yellow: Proceed with caution (no stop required)",
+				],
+			},
+			{
+				id: "signals-green-variations",
+				type: "text",
+				title: "Green Light Variations",
+				content:
+					"Green lights indicate you may proceed, but always check that the intersection is clear first.",
+				bulletPoints: [
+					"Solid Green: Go straight or turn (yield to oncoming traffic)",
+					"Green Arrow: Protected turn - oncoming traffic has red",
+				],
+			},
+			{
+				id: "signals-warning-sign",
+				type: "image",
+				title: "Signal Ahead Warning",
+				content:
+					"This yellow warning sign alerts you that a traffic signal is ahead. Be prepared to stop.",
+				imageUrl: "/images/chapter7/warning-signal-ahead.png",
+			},
+			{
+				id: "signals-malfunctioning",
+				type: "warning",
+				title: "Malfunctioning Signals",
+				content:
+					"If a traffic signal is completely out or malfunctioning, treat the intersection as a four-way stop. Stop, then proceed in order of arrival.",
+				highlight: "No lights = Four-way stop rules apply",
+			},
+		],
 		questions: [
 			{
 				id: "sig-001",
@@ -341,6 +505,77 @@ export const section7Lessons: Lesson[] = [
 		type: "lesson",
 		xpReward: 25,
 		requiredLessons: ["traffic-signals"],
+		learnContent: [
+			{
+				id: "lane-intro",
+				type: "text",
+				title: "Lane Markings",
+				content:
+					"Lane markings tell you when you can change lanes and what each lane is for. Understanding these markings is key to safe driving.",
+				bulletPoints: [
+					"White lines: Separate traffic going the same direction",
+					"Yellow lines: Separate traffic going opposite directions",
+					"Dashed lines: Lane changes allowed",
+					"Solid lines: Lane changes restricted",
+				],
+			},
+			{
+				id: "lane-merge",
+				type: "image",
+				title: "Merging Traffic",
+				content:
+					"This sign warns that traffic is merging from the right. Prepare to adjust your speed or position to allow vehicles to merge safely.",
+				imageUrl: "/images/chapter7/warning-merge.png",
+			},
+			{
+				id: "lane-ends",
+				type: "image",
+				title: "Lane Ends",
+				content:
+					"This sign warns that your lane is ending. You must merge into an adjacent lane. Begin merging early and yield to traffic already in that lane.",
+				imageUrl: "/images/chapter7/warning-lane-ends.png",
+			},
+			{
+				id: "lane-added",
+				type: "image",
+				title: "Added Lane",
+				content:
+					"This sign indicates a new lane is being added. Traffic entering from the ramp has its own lane and doesn't need to merge immediately.",
+				imageUrl: "/images/chapter7/warning-added-lane.png",
+			},
+			{
+				id: "lane-divided",
+				type: "image",
+				title: "Divided Highway",
+				content:
+					"This sign indicates the road ahead becomes a divided highway with a median or barrier separating opposing traffic.",
+				imageUrl: "/images/chapter7/warning-divided-highway.png",
+			},
+			{
+				id: "lane-two-way",
+				type: "image",
+				title: "Two-Way Traffic",
+				content:
+					"This sign warns that you're entering a two-way roadway. Oncoming traffic will be in the lane next to you.",
+				imageUrl: "/images/chapter7/warning-two-way-traffic.png",
+			},
+			{
+				id: "lane-center-turn",
+				type: "warning",
+				title: "Center Left-Turn Lane",
+				content:
+					"The center left-turn lane (marked with double yellow lines on both sides) is ONLY for making left turns. Never use it as a travel lane.",
+				highlight: "Maximum 200 feet of travel in a center turn lane.",
+			},
+			{
+				id: "lane-curves",
+				type: "image",
+				title: "Winding Road Ahead",
+				content:
+					"This sign warns of a series of curves ahead. Reduce your speed and stay in your lane through the curves.",
+				imageUrl: "/images/chapter7/warning-winding-road.png",
+			},
+		],
 		questions: [
 			{
 				id: "lane-001",

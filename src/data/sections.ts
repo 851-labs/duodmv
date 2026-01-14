@@ -45,11 +45,11 @@ export const sections: Section[] = [
 		id: "navigating-roads",
 		number: 6,
 		title: "Navigating the Roads",
-		description: "Lane usage, turns, intersections, and highway driving",
+		description: "Road signs, lane markings, turns, and highway driving",
 		icon: "map",
 		color: "#ff4b4b",
-		totalLessons: 4,
-		estimatedMinutes: 20,
+		totalLessons: 5,
+		estimatedMinutes: 25,
 	},
 	{
 		id: "laws-rules",
@@ -100,16 +100,6 @@ export const sections: Section[] = [
 		color: "#ff4b4b",
 		totalLessons: 1,
 		estimatedMinutes: 5,
-	},
-	{
-		id: "road-signs",
-		number: 12,
-		title: "Road Signs & Signals",
-		description: "Traffic signs, signals, and pavement markings",
-		icon: "signpost",
-		color: "#58cc02",
-		totalLessons: 4,
-		estimatedMinutes: 20,
 	},
 ];
 

@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-	/* Duolingo-inspired colors */
-	--color-primary-50: #f0fdf4;
-	--color-primary-100: #dcfce7;
-	--color-primary-200: #bbf7d0;
-	--color-primary-300: #86efac;
-	--color-primary-400: #4ade80;
+	/* Duolingo green - proper gradient from #58cc02 */
+	--color-primary-50: #f4ffe6;
+	--color-primary-100: #e5ffcc;
+	--color-primary-200: #c9ff99;
+	--color-primary-300: #a3f055;
+	--color-primary-400: #78e000;
 	--color-primary-500: #58cc02;
-	--color-primary-600: #4caf00;
+	--color-primary-600: #45a300;
 	--color-primary-700: #3d8c00;
 	--color-primary-800: #2d6600;
 	--color-primary-900: #1a4000;
@@ -31,25 +31,35 @@
 	--color-hearts-600: #dc2626;
 
 	/* Streak orange */
+	--color-streak-50: #fff7ed;
+	--color-streak-100: #ffedd5;
 	--color-streak-400: #fb923c;
 	--color-streak-500: #ff9600;
 	--color-streak-600: #ea580c;
 
-	/* Correct green */
-	--color-correct-100: #d1fae5;
+	/* Correct green - matches primary palette */
+	--color-correct-50: #f4ffe6;
+	--color-correct-100: #e5ffcc;
+	--color-correct-400: #78e000;
 	--color-correct-500: #58cc02;
-	--color-correct-600: #059669;
+	--color-correct-600: #45a300;
+	--color-correct-700: #2d6600;
 
 	/* Incorrect red */
+	--color-incorrect-50: #ffe8e8;
 	--color-incorrect-100: #fee2e2;
+	--color-incorrect-400: #ff6b6b;
 	--color-incorrect-500: #ff4b4b;
 	--color-incorrect-600: #dc2626;
+	--color-incorrect-700: #b91c1c;
 
 	/* Surface colors for cards */
 	--color-surface-50: #fafafa;
 	--color-surface-100: #f4f4f5;
 	--color-surface-200: #e4e4e7;
 	--color-surface-300: #d4d4d8;
+	--color-surface-400: #a1a1aa;
+	--color-surface-500: #71717a;
 	--color-surface-800: #27272a;
 	--color-surface-900: #18181b;
 
@@ -114,21 +124,3 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-	width: 8px;
-	height: 8px;
-}
-
-::-webkit-scrollbar-track {
-	background: var(--color-surface-100);
-}
-
-::-webkit-scrollbar-thumb {
-	background: var(--color-surface-300);
-	border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: var(--color-surface-400);
-}

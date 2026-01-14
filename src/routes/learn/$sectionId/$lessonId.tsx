@@ -14,8 +14,7 @@ type LessonPhase = "learn" | "quiz";
 function LessonPage() {
 	const { sectionId, lessonId } = Route.useParams();
 	const navigate = useNavigate();
-	const { completeLesson, useHeart, getHearts, getStreak, startLesson } =
-		useProgress();
+	const { completeLesson, getStreak, startLesson } = useProgress();
 
 	const lesson = getLessonById(lessonId);
 	const section = getSectionById(sectionId);
@@ -84,8 +83,6 @@ function LessonPage() {
 			lesson={lesson}
 			onComplete={handleQuizComplete}
 			onExit={handleExit}
-			hearts={getHearts()}
-			onUseHeart={useHeart}
 			streakDays={getStreak()}
 		/>
 	);

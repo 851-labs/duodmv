@@ -72,10 +72,11 @@ export function LessonComplete({
 				<button
 					onClick={onContinue}
 					className={clsx(
-						"w-full py-4 px-6 rounded-xl font-bold text-lg",
+						"w-full py-4 px-6 rounded-2xl font-bold text-lg",
 						"bg-white text-primary-600",
-						"hover:bg-white/90 transition-colors",
-						"shadow-lg shadow-primary-700/30"
+						"shadow-[0_4px_0_0_var(--color-primary-200)]",
+						"hover:bg-surface-50 transition-all duration-100",
+						"active:translate-y-1 active:shadow-none"
 					)}
 				>
 					Continue

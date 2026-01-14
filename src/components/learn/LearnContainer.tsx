@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { X, ChevronRight, ChevronLeft } from "lucide-react";
 import type { LearnContent } from "../../types";
 import { LearnSlide } from "./LearnSlide";
+import { Button } from "../ui/Button";
 
 interface LearnContainerProps {
 	lessonTitle: string;
@@ -23,19 +24,40 @@ export function LearnContainer({
 	const isLast = currentIndex === content.length - 1;
 	const progress = ((currentIndex + 1) / content.length) * 100;
 
-	const handleNext = () => {
+	const handleNext = useCallback(() => {
 		if (isLast) {
 			onComplete();
 		} else {
 			setCurrentIndex((prev) => prev + 1);
 		}
-	};
+	}, [isLast, onComplete]);
 
-	const handlePrevious = () => {
+	const handlePrevious = useCallback(() => {
 		if (!isFirst) {
 			setCurrentIndex((prev) => prev - 1);
 		}
-	};
+	}, [isFirst]);
+
+	// Keyboard shortcuts: Enter/Space for next, Arrow keys for navigation
+	useEffect(() => {
+		const handleKeyDown = (e: KeyboardEvent) => {
+			if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+				return;
+			}
+
+			if (e.key === "Enter" || e.key === " ") {
+				e.preventDefault();
+				handleNext();
+			} else if (e.key === "ArrowRight") {
+				handleNext();
+			} else if (e.key === "ArrowLeft") {
+				handlePrevious();
+			}
+		};
+
+		window.addEventListener("keydown", handleKeyDown);
+		return () => window.removeEventListener("keydown", handleKeyDown);
+	}, [handleNext, handlePrevious]);
 
 	return (
 		<div className="min-h-screen bg-surface-50 flex flex-col">
@@ -81,32 +103,27 @@ export function LearnContainer({
 			<footer className="fixed bottom-0 left-0 right-0 bg-white border-t border-surface-200 p-4">
 				<div className="max-w-2xl mx-auto flex items-center gap-3">
 					{/* Previous button */}
-					<button
+					<Button
 						onClick={handlePrevious}
 						disabled={isFirst}
-						className="flex items-center justify-center w-12 h-12 rounded-xl border-2 border-surface-200 text-zinc-500 hover:bg-surface-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+						variant="outline"
+						className="w-14 h-14 !p-0"
 						aria-label="Previous"
 					>
 						<ChevronLeft className="w-6 h-6" />
-					</button>
+					</Button>
 
 					{/* Next / Continue button */}
-					<button
+					<Button
 						onClick={handleNext}
-						className="flex-1 flex items-center justify-center gap-2 h-12 rounded-xl bg-primary-500 text-white font-semibold hover:bg-primary-600 transition-colors"
+						variant="primary"
+						size="lg"
+						fullWidth
+						icon={<ChevronRight className="w-5 h-5" />}
+						iconPosition="right"
 					>
-						{isLast ? (
-							<>
-								Start Quiz
-								<ChevronRight className="w-5 h-5" />
-							</>
-						) : (
-							<>
-								Got it
-								<ChevronRight className="w-5 h-5" />
-							</>
-						)}
-					</button>
+						{isLast ? "Start Quiz" : "Got it"}
+					</Button>
 				</div>
 			</footer>
 		</div>

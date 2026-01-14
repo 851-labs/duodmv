@@ -12,8 +12,6 @@ interface QuizContainerProps {
 	lesson: Lesson;
 	onComplete: (score: number, xpEarned: number) => void;
 	onExit: () => void;
-	hearts: number;
-	onUseHeart: () => boolean;
 	streakDays: number;
 }
 
@@ -38,8 +36,6 @@ export function QuizContainer({
 	lesson,
 	onComplete,
 	onExit,
-	hearts,
-	onUseHeart,
 	streakDays,
 }: QuizContainerProps) {
 	// Don't shuffle during SSR to avoid hydration mismatch
@@ -65,11 +61,6 @@ export function QuizContainer({
 
 	const handleAnswer = useCallback(
 		(isCorrect: boolean) => {
-			// Use a heart if wrong
-			if (!isCorrect) {
-				onUseHeart();
-			}
-
 			setState((prev) => ({
 				...prev,
 				answers: [
@@ -80,7 +71,7 @@ export function QuizContainer({
 				lastAnswerCorrect: isCorrect,
 			}));
 		},
-		[currentQuestion, onUseHeart]
+		[currentQuestion]
 	);
 
 	const handleContinue = useCallback(() => {
@@ -197,12 +188,6 @@ export function QuizContainer({
 							total={questions.length}
 							correctCount={correctCount}
 						/>
-					</div>
-
-					{/* Hearts display */}
-					<div className="flex items-center gap-1 text-hearts-500">
-						<span className="text-lg">❤️</span>
-						<span className="font-bold">{hearts}</span>
 					</div>
 				</div>
 			</header>

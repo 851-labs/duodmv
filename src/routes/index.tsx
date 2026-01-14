@@ -92,7 +92,7 @@ function HomePage() {
 
 				{/* Quick stats */}
 				<div className="grid grid-cols-3 gap-4">
-					<div className="bg-white rounded-xl p-4 border border-surface-200 text-center">
+					<div className="bg-white rounded-xl p-4 border-2 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)] text-center">
 						<BookOpen className="w-6 h-6 text-secondary-500 mx-auto mb-2" />
 						<p className="text-2xl font-bold text-zinc-900">
 							{completedLessons}
@@ -100,7 +100,7 @@ function HomePage() {
 						<p className="text-xs text-zinc-500">Lessons Done</p>
 					</div>
 
-					<div className="bg-white rounded-xl p-4 border border-surface-200 text-center">
+					<div className="bg-white rounded-xl p-4 border-2 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)] text-center">
 						<Target className="w-6 h-6 text-streak-500 mx-auto mb-2" />
 						<p className="text-2xl font-bold text-zinc-900">
 							{progress.streak.current}
@@ -108,7 +108,7 @@ function HomePage() {
 						<p className="text-xs text-zinc-500">Day Streak</p>
 					</div>
 
-					<div className="bg-white rounded-xl p-4 border border-surface-200 text-center">
+					<div className="bg-white rounded-xl p-4 border-2 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)] text-center">
 						<Trophy className="w-6 h-6 text-primary-500 mx-auto mb-2" />
 						<p className="text-2xl font-bold text-zinc-900">
 							{Math.round((completedLessons / totalLessons) * 100) || 0}%
@@ -121,7 +121,7 @@ function HomePage() {
 				<div className="space-y-3">
 					<Link
 						to="/learn"
-						className="flex items-center justify-between bg-white rounded-xl p-4 border border-surface-200 hover:border-primary-300 transition-colors"
+						className="flex items-center justify-between bg-white rounded-xl p-4 border-2 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)] hover:border-primary-300 hover:shadow-[0_2px_0_0_var(--color-primary-300)] active:translate-y-0.5 active:shadow-none transition-all"
 					>
 						<div className="flex items-center gap-3">
 							<div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary-100">
@@ -137,22 +137,7 @@ function HomePage() {
 						<ArrowRight className="w-5 h-5 text-zinc-400" />
 					</Link>
 
-					<Link
-						to="/practice"
-						className="flex items-center justify-between bg-white rounded-xl p-4 border border-surface-200 hover:border-secondary-300 transition-colors"
-					>
-						<div className="flex items-center gap-3">
-							<div className="flex items-center justify-center w-10 h-10 rounded-lg bg-secondary-100">
-								<Target className="w-5 h-5 text-secondary-600" />
-							</div>
-							<div>
-								<p className="font-semibold text-zinc-900">Practice Mode</p>
-								<p className="text-sm text-zinc-500">Review weak areas</p>
-							</div>
-						</div>
-						<ArrowRight className="w-5 h-5 text-zinc-400" />
-					</Link>
-				</div>
+					</div>
 			</main>
 
 			<BottomNav />

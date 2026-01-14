@@ -33,9 +33,12 @@ export function XPDisplay({
 	return (
 		<div className="flex flex-col">
 			<div className={clsx("flex items-center gap-2", sizeClasses[size])}>
-				<div className="flex items-center gap-1 text-secondary-500">
-					<Zap className={iconSizes[size]} />
-					<span className="font-bold">{totalXp}</span>
+				<div className={clsx(
+					"flex items-center gap-1",
+					totalXp > 0 ? "text-secondary-500" : "text-zinc-400"
+				)}>
+					<Zap className={clsx(iconSizes[size], totalXp > 0 && "fill-secondary-500")} />
+					<span className="font-bold tabular-nums">{totalXp}</span>
 				</div>
 
 				{todayXp !== undefined && todayXp > 0 && (

@@ -35,11 +35,11 @@ export function StreakCounter({
 			<Flame
 				className={clsx(
 					iconSizes[size],
-					streak > 0 && "animate-pulse",
+					streak > 0 && "fill-streak-500",
 					isAtRisk && "text-streak-600"
 				)}
 			/>
-			<span className="font-bold">{streak}</span>
+			<span className="font-bold tabular-nums">{streak}</span>
 			{isAtRisk && streak > 0 && (
 				<span className="text-xs text-streak-600 ml-1">!</span>
 			)}

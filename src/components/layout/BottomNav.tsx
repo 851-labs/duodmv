@@ -1,10 +1,9 @@
 import { Link, useLocation } from "@tanstack/react-router";
-import { BookOpen, Target, User } from "lucide-react";
+import { BookOpen, User } from "lucide-react";
 import clsx from "clsx";
 
 const navItems = [
 	{ href: "/learn", icon: BookOpen, label: "Learn" },
-	{ href: "/practice", icon: Target, label: "Practice" },
 	{ href: "/profile", icon: User, label: "Profile" },
 ];
 

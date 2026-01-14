@@ -15,8 +15,8 @@ export function DailyGoal({ currentXp, goalXp }: DailyGoalProps) {
 			className={clsx(
 				"p-4 rounded-xl border-2",
 				isComplete
-					? "bg-primary-50 border-primary-200"
-					: "bg-white border-surface-200"
+					? "bg-primary-50 border-primary-400 shadow-[0_2px_0_0_var(--color-primary-400)]"
+					: "bg-white border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)]"
 			)}
 		>
 			<div className="flex items-center justify-between mb-3">

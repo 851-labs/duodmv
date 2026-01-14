@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import clsx from "clsx";
 import { CheckCircle, XCircle, BookOpen } from "lucide-react";
 import type { Question } from "../../types";
+import { Button } from "../ui/Button";
 
 interface QuestionFeedbackProps {
 	question: Question;
@@ -13,6 +15,18 @@ export function QuestionFeedback({
 	isCorrect,
 	onContinue,
 }: QuestionFeedbackProps) {
+	// Enter key to continue
+	useEffect(() => {
+		const handleKeyDown = (e: KeyboardEvent) => {
+			if (e.key === "Enter" || e.key === " ") {
+				e.preventDefault();
+				onContinue();
+			}
+		};
+
+		window.addEventListener("keydown", handleKeyDown);
+		return () => window.removeEventListener("keydown", handleKeyDown);
+	}, [onContinue]);
 	return (
 		<div
 			className={clsx(
@@ -60,17 +74,15 @@ export function QuestionFeedback({
 					</div>
 				</div>
 
-				<button
+				<Button
 					onClick={onContinue}
-					className={clsx(
-						"w-full mt-4 py-3 px-6 rounded-xl font-bold text-white transition-colors",
-						isCorrect
-							? "bg-correct-500 hover:bg-correct-600"
-							: "bg-incorrect-500 hover:bg-incorrect-600"
-					)}
+					variant={isCorrect ? "correct" : "incorrect"}
+					size="lg"
+					fullWidth
+					className="mt-4"
 				>
 					Continue
-				</button>
+				</Button>
 			</div>
 		</div>
 	);

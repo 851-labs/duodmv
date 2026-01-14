@@ -19,12 +19,12 @@ export const Route = createRootRoute({
 				content: "width=device-width, initial-scale=1",
 			},
 			{
-				title: "CA DMV Prep - Learn to Drive",
+				title: "DuoDMV - Learn to Drive",
 			},
 			{
 				name: "description",
 				content:
-					"Interactive app to learn the California Driver's Handbook and prepare for your DMV permit test",
+					"Learn the California Driver's Handbook and ace your DMV permit test",
 			},
 		],
 		links: [
