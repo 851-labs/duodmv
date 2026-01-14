@@ -37,7 +37,7 @@ export const section5Lessons: Lesson[] = [
         title: "Left Turn Signal",
         content:
           "Extend your left arm STRAIGHT OUT the driver's window. This signals a LEFT TURN to other drivers.",
-        imageUrl: "/images/signals/left-turn.png",
+        imageUrl: "/images/left-turn.png",
         highlight: "Arm straight out = LEFT TURN",
       },
       {
@@ -46,7 +46,7 @@ export const section5Lessons: Lesson[] = [
         title: "Right Turn Signal",
         content:
           "Extend your left arm out the window and bend it UPWARD at 90 degrees (forearm pointing up). This signals a RIGHT TURN.",
-        imageUrl: "/images/signals/right-turn.png",
+        imageUrl: "/images/right-turn.png",
         highlight: "Arm bent UP = RIGHT TURN",
       },
       {
@@ -55,7 +55,7 @@ export const section5Lessons: Lesson[] = [
         title: "Slow Down / Stop Signal",
         content:
           "Extend your left arm out the window and bend it DOWNWARD at 90 degrees (forearm pointing down). This signals SLOWING DOWN or STOPPING.",
-        imageUrl: "/images/signals/slow-stop.png",
+        imageUrl: "/images/slow-stop.png",
         highlight: "Arm bent DOWN = SLOW/STOP",
       },
       {
@@ -215,7 +215,7 @@ export const section5Lessons: Lesson[] = [
         title: "Seatbelt & Airbag Safety",
         content:
           "Always wear your seatbelt properly with the lap belt across your hips and the shoulder belt across your chest. Keep at least 10 inches from the steering wheel for airbag safety.",
-        imageUrl: "/images/handbook/img-2133.png",
+        imageUrl: "/images/seatbelt-airbag-safety.png",
         highlight: "Seatbelts save lives - wear yours every trip!",
       },
     ],

@@ -50,7 +50,7 @@ export const section8Lessons: Lesson[] = [
         title: "Watch for Bicyclists",
         content:
           "Bicyclists share the road with cars. Always check for cyclists before turning right or opening your door. Give them at least 3 feet of clearance when passing.",
-        imageUrl: "/images/handbook/img-2121.png",
+        imageUrl: "/images/bicycle-on-road.png",
       },
       {
         id: "check-behind",
@@ -183,6 +183,14 @@ export const section8Lessons: Lesson[] = [
           "Following large vehicles that block your view",
           "When tired or distracted",
         ],
+      },
+      {
+        id: "motorcycles-following",
+        type: "image",
+        title: "Following Motorcycles",
+        content:
+          "Give motorcycles extra following distance. They can stop faster than cars, and they're more vulnerable to road hazards that don't affect cars.",
+        imageUrl: "/images/motorcycles-intersection.png",
       },
       {
         id: "cut-off",
@@ -327,7 +335,7 @@ export const section8Lessons: Lesson[] = [
         title: "Motorcycles in Blind Spots",
         content:
           "Motorcycles are small and can easily hide in your blind spots. Always check over your shoulder before changing lanes, especially around motorcycles.",
-        imageUrl: "/images/handbook/img-2132.png",
+        imageUrl: "/images/motorcycle-turning.png",
       },
     ],
     questions: [

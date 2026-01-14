@@ -25,7 +25,7 @@ export const section7Lessons: Lesson[] = [
         title: "Right of Way at Intersections",
         content:
           "At intersections, the vehicle that arrives first has the right of way. If two vehicles arrive at the same time, yield to the vehicle on your right.",
-        imageUrl: "/images/chapter7/intersection-right-of-way.png",
+        imageUrl: "/images/intersection-right-of-way.png",
       },
       {
         id: "row-pedestrians",
@@ -33,7 +33,7 @@ export const section7Lessons: Lesson[] = [
         title: "Pedestrians Have Priority",
         content:
           "Drivers must always yield to pedestrians in crosswalks. This includes people using wheelchairs, tricycles, and other mobility devices.",
-        imageUrl: "/images/chapter7/warning-pedestrian-crossing.png",
+        imageUrl: "/images/warning-pedestrian-crossing.png",
         highlight: "Pedestrians ALWAYS have the right of way in crosswalks.",
       },
       {
@@ -63,7 +63,7 @@ export const section7Lessons: Lesson[] = [
         title: "Yielding to Emergency Vehicles",
         content:
           "When you hear sirens or see flashing lights, safely pull to the right edge of the road and stop. Let the emergency vehicle pass before you resume driving.",
-        imageUrl: "/images/handbook/img-2118.png",
+        imageUrl: "/images/emergency-firetruck.png",
       },
       {
         id: "row-school-bus",
@@ -71,7 +71,7 @@ export const section7Lessons: Lesson[] = [
         title: "School Buses",
         content:
           "When a school bus displays flashing red lights and a stop sign arm, ALL traffic in BOTH directions must stop. Wait until the lights stop flashing before proceeding.",
-        imageUrl: "/images/handbook/img-2127.png",
+        imageUrl: "/images/school-bus-stop.png",
         highlight: "Stop for school buses with red lights flashing - it's the law!",
       },
     ],
@@ -229,7 +229,7 @@ export const section7Lessons: Lesson[] = [
         title: "Railroad Crossings",
         content:
           "At railroad crossings where you cannot see 400 feet in both directions, you must not exceed 15 mph. Use the posted emergency number if your vehicle gets stuck on tracks.",
-        imageUrl: "/images/chapter7/sign-railroad-emergency.png",
+        imageUrl: "/images/sign-railroad-emergency.png",
       },
       {
         id: "speed-construction",
@@ -237,7 +237,7 @@ export const section7Lessons: Lesson[] = [
         title: "Construction Zones",
         content:
           "Slow down in construction zones. Workers may be present, and fines are doubled in these areas. Watch for flaggers directing traffic.",
-        imageUrl: "/images/chapter7/sign-flagger-ahead.png",
+        imageUrl: "/images/sign-flagger-ahead.png",
         highlight: "Fines are DOUBLED in construction zones!",
       },
     ],
@@ -390,7 +390,7 @@ export const section7Lessons: Lesson[] = [
         title: "Signal Ahead Warning",
         content:
           "This yellow warning sign alerts you that a traffic signal is ahead. Be prepared to stop.",
-        imageUrl: "/images/chapter7/warning-signal-ahead.png",
+        imageUrl: "/images/warning-signal-ahead.png",
       },
       {
         id: "signals-malfunctioning",
@@ -536,7 +536,7 @@ export const section7Lessons: Lesson[] = [
         title: "Merging Traffic",
         content:
           "This sign warns that traffic is merging from the right. Prepare to adjust your speed or position to allow vehicles to merge safely.",
-        imageUrl: "/images/chapter7/warning-merge.png",
+        imageUrl: "/images/warning-merge.png",
       },
       {
         id: "lane-ends",
@@ -544,7 +544,7 @@ export const section7Lessons: Lesson[] = [
         title: "Lane Ends",
         content:
           "This sign warns that your lane is ending. You must merge into an adjacent lane. Begin merging early and yield to traffic already in that lane.",
-        imageUrl: "/images/chapter7/warning-lane-ends.png",
+        imageUrl: "/images/warning-lane-ends.png",
       },
       {
         id: "lane-added",
@@ -552,7 +552,7 @@ export const section7Lessons: Lesson[] = [
         title: "Added Lane",
         content:
           "This sign indicates a new lane is being added. Traffic entering from the ramp has its own lane and doesn't need to merge immediately.",
-        imageUrl: "/images/chapter7/warning-added-lane.png",
+        imageUrl: "/images/warning-added-lane.png",
       },
       {
         id: "lane-divided",
@@ -560,7 +560,7 @@ export const section7Lessons: Lesson[] = [
         title: "Divided Highway",
         content:
           "This sign indicates the road ahead becomes a divided highway with a median or barrier separating opposing traffic.",
-        imageUrl: "/images/chapter7/warning-divided-highway.png",
+        imageUrl: "/images/warning-divided-highway.png",
       },
       {
         id: "lane-two-way",
@@ -568,7 +568,7 @@ export const section7Lessons: Lesson[] = [
         title: "Two-Way Traffic",
         content:
           "This sign warns that you're entering a two-way roadway. Oncoming traffic will be in the lane next to you.",
-        imageUrl: "/images/chapter7/warning-two-way-traffic.png",
+        imageUrl: "/images/warning-two-way-traffic.png",
       },
       {
         id: "lane-center-turn",
@@ -584,7 +584,7 @@ export const section7Lessons: Lesson[] = [
         title: "Winding Road Ahead",
         content:
           "This sign warns of a series of curves ahead. Reduce your speed and stay in your lane through the curves.",
-        imageUrl: "/images/chapter7/warning-winding-road.png",
+        imageUrl: "/images/warning-winding-road.png",
       },
     ],
     questions: [

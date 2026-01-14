@@ -24,7 +24,7 @@ export const section6Lessons: Lesson[] = [
         title: "Standard Lane Markings",
         content:
           "This road shows typical lane markings: white dashed lines in the center separate same-direction traffic, and solid white lines mark the road edges.",
-        imageUrl: "/images/handbook/img-010.png",
+        imageUrl: "/images/lane-markings-basic.png",
       },
       {
         id: "yellow-lines",
@@ -178,7 +178,7 @@ export const section6Lessons: Lesson[] = [
         title: "Lane Numbering Example",
         content:
           "Lanes are numbered from the center outward: Lane 1, 2, 3. On a divided highway, each direction has its own numbered lanes starting from the center divider.",
-        imageUrl: "/images/handbook/img-012.png",
+        imageUrl: "/images/lane-numbering.png",
       },
       {
         id: "lane-choice",
@@ -334,7 +334,7 @@ export const section6Lessons: Lesson[] = [
         title: "HOV Lane Sign",
         content:
           "This sign marks an HOV lane. The diamond symbol indicates carpool lane. '2 OR MORE' means at least 2 people must be in the vehicle.",
-        imageUrl: "/images/handbook/img-013.png",
+        imageUrl: "/images/sign-hov-lane.png",
       },
       {
         id: "center-turn",
@@ -355,7 +355,7 @@ export const section6Lessons: Lesson[] = [
         title: "Center Left Turn Lane",
         content:
           "The yellow markings with inner broken and outer solid lines indicate a two-way left turn lane. Both directions use this lane to turn left.",
-        imageUrl: "/images/handbook/img-009.png",
+        imageUrl: "/images/lane-center-turn.png",
       },
       {
         id: "bike-lanes",
@@ -378,6 +378,23 @@ export const section6Lessons: Lesson[] = [
         content:
           "On two-lane roads, turnout areas let faster traffic pass. You MUST use a turnout when driving slowly and 5 or more vehicles are following you.",
         highlight: "5+ vehicles behind you = use the turnout!",
+      },
+      {
+        id: "curb-colors-image",
+        type: "image",
+        title: "Curb Color Meanings",
+        content:
+          "Colored curbs indicate parking rules: White = passenger loading, Green = limited time parking, Yellow = loading zone, Red = no stopping, Blue = disabled parking only.",
+        imageUrl: "/images/curb-colors.png",
+      },
+      {
+        id: "handicap-parking-image",
+        type: "image",
+        title: "Disabled Parking",
+        content:
+          "Blue curbs and blue parking spaces are reserved for people with disabled parking placards or plates. Parking illegally in these spaces results in heavy fines.",
+        imageUrl: "/images/parking-handicap.png",
+        highlight: "Never park in disabled spaces without a valid placard!",
       },
     ],
     questions: [
@@ -669,6 +686,22 @@ export const section6Lessons: Lesson[] = [
           "YIELD (red/white triangle): Slow down, be ready to stop. Let others pass before you proceed.",
       },
       {
+        id: "yield-sign-image",
+        type: "image",
+        title: "Yield Sign",
+        content:
+          "The yield sign (red and white triangle) means slow down and be prepared to stop. Give way to traffic already in the intersection or approaching on another road.",
+        imageUrl: "/images/sign-yield.png",
+      },
+      {
+        id: "four-way-stop-image",
+        type: "image",
+        title: "Four-Way Stop",
+        content:
+          "At a four-way stop, all vehicles must stop. The first vehicle to arrive goes first. If two arrive at the same time, yield to the vehicle on your right.",
+        imageUrl: "/images/intersection-four-way-stop.png",
+      },
+      {
         id: "warning-signs",
         type: "text",
         title: "Yellow Warning Signs",
@@ -688,7 +721,7 @@ export const section6Lessons: Lesson[] = [
         title: "Winding Road Ahead",
         content:
           "This sign warns of a series of curves or turns ahead. Reduce your speed and stay alert for the changing road.",
-        imageUrl: "/images/chapter7/warning-winding-road.png",
+        imageUrl: "/images/warning-winding-road.png",
       },
       {
         id: "warning-merge-sign",
@@ -696,7 +729,7 @@ export const section6Lessons: Lesson[] = [
         title: "Merge Ahead",
         content:
           "Traffic is merging from the right. Be prepared to adjust your speed or position to allow vehicles to merge safely.",
-        imageUrl: "/images/chapter7/warning-merge.png",
+        imageUrl: "/images/warning-merge.png",
       },
       {
         id: "wrong-way",
