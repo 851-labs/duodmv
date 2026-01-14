@@ -194,7 +194,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
   );
 
   const isLessonUnlocked = useCallback(
-    (sectionId: string, lessonId: string, requiredLessons?: string[]): boolean => {
+    (sectionId: string, _lessonId: string, requiredLessons?: string[]): boolean => {
       if (!requiredLessons || requiredLessons.length === 0) {
         return true;
       }

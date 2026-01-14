@@ -46,7 +46,7 @@ function LearnPage() {
         <h1 className="text-2xl font-bold text-zinc-900 mb-6">Learn to Drive</h1>
 
         <div className="space-y-4">
-          {sections.map((section, index) => {
+          {sections.map((section) => {
             const status = getSectionStatus(section.id);
             const progressPercent =
               status.total > 0 ? Math.round((status.completed / status.total) * 100) : 0;

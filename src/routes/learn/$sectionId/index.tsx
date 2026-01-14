@@ -101,7 +101,7 @@ function SectionPage() {
                   <button
                     onClick={() => {
                       if (isUnlocked) {
-                        navigate({
+                        void navigate({
                           to: "/learn/$sectionId/$lessonId",
                           params: { sectionId, lessonId: lesson.id },
                         });

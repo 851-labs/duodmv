@@ -50,14 +50,14 @@ function LessonPage() {
 
   const handleQuizComplete = (score: number, xpEarned: number) => {
     completeLesson(sectionId, lessonId, score, xpEarned);
-    navigate({
+    void navigate({
       to: "/learn/$sectionId",
       params: { sectionId },
     });
   };
 
   const handleExit = () => {
-    navigate({
+    void navigate({
       to: "/learn/$sectionId",
       params: { sectionId },
     });
