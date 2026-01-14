@@ -8,9 +8,5 @@
   "addOnOptions": {},
   "version": 1,
   "framework": "react-cra",
-  "chosenAddOns": [
-    "start",
-    "biome",
-    "nitro"
-  ]
+  "chosenAddOns": ["start", "biome", "nitro"]
 }

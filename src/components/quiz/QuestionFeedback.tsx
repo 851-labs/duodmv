@@ -1,89 +1,83 @@
-import { useEffect } from "react";
 import clsx from "clsx";
 import { CheckCircle, XCircle, BookOpen } from "lucide-react";
+import { useEffect } from "react";
+
 import type { Question } from "../../types";
+
 import { Button } from "../ui/Button";
 
 interface QuestionFeedbackProps {
-	question: Question;
-	isCorrect: boolean;
-	onContinue: () => void;
+  question: Question;
+  isCorrect: boolean;
+  onContinue: () => void;
 }
 
-export function QuestionFeedback({
-	question,
-	isCorrect,
-	onContinue,
-}: QuestionFeedbackProps) {
-	// Enter key to continue
-	useEffect(() => {
-		const handleKeyDown = (e: KeyboardEvent) => {
-			if (e.key === "Enter" || e.key === " ") {
-				e.preventDefault();
-				onContinue();
-			}
-		};
+export function QuestionFeedback({ question, isCorrect, onContinue }: QuestionFeedbackProps) {
+  // Enter key to continue
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        onContinue();
+      }
+    };
 
-		window.addEventListener("keydown", handleKeyDown);
-		return () => window.removeEventListener("keydown", handleKeyDown);
-	}, [onContinue]);
-	return (
-		<div
-			className={clsx(
-				"fixed bottom-0 left-0 right-0 p-4 border-t-2",
-				isCorrect
-					? "bg-correct-100 border-correct-500"
-					: "bg-incorrect-100 border-incorrect-500"
-			)}
-		>
-			<div className="max-w-2xl mx-auto">
-				<div className="flex items-start gap-4">
-					<div
-						className={clsx(
-							"flex items-center justify-center w-10 h-10 rounded-full flex-shrink-0",
-							isCorrect ? "bg-correct-500" : "bg-incorrect-500"
-						)}
-					>
-						{isCorrect ? (
-							<CheckCircle className="w-6 h-6 text-white" />
-						) : (
-							<XCircle className="w-6 h-6 text-white" />
-						)}
-					</div>
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onContinue]);
+  return (
+    <div
+      className={clsx(
+        "fixed bottom-0 left-0 right-0 p-4 border-t-2",
+        isCorrect ? "bg-correct-100 border-correct-500" : "bg-incorrect-100 border-incorrect-500",
+      )}
+    >
+      <div className="max-w-2xl mx-auto">
+        <div className="flex items-start gap-4">
+          <div
+            className={clsx(
+              "flex items-center justify-center w-10 h-10 rounded-full flex-shrink-0",
+              isCorrect ? "bg-correct-500" : "bg-incorrect-500",
+            )}
+          >
+            {isCorrect ? (
+              <CheckCircle className="w-6 h-6 text-white" />
+            ) : (
+              <XCircle className="w-6 h-6 text-white" />
+            )}
+          </div>
 
-					<div className="flex-1 min-w-0">
-						<h3
-							className={clsx(
-								"font-bold text-lg",
-								isCorrect ? "text-correct-600" : "text-incorrect-600"
-							)}
-						>
-							{isCorrect ? "Correct!" : "Not quite"}
-						</h3>
+          <div className="flex-1 min-w-0">
+            <h3
+              className={clsx(
+                "font-bold text-lg",
+                isCorrect ? "text-correct-600" : "text-incorrect-600",
+              )}
+            >
+              {isCorrect ? "Correct!" : "Not quite"}
+            </h3>
 
-						<p className="text-zinc-700 mt-1 text-sm leading-relaxed">
-							{question.explanation}
-						</p>
+            <p className="text-zinc-700 mt-1 text-sm leading-relaxed">{question.explanation}</p>
 
-						{question.handbookReference && (
-							<div className="flex items-center gap-2 mt-2 text-xs text-zinc-500">
-								<BookOpen className="w-3 h-3" />
-								<span>{question.handbookReference}</span>
-							</div>
-						)}
-					</div>
-				</div>
+            {question.handbookReference && (
+              <div className="flex items-center gap-2 mt-2 text-xs text-zinc-500">
+                <BookOpen className="w-3 h-3" />
+                <span>{question.handbookReference}</span>
+              </div>
+            )}
+          </div>
+        </div>
 
-				<Button
-					onClick={onContinue}
-					variant={isCorrect ? "correct" : "incorrect"}
-					size="lg"
-					fullWidth
-					className="mt-4"
-				>
-					Continue
-				</Button>
-			</div>
-		</div>
-	);
+        <Button
+          onClick={onContinue}
+          variant={isCorrect ? "correct" : "incorrect"}
+          size="lg"
+          fullWidth
+          className="mt-4"
+        >
+          Continue
+        </Button>
+      </div>
+    </div>
+  );
 }
