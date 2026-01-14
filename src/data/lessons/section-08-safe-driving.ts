@@ -45,6 +45,14 @@ export const section8Lessons: Lesson[] = [
         ],
       },
       {
+        id: "bicycle-awareness",
+        type: "image",
+        title: "Watch for Bicyclists",
+        content:
+          "Bicyclists share the road with cars. Always check for cyclists before turning right or opening your door. Give them at least 3 feet of clearance when passing.",
+        imageUrl: "/images/handbook/img-2121.png",
+      },
+      {
         id: "check-behind",
         type: "text",
         title: "Know What's Behind You",
@@ -312,6 +320,14 @@ export const section8Lessons: Lesson[] = [
         title: "Avoid Others' Blind Spots",
         content:
           "Don't drive in other vehicles' blind spots, especially trucks. If you can't see their mirrors, they can't see you. Pass through blind spots quickly.",
+      },
+      {
+        id: "motorcycle-blindspot",
+        type: "image",
+        title: "Motorcycles in Blind Spots",
+        content:
+          "Motorcycles are small and can easily hide in your blind spots. Always check over your shoulder before changing lanes, especially around motorcycles.",
+        imageUrl: "/images/handbook/img-2132.png",
       },
     ],
     questions: [

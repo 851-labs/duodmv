@@ -19,6 +19,14 @@ export const section6Lessons: Lesson[] = [
         highlight: "Yellow = opposite directions, White = same direction",
       },
       {
+        id: "lane-marking-example",
+        type: "image",
+        title: "Standard Lane Markings",
+        content:
+          "This road shows typical lane markings: white dashed lines in the center separate same-direction traffic, and solid white lines mark the road edges.",
+        imageUrl: "/images/handbook/img-010.png",
+      },
+      {
         id: "yellow-lines",
         type: "text",
         title: "Yellow Line Markings",
@@ -163,6 +171,14 @@ export const section6Lessons: Lesson[] = [
           "Lane 2, 3, etc.: Middle lanes - regular travel",
           "Rightmost lane: Entering/exiting traffic",
         ],
+      },
+      {
+        id: "lane-numbers-image",
+        type: "image",
+        title: "Lane Numbering Example",
+        content:
+          "Lanes are numbered from the center outward: Lane 1, 2, 3. On a divided highway, each direction has its own numbered lanes starting from the center divider.",
+        imageUrl: "/images/handbook/img-012.png",
       },
       {
         id: "lane-choice",
@@ -313,6 +329,14 @@ export const section6Lessons: Lesson[] = [
         highlight: "Don't cross double solid lines to enter/exit HOV lanes!",
       },
       {
+        id: "hov-sign-image",
+        type: "image",
+        title: "HOV Lane Sign",
+        content:
+          "This sign marks an HOV lane. The diamond symbol indicates carpool lane. '2 OR MORE' means at least 2 people must be in the vehicle.",
+        imageUrl: "/images/handbook/img-013.png",
+      },
+      {
         id: "center-turn",
         type: "text",
         title: "Center Left Turn Lanes",
@@ -324,6 +348,14 @@ export const section6Lessons: Lesson[] = [
           "Check for oncoming vehicles using the same lane",
           "Merge completely before turning",
         ],
+      },
+      {
+        id: "center-turn-image",
+        type: "image",
+        title: "Center Left Turn Lane",
+        content:
+          "The yellow markings with inner broken and outer solid lines indicate a two-way left turn lane. Both directions use this lane to turn left.",
+        imageUrl: "/images/handbook/img-009.png",
       },
       {
         id: "bike-lanes",
@@ -649,6 +681,22 @@ export const section6Lessons: Lesson[] = [
           "Slippery when wet",
           "Divided highway begins/ends",
         ],
+      },
+      {
+        id: "warning-winding",
+        type: "image",
+        title: "Winding Road Ahead",
+        content:
+          "This sign warns of a series of curves or turns ahead. Reduce your speed and stay alert for the changing road.",
+        imageUrl: "/images/chapter7/warning-winding-road.png",
+      },
+      {
+        id: "warning-merge-sign",
+        type: "image",
+        title: "Merge Ahead",
+        content:
+          "Traffic is merging from the right. Be prepared to adjust your speed or position to allow vehicles to merge safely.",
+        imageUrl: "/images/chapter7/warning-merge.png",
       },
       {
         id: "wrong-way",

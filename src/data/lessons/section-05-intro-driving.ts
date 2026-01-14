@@ -209,6 +209,15 @@ export const section5Lessons: Lesson[] = [
           "Adjust mirrors after setting your seat position",
         ],
       },
+      {
+        id: "seatbelt-safety",
+        type: "image",
+        title: "Seatbelt & Airbag Safety",
+        content:
+          "Always wear your seatbelt properly with the lap belt across your hips and the shoulder belt across your chest. Keep at least 10 inches from the steering wheel for airbag safety.",
+        imageUrl: "/images/handbook/img-2133.png",
+        highlight: "Seatbelts save lives - wear yours every trip!",
+      },
     ],
     questions: [
       {

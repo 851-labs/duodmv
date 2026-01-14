@@ -57,6 +57,23 @@ export const section7Lessons: Lesson[] = [
           "When an emergency vehicle approaches with sirens and flashing lights, pull to the right edge of the road and stop. Wait until the emergency vehicle has passed before resuming.",
         highlight: "Pull RIGHT, stop, and wait.",
       },
+      {
+        id: "row-emergency-image",
+        type: "image",
+        title: "Yielding to Emergency Vehicles",
+        content:
+          "When you hear sirens or see flashing lights, safely pull to the right edge of the road and stop. Let the emergency vehicle pass before you resume driving.",
+        imageUrl: "/images/handbook/img-2118.png",
+      },
+      {
+        id: "row-school-bus",
+        type: "image",
+        title: "School Buses",
+        content:
+          "When a school bus displays flashing red lights and a stop sign arm, ALL traffic in BOTH directions must stop. Wait until the lights stop flashing before proceeding.",
+        imageUrl: "/images/handbook/img-2127.png",
+        highlight: "Stop for school buses with red lights flashing - it's the law!",
+      },
     ],
     questions: [
       {
