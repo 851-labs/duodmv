@@ -36,11 +36,11 @@ export const section2Lessons: Lesson[] = [
         title: "Application Steps",
         content: "Steps to get your instruction permit:",
         bulletPoints: [
-          "1. Complete driver's license application",
-          "2. Provide your documents",
-          "3. Pay the application fee",
-          "4. Pass the knowledge test",
-          "5. Pass the vision test",
+          "Complete driver's license application",
+          "Provide your documents",
+          "Pay the application fee",
+          "Pass the knowledge test",
+          "Pass the vision test",
         ],
       },
       {

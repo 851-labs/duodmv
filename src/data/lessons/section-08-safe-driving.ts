@@ -181,9 +181,9 @@ export const section8Lessons: Lesson[] = [
         title: "The 3-Second Rule",
         content: "To maintain a safe following distance, use the 3-second rule:",
         bulletPoints: [
-          "1. Pick a fixed point ahead (sign, tree, etc.)",
-          "2. When the car ahead passes it, count: 'one-one-thousand, two-one-thousand, three-one-thousand'",
-          "3. If you reach the point before finishing, you're too close",
+          "Pick a fixed point ahead (sign, tree, etc.)",
+          "When the car ahead passes it, count: 'one-one-thousand, two-one-thousand, three-one-thousand'",
+          "If you reach the point before finishing, you're too close",
         ],
         highlight: "3 seconds = safe following distance",
       },
