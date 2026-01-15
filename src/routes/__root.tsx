@@ -8,38 +8,23 @@ import appCss from "../styles.css?url";
 
 async function fetchGitHubStars(): Promise<number | null> {
   try {
-    const headers: HeadersInit = {
-      Accept: "application/vnd.github.v3+json",
-      "User-Agent": "duodmv",
-    };
-
-    // Use token if available (5000 req/hour vs 60 req/hour)
-    const token = import.meta.env.GITHUB_TOKEN;
-    if (token) {
-      headers.Authorization = `Bearer ${token}`;
-    }
-
-    const res = await fetch("https://api.github.com/repos/851-labs/duodmv", { headers });
+    // Use Shields.io which handles GitHub API rate limits and caching
+    const res = await fetch("https://img.shields.io/github/stars/851-labs/duodmv.json");
 
     if (!res.ok) {
-      console.error("[GitHub Stars] Failed to fetch:", {
-        status: res.status,
-        statusText: res.statusText,
-        rateLimit: res.headers.get("x-ratelimit-limit"),
-        rateLimitRemaining: res.headers.get("x-ratelimit-remaining"),
-        rateLimitReset: res.headers.get("x-ratelimit-reset"),
-      });
+      console.error("[GitHub Stars] Shields.io fetch failed:", res.status);
       return null;
     }
 
     const data = await res.json();
+    const stars = parseInt(data.message, 10);
 
-    if (typeof data.stargazers_count !== "number") {
-      console.error("[GitHub Stars] Unexpected response shape:", data);
+    if (isNaN(stars)) {
+      console.error("[GitHub Stars] Could not parse stars:", data.message);
       return null;
     }
 
-    return data.stargazers_count;
+    return stars;
   } catch (error) {
     console.error("[GitHub Stars] Fetch error:", error);
     return null;
