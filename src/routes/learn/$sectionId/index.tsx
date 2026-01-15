@@ -1,7 +1,8 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import clsx from "clsx";
-import { ChevronLeft, Lock, CheckCircle, Star, Play } from "lucide-react";
+import { ChevronLeft, Lock, CheckCircle, Play } from "lucide-react";
 
+import { StarRating } from "../../../components/gamification/StarRating";
 import { BottomNav } from "../../../components/layout/BottomNav";
 import { Header } from "../../../components/layout/Header";
 import { getSectionById, getLessonsBySectionId } from "../../../data";
@@ -109,7 +110,7 @@ function SectionPage() {
                     }}
                     disabled={!isUnlocked}
                     className={clsx(
-                      "w-full flex items-center gap-4 p-4 rounded-xl border-2 transition-all text-left",
+                      "relative w-full flex items-center gap-4 p-4 rounded-xl border-2 transition-all text-left",
                       isCompleted
                         ? "bg-primary-50 border-primary-400 shadow-[0_2px_0_0_var(--color-primary-400)] active:translate-y-0.5 active:shadow-none"
                         : isUnlocked
@@ -117,6 +118,13 @@ function SectionPage() {
                           : "bg-surface-100 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)] opacity-60 cursor-not-allowed",
                     )}
                   >
+                    {/* Star rating badge */}
+                    {isCompleted && bestScore && (
+                      <div className="absolute top-2 right-2">
+                        <StarRating score={bestScore} />
+                      </div>
+                    )}
+
                     {/* Lesson icon */}
                     <div
                       className={clsx(
@@ -148,22 +156,15 @@ function SectionPage() {
                         )}
                       </div>
                       <p className="text-sm text-zinc-500 line-clamp-1">{lesson.description}</p>
-
-                      {/* Best score if completed */}
-                      {isCompleted && bestScore && (
-                        <div className="flex items-center gap-1 mt-2 text-xs text-primary-600">
-                          <Star className="w-4 h-4" />
-                          <span>Best: {bestScore}%</span>
-                        </div>
-                      )}
                     </div>
 
-                    {/* XP reward */}
+                    {/* XP reward - hidden for now
                     <div className="text-right">
                       <span className="text-sm font-medium text-secondary-500">
                         +{lesson.xpReward} XP
                       </span>
                     </div>
+                    */}
                   </button>
                 </div>
               );
