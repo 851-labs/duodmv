@@ -1,6 +1,7 @@
 import { X, ChevronRight, ChevronLeft } from "lucide-react";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 
+import { useHotkeyPress } from "../../lib/use-hotkey-press";
 import type { LearnContent } from "../../types";
 
 import { Button } from "../ui/Button";
@@ -15,6 +16,8 @@ interface LearnContainerProps {
 
 export function LearnContainer({ lessonTitle, content, onComplete, onExit }: LearnContainerProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const nextButtonRef = useRef<HTMLButtonElement>(null);
+  const prevButtonRef = useRef<HTMLButtonElement>(null);
 
   const currentContent = content[currentIndex];
   const isFirst = currentIndex === 0;
@@ -35,26 +38,10 @@ export function LearnContainer({ lessonTitle, content, onComplete, onExit }: Lea
     }
   }, [isFirst]);
 
-  // Keyboard shortcuts: Enter/Space for next, Arrow keys for navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
-        return;
-      }
-
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        handleNext();
-      } else if (e.key === "ArrowRight") {
-        handleNext();
-      } else if (e.key === "ArrowLeft") {
-        handlePrevious();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [handleNext, handlePrevious]);
+  useHotkeyPress([
+    { keys: ["Enter", " ", "ArrowRight"], ref: nextButtonRef, onTrigger: handleNext },
+    { keys: ["ArrowLeft"], ref: prevButtonRef, onTrigger: handlePrevious, pressClass: "pressed-sm" },
+  ]);
 
   return (
     <div className="min-h-screen bg-surface-50 flex flex-col">
@@ -101,6 +88,7 @@ export function LearnContainer({ lessonTitle, content, onComplete, onExit }: Lea
         <div className="max-w-2xl mx-auto flex items-center gap-3">
           {/* Previous button */}
           <Button
+            ref={prevButtonRef}
             onClick={handlePrevious}
             disabled={isFirst}
             variant="outline"
@@ -112,6 +100,7 @@ export function LearnContainer({ lessonTitle, content, onComplete, onExit }: Lea
 
           {/* Next / Continue button */}
           <Button
+            ref={nextButtonRef}
             onClick={handleNext}
             variant="primary"
             size="lg"

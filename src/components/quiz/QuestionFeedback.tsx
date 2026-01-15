@@ -1,7 +1,8 @@
 import clsx from "clsx";
 import { CheckCircle, XCircle, BookOpen } from "lucide-react";
-import { useEffect } from "react";
+import { useRef } from "react";
 
+import { useHotkeyPress } from "../../lib/use-hotkey-press";
 import type { Question } from "../../types";
 
 import { Button } from "../ui/Button";
@@ -13,18 +14,11 @@ interface QuestionFeedbackProps {
 }
 
 export function QuestionFeedback({ question, isCorrect, onContinue }: QuestionFeedbackProps) {
-  // Enter key to continue
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        onContinue();
-      }
-    };
+  const continueButtonRef = useRef<HTMLButtonElement>(null);
 
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onContinue]);
+  useHotkeyPress([
+    { keys: ["Enter", " "], ref: continueButtonRef, onTrigger: onContinue },
+  ]);
   return (
     <div
       className={clsx(
@@ -69,6 +63,7 @@ export function QuestionFeedback({ question, isCorrect, onContinue }: QuestionFe
         </div>
 
         <Button
+          ref={continueButtonRef}
           onClick={onContinue}
           variant={isCorrect ? "correct" : "incorrect"}
           size="lg"

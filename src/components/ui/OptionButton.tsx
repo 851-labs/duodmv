@@ -1,6 +1,7 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode, Ref } from "react";
 
 import { clsx } from "clsx";
+import { forwardRef } from "react";
 
 type OptionState = "default" | "selected" | "correct" | "incorrect" | "disabled";
 
@@ -42,14 +43,17 @@ const stateStyles: Record<OptionState, string> = {
   ),
 };
 
-export function OptionButton({
-  children,
-  state = "default",
-  optionLabel,
-  className,
-  disabled,
-  ...props
-}: OptionButtonProps) {
+export const OptionButton = forwardRef(function OptionButton(
+  {
+    children,
+    state = "default",
+    optionLabel,
+    className,
+    disabled,
+    ...props
+  }: OptionButtonProps,
+  ref: Ref<HTMLButtonElement>,
+) {
   // Only override to "disabled" styling if state is default/selected
   // Respect correct/incorrect states even when disabled (for showing answer feedback)
   const effectiveState =
@@ -57,6 +61,7 @@ export function OptionButton({
 
   return (
     <button
+      ref={ref}
       className={clsx(
         "w-full p-4 text-left rounded-xl transition-all duration-100",
         "font-semibold",
@@ -84,4 +89,4 @@ export function OptionButton({
       <span className="flex-1">{children}</span>
     </button>
   );
-}
+});

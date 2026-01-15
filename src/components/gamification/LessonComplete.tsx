@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import { Trophy, Star, Zap } from "lucide-react";
-import { useEffect } from "react";
+import { useRef } from "react";
+
+import { useHotkeyPress } from "../../lib/use-hotkey-press";
 
 interface LessonCompleteProps {
   lessonTitle: string;
@@ -17,15 +19,11 @@ export function LessonComplete({
   isPerfect,
   onContinue,
 }: LessonCompleteProps) {
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Enter") {
-        onContinue();
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onContinue]);
+  const continueButtonRef = useRef<HTMLButtonElement>(null);
+
+  useHotkeyPress([
+    { keys: ["Enter"], ref: continueButtonRef, onTrigger: onContinue },
+  ]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary-500 to-primary-600 flex flex-col items-center justify-center px-4 py-8">
@@ -79,6 +77,7 @@ export function LessonComplete({
 
         {/* Continue button */}
         <button
+          ref={continueButtonRef}
           onClick={onContinue}
           className={clsx(
             "w-full py-4 px-6 rounded-2xl font-bold text-lg",

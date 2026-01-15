@@ -104,6 +104,19 @@
   }
 }
 
+/* Pressed state for keyboard-triggered button animations */
+/* Use .pressed for buttons with 4px shadow (translate-y-1) */
+/* Use .pressed-sm for buttons with 2px shadow (translate-y-0.5) */
+.pressed {
+  transform: translateY(4px) !important;
+  box-shadow: none !important;
+}
+
+.pressed-sm {
+  transform: translateY(2px) !important;
+  box-shadow: none !important;
+}
+
 body {
   @apply m-0 bg-surface-50 text-zinc-900 antialiased;
   font-family:

@@ -1,6 +1,7 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode, Ref } from "react";
 
 import { clsx } from "clsx";
+import { forwardRef } from "react";
 
 type ButtonVariant = "primary" | "secondary" | "correct" | "incorrect" | "outline" | "ghost";
 type ButtonSize = "sm" | "md" | "lg";
@@ -58,19 +59,23 @@ const sizeStyles: Record<ButtonSize, string> = {
   lg: "px-8 py-4 text-lg rounded-2xl",
 };
 
-export function Button({
-  children,
-  variant = "primary",
-  size = "md",
-  fullWidth = false,
-  icon,
-  iconPosition = "left",
-  className,
-  disabled,
-  ...props
-}: ButtonProps) {
+export const Button = forwardRef(function Button(
+  {
+    children,
+    variant = "primary",
+    size = "md",
+    fullWidth = false,
+    icon,
+    iconPosition = "left",
+    className,
+    disabled,
+    ...props
+  }: ButtonProps,
+  ref: Ref<HTMLButtonElement>,
+) {
   return (
     <button
+      ref={ref}
       className={clsx(
         "font-bold transition-all duration-100",
         "flex items-center justify-center gap-2",
@@ -88,4 +93,4 @@ export function Button({
       {icon && iconPosition === "right" && icon}
     </button>
   );
-}
+});

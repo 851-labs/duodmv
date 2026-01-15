@@ -1,5 +1,6 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useRef } from "react";
 
+import { useHotkeyPress } from "../../lib/use-hotkey-press";
 import type { MultipleChoiceQuestion } from "../../types";
 
 import { OptionButton } from "../ui/OptionButton";
@@ -24,6 +25,12 @@ function shuffleOptions(options: string[], correctIndex: number): { shuffledOpti
 export function MultipleChoice({ question, onAnswer, disabled = false }: MultipleChoiceProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [hasAnswered, setHasAnswered] = useState(false);
+  const optionRefs = [
+    useRef<HTMLButtonElement>(null),
+    useRef<HTMLButtonElement>(null),
+    useRef<HTMLButtonElement>(null),
+    useRef<HTMLButtonElement>(null),
+  ];
 
   const { shuffledOptions, newCorrectIndex } = useMemo(
     () => shuffleOptions(question.options, question.correctIndex),
@@ -43,35 +50,12 @@ export function MultipleChoice({ question, onAnswer, disabled = false }: Multipl
     [disabled, hasAnswered, newCorrectIndex, onAnswer],
   );
 
-  // Keyboard shortcuts: A/B/C/D or 1/2/3/4
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Ignore if user is typing in an input
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
-        return;
-      }
-
-      const key = e.key.toUpperCase();
-      let index = -1;
-
-      // A-D keys
-      if (key >= "A" && key <= "D") {
-        index = key.charCodeAt(0) - 65; // A=0, B=1, C=2, D=3
-      }
-      // 1-4 number keys
-      else if (key >= "1" && key <= "4") {
-        index = parseInt(key) - 1; // 1=0, 2=1, 3=2, 4=3
-      }
-
-      // Check if valid index for this question
-      if (index >= 0 && index < shuffledOptions.length) {
-        handleSelect(index);
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [shuffledOptions.length, handleSelect]);
+  useHotkeyPress([
+    { keys: ["a", "1"], ref: optionRefs[0], onTrigger: () => handleSelect(0), pressClass: "pressed-sm" },
+    { keys: ["b", "2"], ref: optionRefs[1], onTrigger: () => handleSelect(1), pressClass: "pressed-sm" },
+    { keys: ["c", "3"], ref: optionRefs[2], onTrigger: () => handleSelect(2), pressClass: "pressed-sm" },
+    { keys: ["d", "4"], ref: optionRefs[3], onTrigger: () => handleSelect(3), pressClass: "pressed-sm" },
+  ]);
 
   const getOptionState = (index: number) => {
     if (!hasAnswered) {
@@ -107,6 +91,7 @@ export function MultipleChoice({ question, onAnswer, disabled = false }: Multipl
         {shuffledOptions.map((option, index) => (
           <OptionButton
             key={index}
+            ref={optionRefs[index]}
             onClick={() => handleSelect(index)}
             disabled={
               disabled ||

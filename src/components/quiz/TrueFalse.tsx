@@ -1,7 +1,8 @@
 import clsx from "clsx";
 import { Check, X } from "lucide-react";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 
+import { useHotkeyPress } from "../../lib/use-hotkey-press";
 import type { TrueFalseQuestion } from "../../types";
 
 interface TrueFalseProps {
@@ -13,6 +14,8 @@ interface TrueFalseProps {
 export function TrueFalse({ question, onAnswer, disabled = false }: TrueFalseProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<boolean | null>(null);
   const [hasAnswered, setHasAnswered] = useState(false);
+  const trueButtonRef = useRef<HTMLButtonElement>(null);
+  const falseButtonRef = useRef<HTMLButtonElement>(null);
 
   const handleSelect = useCallback(
     (answer: boolean) => {
@@ -27,29 +30,10 @@ export function TrueFalse({ question, onAnswer, disabled = false }: TrueFalsePro
     [disabled, hasAnswered, question.isTrue, onAnswer],
   );
 
-  // Keyboard shortcuts: T/F or 1/2
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Ignore if user is typing in an input
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
-        return;
-      }
-
-      const key = e.key.toUpperCase();
-
-      // T or 1 for True
-      if (key === "T" || key === "1") {
-        handleSelect(true);
-      }
-      // F or 2 for False
-      else if (key === "F" || key === "2") {
-        handleSelect(false);
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [handleSelect]);
+  useHotkeyPress([
+    { keys: ["t", "1"], ref: trueButtonRef, onTrigger: () => handleSelect(true), pressClass: "pressed-sm" },
+    { keys: ["f", "2"], ref: falseButtonRef, onTrigger: () => handleSelect(false), pressClass: "pressed-sm" },
+  ]);
 
   const getButtonClass = (buttonValue: boolean) => {
     const baseClass =
@@ -105,6 +89,7 @@ export function TrueFalse({ question, onAnswer, disabled = false }: TrueFalsePro
 
       <div className="grid grid-cols-2 gap-4 mt-8">
         <button
+          ref={trueButtonRef}
           onClick={() => handleSelect(true)}
           disabled={disabled || hasAnswered}
           className={clsx(getButtonClass(true), "disabled:cursor-not-allowed relative")}
@@ -144,6 +129,7 @@ export function TrueFalse({ question, onAnswer, disabled = false }: TrueFalsePro
         </button>
 
         <button
+          ref={falseButtonRef}
           onClick={() => handleSelect(false)}
           disabled={disabled || hasAnswered}
           className={clsx(getButtonClass(false), "disabled:cursor-not-allowed relative")}
