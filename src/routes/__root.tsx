@@ -9,9 +9,28 @@ import appCss from "../styles.css?url";
 async function fetchGitHubStars(): Promise<number | null> {
   try {
     const res = await fetch("https://api.github.com/repos/851-labs/duodmv");
+
+    if (!res.ok) {
+      console.error("[GitHub Stars] Failed to fetch:", {
+        status: res.status,
+        statusText: res.statusText,
+        rateLimit: res.headers.get("x-ratelimit-limit"),
+        rateLimitRemaining: res.headers.get("x-ratelimit-remaining"),
+        rateLimitReset: res.headers.get("x-ratelimit-reset"),
+      });
+      return null;
+    }
+
     const data = await res.json();
-    return typeof data.stargazers_count === "number" ? data.stargazers_count : null;
-  } catch {
+
+    if (typeof data.stargazers_count !== "number") {
+      console.error("[GitHub Stars] Unexpected response shape:", data);
+      return null;
+    }
+
+    return data.stargazers_count;
+  } catch (error) {
+    console.error("[GitHub Stars] Fetch error:", error);
     return null;
   }
 }
