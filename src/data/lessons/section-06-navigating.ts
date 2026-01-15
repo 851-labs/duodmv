@@ -19,14 +19,6 @@ export const section6Lessons: Lesson[] = [
         highlight: "Yellow = opposite directions, White = same direction",
       },
       {
-        id: "lane-marking-example",
-        type: "image",
-        title: "Standard Lane Markings",
-        content:
-          "This road shows typical lane markings: white dashed lines in the center separate same-direction traffic, and solid white lines mark the road edges.",
-        imageUrl: "/images/lane-markings-basic.png",
-      },
-      {
         id: "yellow-lines",
         type: "text",
         title: "Yellow Line Markings",
@@ -49,6 +41,14 @@ export const section6Lessons: Lesson[] = [
           "Broken white: You may change lanes when safe",
           "Large broken lines: Lane is ending, prepare to merge",
         ],
+      },
+      {
+        id: "large-broken-lines",
+        type: "image",
+        title: "Large Broken Lines",
+        content:
+          "Notice how the broken lines on the right are wider/thicker than normal. Large broken white lines warn you that your lane is ending or narrowing ahead. When you see these, prepare to merge into the adjacent lane.",
+        imageUrl: "/images/lane-markings-basic.png",
       },
       {
         id: "yield-line",
