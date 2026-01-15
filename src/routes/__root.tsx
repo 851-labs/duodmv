@@ -8,7 +8,18 @@ import appCss from "../styles.css?url";
 
 async function fetchGitHubStars(): Promise<number | null> {
   try {
-    const res = await fetch("https://api.github.com/repos/851-labs/duodmv");
+    const headers: HeadersInit = {
+      Accept: "application/vnd.github.v3+json",
+      "User-Agent": "duodmv",
+    };
+
+    // Use token if available (5000 req/hour vs 60 req/hour)
+    const token = import.meta.env.GITHUB_TOKEN;
+    if (token) {
+      headers.Authorization = `Bearer ${token}`;
+    }
+
+    const res = await fetch("https://api.github.com/repos/851-labs/duodmv", { headers });
 
     if (!res.ok) {
       console.error("[GitHub Stars] Failed to fetch:", {
