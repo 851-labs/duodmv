@@ -117,6 +117,17 @@
   box-shadow: none !important;
 }
 
+/* Custom focus rings that match our UI */
+@layer base {
+  *:focus {
+    @apply outline-none;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-surface-50;
+  }
+}
+
 body {
   @apply m-0 bg-surface-50 text-zinc-900 antialiased;
   font-family:

@@ -79,7 +79,7 @@ function HomePage() {
           <Link
             to="/learn/$sectionId"
             params={{ sectionId: nextSection.section.id }}
-            className="block"
+            className="block rounded-2xl transition-shadow"
           >
             <div className="bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl p-6 text-white shadow-lg shadow-primary-500/20">
               <div className="flex items-center justify-between">
