@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Trophy, Star, Zap } from "lucide-react";
+import { Trophy, Star, Zap, Target } from "lucide-react";
 import { useRef } from "react";
 
 import { useHotkeyPress } from "../../lib/use-hotkey-press";
@@ -21,9 +21,7 @@ export function LessonComplete({
 }: LessonCompleteProps) {
   const continueButtonRef = useRef<HTMLButtonElement>(null);
 
-  useHotkeyPress([
-    { keys: ["Enter"], ref: continueButtonRef, onTrigger: onContinue },
-  ]);
+  useHotkeyPress([{ keys: ["Enter"], ref: continueButtonRef, onTrigger: onContinue }]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary-500 to-primary-600 flex flex-col items-center justify-center px-4 py-8">
@@ -48,21 +46,21 @@ export function LessonComplete({
         <p className="text-white/80 text-lg mb-8">{lessonTitle}</p>
 
         {/* Stats cards */}
-        <div className="grid grid-cols-2 gap-4 mb-8">
+        <div className="grid grid-cols-2 gap-4 mb-4">
           {/* Accuracy */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
+          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
             <div className="flex items-center justify-center gap-2 mb-2">
-              <Star className="w-5 h-5 text-streak-500" />
-              <span className="text-white/60 text-sm">Accuracy</span>
+              <Star className="w-5 h-5 text-white" />
+              <span className="text-white text-sm">Accuracy</span>
             </div>
             <p className="text-3xl font-bold text-white">{accuracy}%</p>
           </div>
 
           {/* XP Earned */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
+          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
             <div className="flex items-center justify-center gap-2 mb-2">
-              <Zap className="w-5 h-5 text-secondary-400" />
-              <span className="text-white/60 text-sm">XP Earned</span>
+              <Zap className="w-5 h-5 text-white" />
+              <span className="text-white text-sm">XP Earned</span>
             </div>
             <p className="text-3xl font-bold text-white">+{xpEarned}</p>
           </div>
@@ -70,8 +68,9 @@ export function LessonComplete({
 
         {/* Perfect bonus indicator */}
         {isPerfect && (
-          <div className="mb-6 py-3 px-4 bg-streak-500/20 rounded-xl">
-            <p className="text-streak-400 font-medium">🎯 Perfect Bonus: +50% XP</p>
+          <div className="mb-6 py-3 px-4 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center gap-2">
+            <Target className="w-5 h-5 text-white" />
+            <p className="text-white font-medium">Perfect Bonus: +50% XP</p>
           </div>
         )}
 
