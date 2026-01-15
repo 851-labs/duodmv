@@ -103,7 +103,7 @@ function LearnPage() {
                           className="h-full rounded-full transition-all duration-500"
                           style={{
                             width: `${progressPercent}%`,
-                            backgroundColor: section.color,
+                            backgroundColor: status.isComplete ? "var(--color-primary-500)" : section.color,
                           }}
                         />
                       </div>

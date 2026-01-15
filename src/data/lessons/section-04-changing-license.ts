@@ -22,9 +22,7 @@ export const section4Lessons: Lesson[] = [
         type: "warning",
         title: "Change Your Address",
         content:
-          "If you move, you must notify DMV of your new address within ten days. Submit a change of address online at dmv.ca.gov/addresschange or by mail.",
-        highlight:
-          "You must notify DMV within 10 days of moving. You do not automatically get a new license when you change your address.",
+          "If you move, you must notify DMV of your new address within ten days. Submit a change of address online at dmv.ca.gov/addresschange or by mail. You do not automatically get a new license when you change your address.",
       },
       {
         id: "replace-renew",
