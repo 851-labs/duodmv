@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { Car } from "lucide-react";
 
 import { useProgress } from "../../store/progress-context";
 import { GitHubStars } from "../gamification/GitHubStars";
@@ -15,9 +14,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary-500">
-              <Car className="w-6 h-6 text-white" />
-            </div>
+            <img src="/logo512.png" alt="DuoDMV" className="size-8" />
             <span className="font-bold text-xl text-zinc-900 hidden sm:block">DuoDMV</span>
           </Link>
 
