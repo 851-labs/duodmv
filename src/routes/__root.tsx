@@ -1,5 +1,5 @@
 import { HeadContent, Link, Outlet, Scripts, createRootRoute } from "@tanstack/react-router";
-import { Car, Home } from "lucide-react";
+import { Home } from "lucide-react";
 import { configure } from "onedollarstats";
 import { useEffect } from "react";
 
@@ -81,12 +81,18 @@ function NotFound() {
   return (
     <div className="min-h-screen bg-surface-50 flex items-center justify-center px-4">
       <div className="text-center">
-        <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-primary-100 mx-auto mb-6">
-          <Car className="w-10 h-10 text-primary-500" />
+        {/* WRONG WAY road sign - tilted like it's been bumped */}
+        <div className="inline-block mb-6 -rotate-6 hover:rotate-0 transition-transform duration-300 cursor-default">
+          <div className="bg-red-500 border-[6px] border-white rounded-xl px-10 py-5 shadow-[0_8px_0_0_#b91c1c] ring-2 ring-red-300">
+            <p className="text-white font-black text-4xl tracking-wider drop-shadow-sm">WRONG WAY</p>
+          </div>
+          <div className="w-5 h-20 bg-gradient-to-b from-zinc-400 to-zinc-500 mx-auto rounded-b shadow-md" />
         </div>
-        <h1 className="text-4xl font-bold text-zinc-900 mb-2">404</h1>
-        <p className="text-lg text-zinc-600 mb-8">
-          Oops! Looks like you took a wrong turn.
+        <p className="text-xl font-semibold text-zinc-700 mb-2">
+          Oops! Wrong turn.
+        </p>
+        <p className="text-zinc-500 mb-8">
+          This page doesn't exist. Let's get you back on track.
         </p>
         <Link
           to="/"
