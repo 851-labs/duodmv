@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Car } from "lucide-react";
 
 import { useProgress } from "../../store/progress-context";
+import { GitHubStars } from "../gamification/GitHubStars";
 import { StreakCounter } from "../gamification/StreakCounter";
 import { XPDisplay } from "../gamification/XPDisplay";
 
@@ -24,6 +25,7 @@ export function Header() {
           <div className="flex items-center gap-4">
             <StreakCounter streak={getStreak()} />
             <XPDisplay totalXp={progress.xp.total} />
+            <GitHubStars />
           </div>
         </div>
       </div>

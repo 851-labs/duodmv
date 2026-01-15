@@ -5,7 +5,20 @@ import { useEffect } from "react";
 import { ProgressProvider } from "../store/progress-context";
 import appCss from "../styles.css?url";
 
+async function fetchGitHubStars(): Promise<number | null> {
+  try {
+    const res = await fetch("https://api.github.com/repos/851-labs/duodmv");
+    const data = await res.json();
+    return typeof data.stargazers_count === "number" ? data.stargazers_count : null;
+  } catch {
+    return null;
+  }
+}
+
 export const Route = createRootRoute({
+  loader: async () => ({
+    githubStars: await fetchGitHubStars(),
+  }),
   head: () => ({
     meta: [
       {

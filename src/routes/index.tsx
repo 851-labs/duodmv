@@ -49,7 +49,7 @@ function HomePage() {
       <main className="max-w-2xl mx-auto px-4 py-6 space-y-6">
         {/* Welcome section */}
         <div className="text-center py-4">
-          <h1 className="text-2xl font-bold text-zinc-900">Welcome back! 👋</h1>
+          <h1 className="text-2xl font-bold text-zinc-900">Welcome back!</h1>
           <p className="text-zinc-500 mt-1">
             Level {level.level} · {level.title}
           </p>
