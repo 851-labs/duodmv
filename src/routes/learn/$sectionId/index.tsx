@@ -25,7 +25,7 @@ function SectionPage() {
       <div className="min-h-screen bg-surface-50 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-xl font-bold text-zinc-900">Section not found</h1>
-          <Link to="/learn" className="text-primary-600 mt-2 inline-block">
+          <Link to="/" className="text-primary-600 mt-2 inline-block">
             Back to sections
           </Link>
         </div>
@@ -42,11 +42,11 @@ function SectionPage() {
       <main className="max-w-2xl mx-auto px-4 py-6">
         {/* Back link */}
         <Link
-          to="/learn"
+          to="/"
           className="inline-flex items-center gap-1 text-zinc-500 hover:text-zinc-700 mb-6"
         >
           <ChevronLeft className="w-5 h-5" />
-          <span>All Sections</span>
+          <span>Home</span>
         </Link>
 
         {/* Section header */}

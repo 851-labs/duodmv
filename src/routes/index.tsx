@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Target, Trophy } from "lucide-react";
+import clsx from "clsx";
+import { ArrowRight, BookOpen, CheckCircle, Clock, Target, Trophy } from "lucide-react";
 
 import { DailyGoal } from "../components/gamification/DailyGoal";
 import { BottomNav } from "../components/layout/BottomNav";
@@ -22,6 +23,21 @@ function HomePage() {
     (acc, s) => acc + s.completedLessons.length,
     0,
   );
+
+  const getSectionStatus = (sectionId: string) => {
+    const sectionProgress = progress.sections[sectionId];
+    const lessons = getLessonsBySectionId(sectionId);
+
+    if (!sectionProgress) {
+      return { completed: 0, total: lessons.length, isComplete: false };
+    }
+
+    return {
+      completed: sectionProgress.completedLessons.length,
+      total: lessons.length,
+      isComplete: sectionProgress.completedLessons.length >= lessons.length,
+    };
+  };
 
   // Find the next section to continue
   const getNextSection = () => {
@@ -105,23 +121,79 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Quick actions */}
-        <div className="space-y-3">
-          <Link
-            to="/learn"
-            className="flex items-center justify-between bg-white rounded-xl p-4 border-2 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)] hover:border-primary-300 hover:shadow-[0_2px_0_0_var(--color-primary-300)] active:translate-y-0.5 active:shadow-none transition-all"
-          >
-            <div className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary-100">
-                <BookOpen className="w-5 h-5 text-primary-600" />
-              </div>
-              <div>
-                <p className="font-semibold text-zinc-900">All Sections</p>
-                <p className="text-sm text-zinc-500">{sections.length} sections to learn</p>
-              </div>
-            </div>
-            <ArrowRight className="w-5 h-5 text-zinc-400" />
-          </Link>
+        {/* All Sections */}
+        <div>
+          <h2 className="text-lg font-bold text-zinc-900 mb-4">Chapters</h2>
+          <div className="space-y-3">
+            {sections.map((section) => {
+              const status = getSectionStatus(section.id);
+              const progressPercent =
+                status.total > 0 ? Math.round((status.completed / status.total) * 100) : 0;
+
+              return (
+                <Link
+                  key={section.id}
+                  to="/learn/$sectionId"
+                  params={{ sectionId: section.id }}
+                  className={clsx(
+                    "block bg-white rounded-xl border-2 p-4 transition-all shadow-[0_2px_0_0_var(--color-surface-200)]",
+                    "hover:border-primary-300 hover:shadow-[0_2px_0_0_var(--color-primary-300)] active:translate-y-0.5 active:shadow-none border-surface-200",
+                  )}
+                >
+                  <div className="flex items-start gap-4">
+                    {/* Section number badge */}
+                    <div
+                      className={clsx(
+                        "flex items-center justify-center w-12 h-12 rounded-xl font-bold text-lg",
+                        status.isComplete
+                          ? "bg-primary-500 text-white"
+                          : "bg-surface-100 text-zinc-600",
+                      )}
+                      style={
+                        !status.isComplete
+                          ? { backgroundColor: `${section.color}20`, color: section.color }
+                          : {}
+                      }
+                    >
+                      {status.isComplete ? (
+                        <CheckCircle className="w-6 h-6" />
+                      ) : (
+                        section.number
+                      )}
+                    </div>
+
+                    {/* Section info */}
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-semibold text-zinc-900 mb-1">{section.title}</h3>
+                      <p className="text-sm text-zinc-500 mb-3 line-clamp-1">{section.description}</p>
+
+                      {/* Progress bar */}
+                      <div className="flex items-center gap-3">
+                        <div className="flex-1 h-2 bg-surface-200 rounded-full overflow-hidden">
+                          <div
+                            className="h-full rounded-full transition-all duration-500"
+                            style={{
+                              width: `${progressPercent}%`,
+                              backgroundColor: status.isComplete ? "var(--color-primary-500)" : section.color,
+                            }}
+                          />
+                        </div>
+                        <span className="text-xs text-zinc-400 whitespace-nowrap">
+                          {status.completed}/{status.total}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Estimated time */}
+                    <div className="flex items-center gap-1 text-xs text-zinc-400">
+                      <Clock className="w-4 h-4" />
+                      <span>{section.estimatedMinutes}m</span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </main>
 
