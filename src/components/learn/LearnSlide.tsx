@@ -20,8 +20,10 @@ export function LearnSlide({ content }: LearnSlideProps) {
       {/* Title */}
       {content.title && <h2 className="text-2xl font-bold text-zinc-900">{content.title}</h2>}
 
-      {/* Main content text */}
-      <p className="text-lg text-zinc-700 leading-relaxed">{content.content}</p>
+      {/* Main content text (skip for tip/warning as they render in admonition) */}
+      {content.type !== "tip" && content.type !== "warning" && (
+        <p className="text-lg text-zinc-700 leading-relaxed">{content.content}</p>
+      )}
 
       {/* Custom diagram component */}
       {DiagramComponent && (
