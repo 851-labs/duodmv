@@ -50,7 +50,7 @@ export const section8Lessons: Lesson[] = [
         title: "Watch for Bicyclists",
         content:
           "Bicyclists share the road with cars. Always check for cyclists before turning right or opening your door. Give them at least 3 feet of clearance when passing.",
-        imageUrl: "/images/bicycle-on-road.png",
+        imageUrl: "/images-v2/bicycle-on-road.png",
       },
       {
         id: "bicycle-beside",
@@ -58,7 +58,7 @@ export const section8Lessons: Lesson[] = [
         title: "Passing Bicyclists Safely",
         content:
           "When passing a cyclist, give at least 3 feet of clearance. If the lane is too narrow, wait until you can safely move into the next lane to pass.",
-        imageUrl: "/images/bicycle-beside-car.png",
+        imageUrl: "/images-v2/bicycle-beside-car.png",
       },
       {
         id: "construction-vehicles",
@@ -66,7 +66,7 @@ export const section8Lessons: Lesson[] = [
         title: "Construction Vehicles",
         content:
           "Be extra cautious around construction vehicles. They move slowly, make wide turns, and operators may have limited visibility. Give them plenty of space.",
-        imageUrl: "/images/vehicle-construction.png",
+        imageUrl: "/images-v2/vehicle-construction.png",
       },
       {
         id: "check-behind",
@@ -206,7 +206,7 @@ export const section8Lessons: Lesson[] = [
         title: "Following Motorcycles",
         content:
           "Give motorcycles extra following distance. They can stop faster than cars, and they're more vulnerable to road hazards that don't affect cars.",
-        imageUrl: "/images/motorcycles-intersection.png",
+        imageUrl: "/images-v2/motorcycles-intersection.png",
       },
       {
         id: "cut-off",
@@ -236,7 +236,7 @@ export const section8Lessons: Lesson[] = [
         title: "Flammable Materials",
         content:
           "Red placards indicate flammable liquids or gases. Keep extra distance - these materials can ignite or explode in an accident.",
-        imageUrl: "/images/hazmat-flammable.png",
+        imageUrl: "/images-v2/hazmat-flammable.png",
       },
       {
         id: "hazmat-explosives",
@@ -244,7 +244,7 @@ export const section8Lessons: Lesson[] = [
         title: "Explosives",
         content:
           "Orange placards with '1' indicate explosives. Give these vehicles maximum following distance and never tailgate.",
-        imageUrl: "/images/hazmat-explosives.png",
+        imageUrl: "/images-v2/hazmat-explosives.png",
       },
       {
         id: "hazmat-radioactive",
@@ -252,7 +252,7 @@ export const section8Lessons: Lesson[] = [
         title: "Radioactive Materials",
         content:
           "Yellow and white placards with the trefoil symbol indicate radioactive materials. If involved in an accident, stay far away.",
-        imageUrl: "/images/hazmat-radioactive.png",
+        imageUrl: "/images-v2/hazmat-radioactive.png",
       },
       {
         id: "hazmat-toxic",
@@ -260,7 +260,7 @@ export const section8Lessons: Lesson[] = [
         title: "Toxic/Poison Materials",
         content:
           "White placards with skull symbol indicate toxic or poisonous materials. Avoid breathing fumes if you see a spill.",
-        imageUrl: "/images/hazmat-toxic.png",
+        imageUrl: "/images-v2/hazmat-toxic.png",
       },
     ],
     questions: [
@@ -391,7 +391,7 @@ export const section8Lessons: Lesson[] = [
         title: "Motorcycles in Blind Spots",
         content:
           "Motorcycles are small and can easily hide in your blind spots. Always check over your shoulder before changing lanes, especially around motorcycles.",
-        imageUrl: "/images/motorcycle-turning.png",
+        imageUrl: "/images-v2/motorcycle-turning.png",
       },
     ],
     questions: [

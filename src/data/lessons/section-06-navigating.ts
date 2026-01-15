@@ -48,7 +48,7 @@ export const section6Lessons: Lesson[] = [
         title: "Large Broken Lines",
         content:
           "Notice how the broken lines on the right are wider/thicker than normal. Large broken white lines warn you that your lane is ending or narrowing ahead. When you see these, prepare to merge into the adjacent lane.",
-        imageUrl: "/images/lane-markings-basic.png",
+        imageUrl: "/images-v2/lane-markings-basic.png",
       },
       {
         id: "yield-line",
@@ -178,7 +178,7 @@ export const section6Lessons: Lesson[] = [
         title: "Lane Numbering Example",
         content:
           "Lanes are numbered from the center outward: Lane 1, 2, 3. On a divided highway, each direction has its own numbered lanes starting from the center divider.",
-        imageUrl: "/images/lane-numbering.png",
+        imageUrl: "/images-v2/lane-numbering.png",
       },
       {
         id: "lane-choice",
@@ -334,7 +334,7 @@ export const section6Lessons: Lesson[] = [
         title: "HOV Lane Sign",
         content:
           "This sign marks an HOV lane. The diamond symbol indicates carpool lane. '2 OR MORE' means at least 2 people must be in the vehicle.",
-        imageUrl: "/images/sign-hov-lane.png",
+        imageUrl: "/images-v2/sign-hov-lane.png",
       },
       {
         id: "center-turn",
@@ -355,7 +355,7 @@ export const section6Lessons: Lesson[] = [
         title: "Center Left Turn Lane",
         content:
           "The yellow markings with inner broken and outer solid lines indicate a two-way left turn lane. Both directions use this lane to turn left.",
-        imageUrl: "/images/lane-center-turn.png",
+        imageUrl: "/images-v2/lane-center-turn.png",
       },
       {
         id: "bike-lanes",
@@ -385,7 +385,7 @@ export const section6Lessons: Lesson[] = [
         title: "Curb Color Meanings",
         content:
           "Colored curbs indicate parking rules: White = passenger loading, Green = limited time parking, Yellow = loading zone, Red = no stopping, Blue = disabled parking only.",
-        imageUrl: "/images/curb-colors.png",
+        imageUrl: "/images-v2/curb-colors.png",
       },
       {
         id: "handicap-parking-image",
@@ -393,7 +393,7 @@ export const section6Lessons: Lesson[] = [
         title: "Disabled Parking",
         content:
           "Blue curbs and blue parking spaces are reserved for people with disabled parking placards or plates. Parking illegally in these spaces results in heavy fines.",
-        imageUrl: "/images/parking-handicap.png",
+        imageUrl: "/images-v2/parking-handicap.png",
         highlight: "Never park in disabled spaces without a valid placard!",
       },
     ],
@@ -509,7 +509,7 @@ export const section6Lessons: Lesson[] = [
         title: "Right Turn Position",
         content:
           "Position your vehicle close to the right curb when preparing for a right turn. This prevents other vehicles from squeezing between you and the curb.",
-        imageUrl: "/images/turn-right-curb.png",
+        imageUrl: "/images-v2/turn-right-curb.png",
       },
       {
         id: "right-on-red",
@@ -699,7 +699,7 @@ export const section6Lessons: Lesson[] = [
         title: "Yield Sign",
         content:
           "The yield sign (red and white triangle) means slow down and be prepared to stop. Give way to traffic already in the intersection or approaching on another road.",
-        imageUrl: "/images/sign-yield.png",
+        imageUrl: "/images-v2/sign-yield.png",
       },
       {
         id: "four-way-stop-image",
@@ -707,7 +707,7 @@ export const section6Lessons: Lesson[] = [
         title: "Four-Way Stop",
         content:
           "At a four-way stop, all vehicles must stop. The first vehicle to arrive goes first. If two arrive at the same time, yield to the vehicle on your right.",
-        imageUrl: "/images/intersection-four-way-stop.png",
+        imageUrl: "/images-v2/intersection-four-way-stop.png",
       },
       {
         id: "warning-signs",
@@ -729,7 +729,7 @@ export const section6Lessons: Lesson[] = [
         title: "Winding Road Ahead",
         content:
           "This sign warns of a series of curves or turns ahead. Reduce your speed and stay alert for the changing road.",
-        imageUrl: "/images/warning-winding-road.png",
+        imageUrl: "/images-v2/warning-winding-road.png",
       },
       {
         id: "warning-merge-sign",
@@ -737,7 +737,7 @@ export const section6Lessons: Lesson[] = [
         title: "Merge Ahead",
         content:
           "Traffic is merging from the right. Be prepared to adjust your speed or position to allow vehicles to merge safely.",
-        imageUrl: "/images/warning-merge.png",
+        imageUrl: "/images-v2/warning-merge.png",
       },
       {
         id: "warning-stop-ahead",
@@ -745,7 +745,7 @@ export const section6Lessons: Lesson[] = [
         title: "Stop Sign Ahead",
         content:
           "This sign warns that a stop sign is ahead. Begin slowing down and prepare to make a complete stop.",
-        imageUrl: "/images/warning-stop-ahead.png",
+        imageUrl: "/images-v2/warning-stop-ahead.png",
       },
       {
         id: "warning-yield-ahead",
@@ -753,7 +753,7 @@ export const section6Lessons: Lesson[] = [
         title: "Yield Sign Ahead",
         content:
           "A yield sign is ahead. Prepare to slow down and yield to traffic on the road you're entering.",
-        imageUrl: "/images/warning-yield-ahead.png",
+        imageUrl: "/images-v2/warning-yield-ahead.png",
       },
       {
         id: "warning-left-curve",
@@ -761,7 +761,7 @@ export const section6Lessons: Lesson[] = [
         title: "Left Curve Ahead",
         content:
           "The road curves to the left ahead. Reduce your speed before entering the curve and stay in your lane.",
-        imageUrl: "/images/warning-left-curve.png",
+        imageUrl: "/images-v2/warning-left-curve.png",
       },
       {
         id: "warning-side-road",
@@ -769,7 +769,7 @@ export const section6Lessons: Lesson[] = [
         title: "Side Road Ahead",
         content:
           "A side road enters the highway from the right. Watch for vehicles entering or crossing your path.",
-        imageUrl: "/images/warning-side-road.png",
+        imageUrl: "/images-v2/warning-side-road.png",
       },
       {
         id: "warning-intersection-sign",
@@ -777,7 +777,7 @@ export const section6Lessons: Lesson[] = [
         title: "Intersection Ahead",
         content:
           "An intersection is ahead. Be prepared for cross traffic and vehicles entering from side roads.",
-        imageUrl: "/images/warning-intersection.png",
+        imageUrl: "/images-v2/warning-intersection.png",
       },
       {
         id: "warning-divided-ends",
@@ -785,7 +785,7 @@ export const section6Lessons: Lesson[] = [
         title: "Divided Highway Ends",
         content:
           "The divided highway is ending. Prepare for two-way traffic ahead with no median barrier.",
-        imageUrl: "/images/warning-divided-highway-ends.png",
+        imageUrl: "/images-v2/warning-divided-highway-ends.png",
       },
       {
         id: "sign-road-machinery",
@@ -793,7 +793,7 @@ export const section6Lessons: Lesson[] = [
         title: "Road Machinery Ahead",
         content:
           "Construction or maintenance equipment may be operating on or near the road. Slow down and be prepared to stop.",
-        imageUrl: "/images/sign-road-machinery.png",
+        imageUrl: "/images-v2/sign-road-machinery.png",
       },
       {
         id: "sign-shoulder-work",
@@ -801,7 +801,7 @@ export const section6Lessons: Lesson[] = [
         title: "Shoulder Work Ahead",
         content:
           "Workers may be on the road shoulder. Move over to give them space and watch for equipment entering the roadway.",
-        imageUrl: "/images/sign-shoulder-work.png",
+        imageUrl: "/images-v2/sign-shoulder-work.png",
       },
       {
         id: "sign-emergency-parking",
@@ -809,7 +809,7 @@ export const section6Lessons: Lesson[] = [
         title: "Emergency Parking Only",
         content:
           "This sign marks areas reserved for emergency stops only. Don't park here unless your vehicle is disabled.",
-        imageUrl: "/images/sign-emergency-parking.png",
+        imageUrl: "/images-v2/sign-emergency-parking.png",
       },
       {
         id: "sign-recreation",
@@ -817,7 +817,7 @@ export const section6Lessons: Lesson[] = [
         title: "Recreation Area Sign",
         content:
           "Brown signs indicate recreation areas, parks, or points of interest. They help you find hiking, camping, and outdoor activities.",
-        imageUrl: "/images/sign-skiing-recreation.png",
+        imageUrl: "/images-v2/sign-skiing-recreation.png",
       },
       {
         id: "wrong-way",
