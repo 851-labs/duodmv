@@ -5,8 +5,10 @@ export default defineNitroConfig({
     wrangler: {
       name: "duodmv",
       observability: {
+        enabled: true,
+        head_sampling_rate: 1.0,
         logs: {
-          enabled: false,
+          enabled: true,
           invocation_logs: true,
         },
       },
