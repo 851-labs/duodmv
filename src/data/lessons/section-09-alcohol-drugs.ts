@@ -22,7 +22,8 @@ export const section9Lessons: Lesson[] = [
           "0.01% BAC: Limit for drivers under 21 (zero tolerance)",
           "0.01% BAC: Limit for anyone on DUI probation",
         ],
-        highlight: "You can be charged with DUI even below these limits if your driving is impaired!",
+        highlight:
+          "You can be charged with DUI even below these limits if your driving is impaired!",
       },
       {
         id: "implied-consent",
@@ -49,8 +50,7 @@ export const section9Lessons: Lesson[] = [
         id: "open-container",
         type: "text",
         title: "Open Container Laws",
-        content:
-          "It's illegal to have an open container of alcohol in your vehicle:",
+        content: "It's illegal to have an open container of alcohol in your vehicle:",
         bulletPoints: [
           "All alcohol must be sealed and unopened",
           "Open containers must be in the trunk",
@@ -62,8 +62,7 @@ export const section9Lessons: Lesson[] = [
         id: "cannabis-rules",
         type: "text",
         title: "Cannabis Laws for Drivers",
-        content:
-          "Even though cannabis is legal in California, strict rules apply:",
+        content: "Even though cannabis is legal in California, strict rules apply:",
         bulletPoints: [
           "Never smoke or consume cannabis while driving",
           "Cannabis containers must be sealed/unopened in the vehicle",
@@ -210,8 +209,7 @@ export const section9Lessons: Lesson[] = [
         id: "drug-impairment",
         type: "text",
         title: "Drug Impairment",
-        content:
-          "Many substances impair driving, not just alcohol:",
+        content: "Many substances impair driving, not just alcohol:",
         bulletPoints: [
           "Marijuana: Slowed reaction time, impaired judgment",
           "Prescription drugs: May cause drowsiness, dizziness",
@@ -223,8 +221,7 @@ export const section9Lessons: Lesson[] = [
         id: "minor-consequences",
         type: "text",
         title: "Consequences for Minors",
-        content:
-          "If you're under 21 and caught with alcohol in your vehicle:",
+        content: "If you're under 21 and caught with alcohol in your vehicle:",
         bulletPoints: [
           "Vehicle may be impounded for 30 days",
           "License suspended for 1 year",

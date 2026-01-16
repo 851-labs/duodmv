@@ -172,8 +172,7 @@ export const section3Lessons: Lesson[] = [
         title: "Foot Brake Requirement",
         content:
           "When you push the brake pedal, there must be at least 1 inch of clearance between the pedal and the floor. This ensures your brakes can fully engage.",
-        highlight:
-          "The examiner will check this during the pre-drive inspection.",
+        highlight: "The examiner will check this during the pre-drive inspection.",
       },
       {
         id: "interpreter-rules",
@@ -265,8 +264,7 @@ export const section3Lessons: Lesson[] = [
         lessonId: "drive-test",
         difficulty: 2,
         xpValue: 15,
-        statement:
-          "You can use lane departure warning systems during your drive test.",
+        statement: "You can use lane departure warning systems during your drive test.",
         isTrue: false,
         explanation:
           "Advanced Driver Assistance Systems (ADAS) like lane departure warning, automated parking, and adaptive cruise control must be turned off during the drive test.",
@@ -279,8 +277,7 @@ export const section3Lessons: Lesson[] = [
         lessonId: "drive-test",
         difficulty: 2,
         xpValue: 15,
-        question:
-          "When can an interpreter assist you during the drive test process?",
+        question: "When can an interpreter assist you during the drive test process?",
         options: [
           "Only during the pre-drive vehicle inspection",
           "Throughout the entire drive test",
@@ -301,7 +298,12 @@ export const section3Lessons: Lesson[] = [
         xpValue: 15,
         question:
           "How much clearance must there be between the brake pedal and floor when pressed?",
-        options: ["At least 1 inch", "At least 2 inches", "At least 3 inches", "No minimum required"],
+        options: [
+          "At least 1 inch",
+          "At least 2 inches",
+          "At least 3 inches",
+          "No minimum required",
+        ],
         correctIndex: 0,
         explanation:
           "When the brake pedal is pushed, there must be at least 1 inch of clearance between the pedal and the floor to ensure proper braking ability.",

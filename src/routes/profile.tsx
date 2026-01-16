@@ -1,12 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import clsx from "clsx";
-import { ChevronLeft, Trophy, Target, Flame, Zap, Settings } from "lucide-react";
+import { ChevronLeft, Trophy, Target, Flame, Zap } from "lucide-react";
 
 import { XPDisplay } from "../components/gamification/XPDisplay";
 import { BottomNav } from "../components/layout/BottomNav";
 import { Header } from "../components/layout/Header";
 import { sections, getLessonsBySectionId } from "../data";
-import { calculateLevel, DAILY_GOALS } from "../lib/xp";
+import { calculateLevel } from "../lib/xp";
 import { useProgress } from "../store/progress-context";
 
 export const Route = createFileRoute("/profile")({
@@ -14,7 +13,7 @@ export const Route = createFileRoute("/profile")({
 });
 
 function ProfilePage() {
-  const { progress, setDailyGoal } = useProgress();
+  const { progress } = useProgress();
   const level = calculateLevel(progress.xp.total);
 
   // Calculate stats

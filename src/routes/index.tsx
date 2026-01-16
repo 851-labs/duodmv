@@ -155,17 +155,15 @@ function HomePage() {
                           : {}
                       }
                     >
-                      {status.isComplete ? (
-                        <CheckCircle className="w-6 h-6" />
-                      ) : (
-                        section.number
-                      )}
+                      {status.isComplete ? <CheckCircle className="w-6 h-6" /> : section.number}
                     </div>
 
                     {/* Section info */}
                     <div className="flex-1 min-w-0">
                       <h3 className="font-semibold text-zinc-900 mb-1">{section.title}</h3>
-                      <p className="text-sm text-zinc-500 mb-3 line-clamp-1">{section.description}</p>
+                      <p className="text-sm text-zinc-500 mb-3 line-clamp-1">
+                        {section.description}
+                      </p>
 
                       {/* Progress bar */}
                       <div className="flex items-center gap-3">
@@ -174,7 +172,9 @@ function HomePage() {
                             className="h-full rounded-full transition-all duration-500"
                             style={{
                               width: `${progressPercent}%`,
-                              backgroundColor: status.isComplete ? "var(--color-primary-500)" : section.color,
+                              backgroundColor: status.isComplete
+                                ? "var(--color-primary-500)"
+                                : section.color,
                             }}
                           />
                         </div>

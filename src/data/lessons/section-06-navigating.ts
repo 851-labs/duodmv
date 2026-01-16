@@ -923,8 +923,7 @@ export const section6Lessons: Lesson[] = [
         id: "parallel-parking",
         type: "text",
         title: "Parallel Parking Steps",
-        content:
-          "Parallel parking requires practice. Follow these steps for a safe, legal park:",
+        content: "Parallel parking requires practice. Follow these steps for a safe, legal park:",
         bulletPoints: [
           "Find a space at least 3 feet longer than your vehicle",
           "Pull alongside the car in front, about 2 feet away",
@@ -983,8 +982,7 @@ export const section6Lessons: Lesson[] = [
         id: "highway-entering",
         type: "text",
         title: "Entering a Highway",
-        content:
-          "Freeways have on-ramps (acceleration lanes) to help you match traffic speed:",
+        content: "Freeways have on-ramps (acceleration lanes) to help you match traffic speed:",
         bulletPoints: [
           "Use the full length of the on-ramp to accelerate",
           "Match or be close to freeway traffic speed BEFORE merging",
@@ -998,8 +996,7 @@ export const section6Lessons: Lesson[] = [
         id: "highway-exiting",
         type: "text",
         title: "Exiting a Highway",
-        content:
-          "Plan your exit well in advance and follow these steps:",
+        content: "Plan your exit well in advance and follow these steps:",
         bulletPoints: [
           "Move to the exit lane EARLY - don't wait until the last moment",
           "Signal at least 5 seconds (or 400 feet) before exiting",
@@ -1030,8 +1027,7 @@ export const section6Lessons: Lesson[] = [
         lessonId: "parking-maneuvers",
         difficulty: 1,
         xpValue: 10,
-        question:
-          "When parallel parked, your wheels must be within how many inches of the curb?",
+        question: "When parallel parked, your wheels must be within how many inches of the curb?",
         options: ["18 inches", "12 inches", "24 inches", "6 inches"],
         correctIndex: 0,
         explanation:
@@ -1045,8 +1041,7 @@ export const section6Lessons: Lesson[] = [
         lessonId: "parking-maneuvers",
         difficulty: 2,
         xpValue: 15,
-        question:
-          "When parking facing DOWNHILL, which way should you turn your wheels?",
+        question: "When parking facing DOWNHILL, which way should you turn your wheels?",
         options: [
           "Toward the curb (right)",
           "Away from the curb (left)",
@@ -1065,8 +1060,7 @@ export const section6Lessons: Lesson[] = [
         lessonId: "parking-maneuvers",
         difficulty: 2,
         xpValue: 15,
-        question:
-          "When parking facing UPHILL with a curb, which way should you turn your wheels?",
+        question: "When parking facing UPHILL with a curb, which way should you turn your wheels?",
         options: [
           "Away from the curb (left)",
           "Toward the curb (right)",
@@ -1124,8 +1118,7 @@ export const section6Lessons: Lesson[] = [
         lessonId: "parking-maneuvers",
         difficulty: 2,
         xpValue: 15,
-        question:
-          "How far before exiting a freeway should you signal?",
+        question: "How far before exiting a freeway should you signal?",
         options: [
           "At least 5 seconds or 400 feet",
           "At least 2 seconds or 100 feet",

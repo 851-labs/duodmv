@@ -19,7 +19,9 @@ interface HotkeyBinding {
  */
 export function useHotkeyPress(bindings: HotkeyBinding[]) {
   // Track which key is currently pressing which element
-  const activePress = useRef<{ key: string; element: HTMLElement; pressClass: PressClass } | null>(null);
+  const activePress = useRef<{ key: string; element: HTMLElement; pressClass: PressClass } | null>(
+    null,
+  );
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -35,9 +37,7 @@ export function useHotkeyPress(bindings: HotkeyBinding[]) {
 
       // Find matching binding
       for (const binding of bindings) {
-        const matchedKey = binding.keys.find(
-          (k) => k.toLowerCase() === e.key.toLowerCase()
-        );
+        const matchedKey = binding.keys.find((k) => k.toLowerCase() === e.key.toLowerCase());
 
         if (matchedKey && binding.ref.current) {
           e.preventDefault();

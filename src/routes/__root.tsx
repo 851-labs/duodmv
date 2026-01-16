@@ -99,16 +99,14 @@ function NotFound() {
         {/* WRONG WAY road sign - tilted like it's been bumped */}
         <div className="inline-block mb-6 -rotate-6 hover:rotate-0 transition-transform duration-300 cursor-default">
           <div className="bg-red-500 border-[6px] border-white rounded-xl px-10 py-5 shadow-[0_8px_0_0_#b91c1c] ring-2 ring-red-300">
-            <p className="text-white font-black text-4xl tracking-wider drop-shadow-sm">WRONG WAY</p>
+            <p className="text-white font-black text-4xl tracking-wider drop-shadow-sm">
+              WRONG WAY
+            </p>
           </div>
           <div className="w-5 h-20 bg-gradient-to-b from-zinc-400 to-zinc-500 mx-auto rounded-b shadow-md" />
         </div>
-        <p className="text-xl font-semibold text-zinc-700 mb-2">
-          Oops! Wrong turn.
-        </p>
-        <p className="text-zinc-500 mb-8">
-          This page doesn't exist. Let's get you back on track.
-        </p>
+        <p className="text-xl font-semibold text-zinc-700 mb-2">Oops! Wrong turn.</p>
+        <p className="text-zinc-500 mb-8">This page doesn't exist. Let's get you back on track.</p>
         <Link
           to="/"
           className="inline-flex items-center justify-center gap-2 bg-primary-500 text-white font-bold px-6 py-3 rounded-xl transition-all duration-100 shadow-[0_4px_0_0_var(--color-primary-600)] hover:bg-primary-400 hover:shadow-[0_4px_0_0_var(--color-primary-500)] active:translate-y-1 active:shadow-none"

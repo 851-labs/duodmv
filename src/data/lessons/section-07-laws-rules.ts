@@ -773,8 +773,7 @@ export const section7Lessons: Lesson[] = [
         id: "stop-procedure",
         type: "text",
         title: "When You're Pulled Over",
-        content:
-          "If law enforcement signals you to stop, follow these steps:",
+        content: "If law enforcement signals you to stop, follow these steps:",
         bulletPoints: [
           "Use your turn signal and pull to the RIGHT side of the road",
           "Find a safe, well-lit location if possible",
@@ -789,13 +788,8 @@ export const section7Lessons: Lesson[] = [
         id: "required-documents",
         type: "text",
         title: "Required Documents",
-        content:
-          "When asked by law enforcement, you must provide:",
-        bulletPoints: [
-          "Your driver's license",
-          "Proof of insurance",
-          "Vehicle registration",
-        ],
+        content: "When asked by law enforcement, you must provide:",
+        bulletPoints: ["Your driver's license", "Proof of insurance", "Vehicle registration"],
         highlight:
           "Don't reach for documents until the officer asks - tell them where the documents are first.",
       },
@@ -803,8 +797,7 @@ export const section7Lessons: Lesson[] = [
         id: "your-rights",
         type: "text",
         title: "Your Rights During a Stop",
-        content:
-          "You have certain rights during a traffic stop:",
+        content: "You have certain rights during a traffic stop:",
         bulletPoints: [
           "You have the right to record the encounter (First Amendment)",
           "You may remain silent beyond providing required documents",
@@ -866,8 +859,7 @@ export const section7Lessons: Lesson[] = [
         lessonId: "law-enforcement",
         difficulty: 2,
         xpValue: 15,
-        statement:
-          "You have the right to record a police encounter under the First Amendment.",
+        statement: "You have the right to record a police encounter under the First Amendment.",
         isTrue: true,
         explanation:
           "The First Amendment protects your right to record police encounters in public. However, don't interfere with their duties.",
@@ -956,8 +948,7 @@ export const section7Lessons: Lesson[] = [
         id: "points-suspension",
         type: "warning",
         title: "License Suspension Thresholds",
-        content:
-          "Your license will be suspended if you accumulate too many points:",
+        content: "Your license will be suspended if you accumulate too many points:",
         bulletPoints: [
           "4 points in 12 months = suspension",
           "6 points in 24 months = suspension",
@@ -995,8 +986,7 @@ export const section7Lessons: Lesson[] = [
         id: "towing-rules",
         type: "text",
         title: "Towing & Large Vehicles",
-        content:
-          "If you're towing a trailer or driving a vehicle with 3 or more axles, you must:",
+        content: "If you're towing a trailer or driving a vehicle with 3 or more axles, you must:",
         bulletPoints: [
           "Stay in the far right lane on highways",
           "Not drive in the left lane (except to pass or turn)",
@@ -1039,8 +1029,7 @@ export const section7Lessons: Lesson[] = [
         lessonId: "work-zones-points",
         difficulty: 2,
         xpValue: 15,
-        question:
-          "On a steep mountain road where vehicles can't pass, who has the right of way?",
+        question: "On a steep mountain road where vehicles can't pass, who has the right of way?",
         options: [
           "The vehicle going uphill",
           "The vehicle going downhill",

@@ -1,9 +1,9 @@
 import { X, ChevronRight, ChevronLeft } from "lucide-react";
 import { useState, useCallback, useRef } from "react";
 
-import { useHotkeyPress } from "../../lib/use-hotkey-press";
 import type { LearnContent } from "../../types";
 
+import { useHotkeyPress } from "../../lib/use-hotkey-press";
 import { Button } from "../ui/Button";
 import { LearnSlide } from "./LearnSlide";
 
@@ -40,7 +40,12 @@ export function LearnContainer({ lessonTitle, content, onComplete, onExit }: Lea
 
   useHotkeyPress([
     { keys: ["Enter", " ", "ArrowRight"], ref: nextButtonRef, onTrigger: handleNext },
-    { keys: ["ArrowLeft"], ref: prevButtonRef, onTrigger: handlePrevious, pressClass: "pressed-sm" },
+    {
+      keys: ["ArrowLeft"],
+      ref: prevButtonRef,
+      onTrigger: handlePrevious,
+      pressClass: "pressed-sm",
+    },
   ]);
 
   return (

@@ -1,8 +1,8 @@
 import { useState, useCallback, useMemo, useRef } from "react";
 
-import { useHotkeyPress } from "../../lib/use-hotkey-press";
 import type { MultipleChoiceQuestion } from "../../types";
 
+import { useHotkeyPress } from "../../lib/use-hotkey-press";
 import { OptionButton } from "../ui/OptionButton";
 
 interface MultipleChoiceProps {
@@ -11,13 +11,16 @@ interface MultipleChoiceProps {
   disabled?: boolean;
 }
 
-function shuffleOptions(options: string[], correctIndex: number): { shuffledOptions: string[]; newCorrectIndex: number } {
+function shuffleOptions(
+  options: string[],
+  correctIndex: number,
+): { shuffledOptions: string[]; newCorrectIndex: number } {
   const indices = options.map((_, i) => i);
   for (let i = indices.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [indices[i], indices[j]] = [indices[j], indices[i]];
   }
-  const shuffledOptions = indices.map(i => options[i]);
+  const shuffledOptions = indices.map((i) => options[i]);
   const newCorrectIndex = indices.indexOf(correctIndex);
   return { shuffledOptions, newCorrectIndex };
 }
@@ -34,7 +37,7 @@ export function MultipleChoice({ question, onAnswer, disabled = false }: Multipl
 
   const { shuffledOptions, newCorrectIndex } = useMemo(
     () => shuffleOptions(question.options, question.correctIndex),
-    [question.id]
+    [question.id],
   );
 
   const handleSelect = useCallback(
@@ -51,10 +54,30 @@ export function MultipleChoice({ question, onAnswer, disabled = false }: Multipl
   );
 
   useHotkeyPress([
-    { keys: ["a", "1"], ref: optionRefs[0], onTrigger: () => handleSelect(0), pressClass: "pressed-sm" },
-    { keys: ["b", "2"], ref: optionRefs[1], onTrigger: () => handleSelect(1), pressClass: "pressed-sm" },
-    { keys: ["c", "3"], ref: optionRefs[2], onTrigger: () => handleSelect(2), pressClass: "pressed-sm" },
-    { keys: ["d", "4"], ref: optionRefs[3], onTrigger: () => handleSelect(3), pressClass: "pressed-sm" },
+    {
+      keys: ["a", "1"],
+      ref: optionRefs[0],
+      onTrigger: () => handleSelect(0),
+      pressClass: "pressed-sm",
+    },
+    {
+      keys: ["b", "2"],
+      ref: optionRefs[1],
+      onTrigger: () => handleSelect(1),
+      pressClass: "pressed-sm",
+    },
+    {
+      keys: ["c", "3"],
+      ref: optionRefs[2],
+      onTrigger: () => handleSelect(2),
+      pressClass: "pressed-sm",
+    },
+    {
+      keys: ["d", "4"],
+      ref: optionRefs[3],
+      onTrigger: () => handleSelect(3),
+      pressClass: "pressed-sm",
+    },
   ]);
 
   const getOptionState = (index: number) => {
@@ -94,8 +117,7 @@ export function MultipleChoice({ question, onAnswer, disabled = false }: Multipl
             ref={optionRefs[index]}
             onClick={() => handleSelect(index)}
             disabled={
-              disabled ||
-              (hasAnswered && index !== selectedIndex && index !== newCorrectIndex)
+              disabled || (hasAnswered && index !== selectedIndex && index !== newCorrectIndex)
             }
             state={getOptionState(index)}
             optionLabel={String.fromCharCode(65 + index)}

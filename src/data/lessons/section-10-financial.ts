@@ -167,8 +167,7 @@ export const section10Lessons: Lesson[] = [
         id: "animal-collision",
         type: "text",
         title: "Collision with an Animal",
-        content:
-          "If you hit an animal while driving:",
+        content: "If you hit an animal while driving:",
         bulletPoints: [
           "Stop safely if possible",
           "Don't touch or move the injured animal - it may bite",

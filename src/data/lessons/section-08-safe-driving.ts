@@ -632,8 +632,7 @@ export const section8Lessons: Lesson[] = [
         id: "tire-blowout",
         type: "text",
         title: "Tire Blowout",
-        content:
-          "A tire blowout can happen suddenly. Stay calm and follow these steps:",
+        content: "A tire blowout can happen suddenly. Stay calm and follow these steps:",
         bulletPoints: [
           "Grip the steering wheel firmly",
           "Don't slam on the brakes - maintain speed initially",
@@ -648,8 +647,7 @@ export const section8Lessons: Lesson[] = [
         id: "off-pavement",
         type: "text",
         title: "Driving Off the Pavement",
-        content:
-          "If your wheels drift off the pavement onto the shoulder:",
+        content: "If your wheels drift off the pavement onto the shoulder:",
         bulletPoints: [
           "Grip the steering wheel firmly",
           "Remove your foot from the accelerator - don't brake hard",
@@ -662,8 +660,7 @@ export const section8Lessons: Lesson[] = [
         id: "skid-types",
         type: "text",
         title: "Skid Recovery - ABS vs Non-ABS",
-        content:
-          "Recovery technique depends on your braking system:",
+        content: "Recovery technique depends on your braking system:",
         bulletPoints: [
           "Four-wheel ABS: Apply firm, steady brake pressure",
           "Rear-wheel ABS only: Ease up on brake, let front wheels roll",
@@ -676,8 +673,7 @@ export const section8Lessons: Lesson[] = [
         id: "stuck-vehicle",
         type: "text",
         title: "Stuck in Snow or Mud",
-        content:
-          "If your vehicle gets stuck:",
+        content: "If your vehicle gets stuck:",
         bulletPoints: [
           "Shift to a low gear",
           "Apply gentle accelerator pressure",
@@ -698,8 +694,7 @@ export const section8Lessons: Lesson[] = [
         id: "high-winds",
         type: "text",
         title: "High Winds",
-        content:
-          "Strong winds can push your vehicle unexpectedly:",
+        content: "Strong winds can push your vehicle unexpectedly:",
         bulletPoints: [
           "Reduce your speed",
           "Keep a firm grip on the steering wheel",
@@ -712,8 +707,7 @@ export const section8Lessons: Lesson[] = [
         id: "disabled-freeway",
         type: "text",
         title: "Vehicle Disabled on Freeway",
-        content:
-          "If your vehicle breaks down on a freeway:",
+        content: "If your vehicle breaks down on a freeway:",
         bulletPoints: [
           "Try to pull completely off the road onto the right shoulder",
           "Turn on hazard lights immediately",
@@ -734,8 +728,7 @@ export const section8Lessons: Lesson[] = [
         id: "overheating",
         type: "text",
         title: "Engine Overheating",
-        content:
-          "Watch your temperature gauge. If it moves toward hot:",
+        content: "Watch your temperature gauge. If it moves toward hot:",
         bulletPoints: [
           "Turn off the air conditioning",
           "Turn ON the heater to draw heat from engine",
@@ -747,8 +740,7 @@ export const section8Lessons: Lesson[] = [
         id: "traffic-break",
         type: "text",
         title: "Law Enforcement Traffic Breaks",
-        content:
-          "Officers sometimes use 'traffic breaks' to slow traffic or clear hazards:",
+        content: "Officers sometimes use 'traffic breaks' to slow traffic or clear hazards:",
         bulletPoints: [
           "The officer weaves across lanes with lights flashing",
           "Turn on your hazard lights",

@@ -2,8 +2,9 @@ import clsx from "clsx";
 import { Check, X } from "lucide-react";
 import { useState, useCallback, useRef } from "react";
 
-import { useHotkeyPress } from "../../lib/use-hotkey-press";
 import type { TrueFalseQuestion } from "../../types";
+
+import { useHotkeyPress } from "../../lib/use-hotkey-press";
 
 interface TrueFalseProps {
   question: TrueFalseQuestion;
@@ -31,8 +32,18 @@ export function TrueFalse({ question, onAnswer, disabled = false }: TrueFalsePro
   );
 
   useHotkeyPress([
-    { keys: ["t", "1"], ref: trueButtonRef, onTrigger: () => handleSelect(true), pressClass: "pressed-sm" },
-    { keys: ["f", "2"], ref: falseButtonRef, onTrigger: () => handleSelect(false), pressClass: "pressed-sm" },
+    {
+      keys: ["t", "1"],
+      ref: trueButtonRef,
+      onTrigger: () => handleSelect(true),
+      pressClass: "pressed-sm",
+    },
+    {
+      keys: ["f", "2"],
+      ref: falseButtonRef,
+      onTrigger: () => handleSelect(false),
+      pressClass: "pressed-sm",
+    },
   ]);
 
   const getButtonClass = (buttonValue: boolean) => {

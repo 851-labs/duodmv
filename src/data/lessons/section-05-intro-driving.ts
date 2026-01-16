@@ -315,8 +315,7 @@ export const section5Lessons: Lesson[] = [
         id: "horn-use",
         type: "text",
         title: "Horn Use",
-        content:
-          "Your horn is a safety device to warn others. Use it appropriately.",
+        content: "Your horn is a safety device to warn others. Use it appropriately.",
         bulletPoints: [
           "Use to avoid a collision with another vehicle or pedestrian",
           "Use on mountain roads when you cannot see at least 200 feet ahead",
@@ -329,8 +328,7 @@ export const section5Lessons: Lesson[] = [
         id: "emergency-flashers",
         type: "text",
         title: "Emergency Flashers",
-        content:
-          "Use your emergency flashers (hazard lights) to warn other drivers of a problem.",
+        content: "Use your emergency flashers (hazard lights) to warn other drivers of a problem.",
         bulletPoints: [
           "Use when your vehicle is disabled on the road",
           "Tap your brakes 3-4 times to alert drivers behind you of sudden slowing",
@@ -362,8 +360,7 @@ export const section5Lessons: Lesson[] = [
         id: "health-fatigue",
         type: "text",
         title: "Fatigue and Driving",
-        content:
-          "Drowsy driving is dangerous and causes thousands of crashes each year.",
+        content: "Drowsy driving is dangerous and causes thousands of crashes each year.",
         bulletPoints: [
           "Get enough sleep before long trips",
           "Take breaks every 2 hours or 100 miles",
@@ -428,8 +425,7 @@ export const section5Lessons: Lesson[] = [
         lessonId: "headlights-safety",
         difficulty: 2,
         xpValue: 15,
-        question:
-          "Within how many feet of an oncoming vehicle should you dim your high beams?",
+        question: "Within how many feet of an oncoming vehicle should you dim your high beams?",
         options: ["500 feet", "200 feet", "1,000 feet", "100 feet"],
         correctIndex: 0,
         explanation:
@@ -472,8 +468,7 @@ export const section5Lessons: Lesson[] = [
         lessonId: "headlights-safety",
         difficulty: 2,
         xpValue: 15,
-        question:
-          "When should you use your horn on mountain roads?",
+        question: "When should you use your horn on mountain roads?",
         options: [
           "When you cannot see at least 200 feet ahead",
           "To say hello to other drivers",
@@ -505,8 +500,7 @@ export const section5Lessons: Lesson[] = [
         lessonId: "headlights-safety",
         difficulty: 1,
         xpValue: 10,
-        question:
-          "Children must use a car seat or booster seat until they are:",
+        question: "Children must use a car seat or booster seat until they are:",
         options: [
           "8 years old OR 4 feet 9 inches tall",
           "6 years old OR 4 feet tall",
@@ -525,8 +519,7 @@ export const section5Lessons: Lesson[] = [
         lessonId: "headlights-safety",
         difficulty: 2,
         xpValue: 15,
-        statement:
-          "Children under 2 years old must ride in a rear-facing car seat.",
+        statement: "Children under 2 years old must ride in a rear-facing car seat.",
         isTrue: true,
         explanation:
           "California law requires children under 2 years old to ride in a rear-facing car seat in the back seat. This is the safest position for infants.",

@@ -44,14 +44,7 @@ const stateStyles: Record<OptionState, string> = {
 };
 
 export const OptionButton = forwardRef(function OptionButton(
-  {
-    children,
-    state = "default",
-    optionLabel,
-    className,
-    disabled,
-    ...props
-  }: OptionButtonProps,
+  { children, state = "default", optionLabel, className, disabled, ...props }: OptionButtonProps,
   ref: Ref<HTMLButtonElement>,
 ) {
   // Only override to "disabled" styling if state is default/selected

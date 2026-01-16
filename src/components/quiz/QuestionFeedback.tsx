@@ -2,9 +2,9 @@ import clsx from "clsx";
 import { CheckCircle, XCircle, BookOpen } from "lucide-react";
 import { useRef } from "react";
 
-import { useHotkeyPress } from "../../lib/use-hotkey-press";
 import type { Question } from "../../types";
 
+import { useHotkeyPress } from "../../lib/use-hotkey-press";
 import { Button } from "../ui/Button";
 
 interface QuestionFeedbackProps {
@@ -16,9 +16,7 @@ interface QuestionFeedbackProps {
 export function QuestionFeedback({ question, isCorrect, onContinue }: QuestionFeedbackProps) {
   const continueButtonRef = useRef<HTMLButtonElement>(null);
 
-  useHotkeyPress([
-    { keys: ["Enter", " "], ref: continueButtonRef, onTrigger: onContinue },
-  ]);
+  useHotkeyPress([{ keys: ["Enter", " "], ref: continueButtonRef, onTrigger: onContinue }]);
   return (
     <div
       className={clsx(

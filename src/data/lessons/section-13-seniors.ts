@@ -114,8 +114,7 @@ export const section13Lessons: Lesson[] = [
         lessonId: "seniors-driving",
         difficulty: 1,
         xpValue: 10,
-        statement:
-          "Getting lost in familiar places may be a warning sign of an unsafe driver.",
+        statement: "Getting lost in familiar places may be a warning sign of an unsafe driver.",
         isTrue: true,
         explanation:
           "Getting lost in familiar places is one of the warning signs that may indicate unsafe driving abilities.",
