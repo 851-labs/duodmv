@@ -4,6 +4,7 @@ export default defineNitroConfig({
   cloudflare: {
     wrangler: {
       name: "duodmv",
+      workers_dev: false,
       preview_urls: true,
       placement: {
         mode: "smart",
