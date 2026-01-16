@@ -36,7 +36,7 @@ function ProfilePage() {
         </Link>
 
         {/* Profile header */}
-        <div className="bg-white rounded-2xl p-6 border border-surface-200">
+        <div className="bg-white rounded-2xl p-6 border-2 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)]">
           <div className="flex items-center gap-4 mb-6">
             <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 text-white text-2xl font-bold">
               {level.level}
@@ -57,7 +57,7 @@ function ProfilePage() {
 
         {/* Stats grid */}
         <div className="grid grid-cols-2 gap-4">
-          <div className="bg-white rounded-xl p-4 border border-surface-200">
+          <div className="bg-white rounded-xl p-4 border-2 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)]">
             <div className="flex items-center gap-2 text-streak-500 mb-2">
               <Flame className="w-5 h-5" />
               <span className="font-medium">Streak</span>
@@ -66,7 +66,7 @@ function ProfilePage() {
             <p className="text-sm text-zinc-500">Best: {progress.streak.longest} days</p>
           </div>
 
-          <div className="bg-white rounded-xl p-4 border border-surface-200">
+          <div className="bg-white rounded-xl p-4 border-2 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)]">
             <div className="flex items-center gap-2 text-secondary-500 mb-2">
               <Zap className="w-5 h-5" />
               <span className="font-medium">Total XP</span>
@@ -75,7 +75,7 @@ function ProfilePage() {
             <p className="text-sm text-zinc-500">+{progress.xp.todayXp} today</p>
           </div>
 
-          <div className="bg-white rounded-xl p-4 border border-surface-200">
+          <div className="bg-white rounded-xl p-4 border-2 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)]">
             <div className="flex items-center gap-2 text-primary-500 mb-2">
               <Trophy className="w-5 h-5" />
               <span className="font-medium">Lessons</span>
@@ -84,7 +84,7 @@ function ProfilePage() {
             <p className="text-sm text-zinc-500">of {totalLessons} complete</p>
           </div>
 
-          <div className="bg-white rounded-xl p-4 border border-surface-200">
+          <div className="bg-white rounded-xl p-4 border-2 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)]">
             <div className="flex items-center gap-2 text-hearts-500 mb-2">
               <Target className="w-5 h-5" />
               <span className="font-medium">Progress</span>
@@ -96,8 +96,8 @@ function ProfilePage() {
           </div>
         </div>
 
-        {/* Daily Goal Settings */}
-        <div className="bg-white rounded-2xl p-6 border border-surface-200">
+        {/* Daily Goal Settings - hidden for now
+        <div className="bg-white rounded-2xl p-6 border-2 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)]">
           <div className="flex items-center gap-2 mb-4">
             <Settings className="w-5 h-5 text-zinc-500" />
             <h2 className="font-semibold text-zinc-900">Daily Goal</h2>
@@ -123,9 +123,10 @@ function ProfilePage() {
             ))}
           </div>
         </div>
+        */}
 
         {/* Section progress */}
-        <div className="bg-white rounded-2xl p-6 border border-surface-200">
+        <div className="bg-white rounded-2xl p-6 border-2 border-surface-200 shadow-[0_2px_0_0_var(--color-surface-200)]">
           <h2 className="font-semibold text-zinc-900 mb-4">Section Progress</h2>
 
           <div className="space-y-4">
