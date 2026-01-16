@@ -4,6 +4,12 @@ export default defineNitroConfig({
   cloudflare: {
     wrangler: {
       name: "duodmv",
+      routes: [
+        {
+          pattern: "duodmv.851.sh",
+          custom_domain: true,
+        },
+      ],
       observability: {
         enabled: true,
         head_sampling_rate: 1.0,
