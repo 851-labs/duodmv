@@ -1,6 +1,6 @@
 <div align="center">
   <img width="180" height="180" src="public/logo512.png" alt="logo">
-  <h1><b>DuoDMV</b></h1>
+  <h1><a href="https://duodmv.851.workers.dev/"><b>DuoDMV</b></a></h1>
   <p>Duolingo but for your driver's permit.<br>Study California's driving rules and pass your knowledge test.</p>
 </div>
 
