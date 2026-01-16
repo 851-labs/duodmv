@@ -16,7 +16,8 @@
 
 ## 🛠️ Tech Stack
 
-- [Claude Code](https://www.claude.com/product/claude-code) - AI Agent
+- [Bun](https://bun.com) - Package Manager
+- [Claude Code](https://www.claude.com/product/claude-code) - AI Coding Agent
 - [Tanstack Start](https://tanstack.com/start/latest) - React Framework
 - [Cloudflare Workers](https://workers.cloudflare.com/) - Hosting
 
