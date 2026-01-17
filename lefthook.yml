@@ -5,8 +5,3 @@ pre-commit:
       run: bun run format
     lint:
       run: bun run lint
-
-commit-msg:
-  commands:
-    commitlint:
-      run: bunx commitlint --edit {1}
