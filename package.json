@@ -12,8 +12,8 @@
     "lint:fix": "oxlint --fix --type-aware --type-check"
   },
   "dependencies": {
-    "@tanstack/react-router": "^1.150.0",
-    "@tanstack/react-start": "^1.150.0",
+    "@tanstack/react-router": "^1.151.6",
+    "@tanstack/react-start": "^1.152.0",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "lucide-react": "^0.562.0",
@@ -24,7 +24,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/devtools-vite": "^0.4.1",
-    "@tanstack/router-plugin": "^1.150.0",
+    "@tanstack/router-plugin": "^1.151.6",
     "@types/node": "^25.0.9",
     "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",
