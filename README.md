@@ -4,6 +4,18 @@
   <p>Duolingo but for your driver's permit.<br>Study California's driving rules and pass your knowledge test.</p>
 </div>
 
+<div align="center">
+  <a href="https://duodmv.851.sh/">
+    <img src="https://img.shields.io/badge/Website-duodmv.851.sh-5b2bd4?style=flat" alt="Website">
+  </a>
+  <a href="https://deepwiki.com/851-labs/duodmv">
+    <img src="https://img.shields.io/badge/DeepWiki-Docs-4b32c3?style=flat" alt="DeepWiki">
+  </a>
+  <a href="LICENSE.md">
+    <img src="https://img.shields.io/badge/License-MIT-blue?style=flat" alt="MIT License">
+  </a>
+</div>
+
 ## Showcase
 
 |                        Home                         |                            Profile                            |
