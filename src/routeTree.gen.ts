@@ -51,9 +51,9 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/design': typeof DesignRoute
   '/profile': typeof ProfileRoute
-  '/learn': typeof LearnIndexRoute
+  '/learn/': typeof LearnIndexRoute
   '/learn/$sectionId/$lessonId': typeof LearnSectionIdLessonIdRoute
-  '/learn/$sectionId': typeof LearnSectionIdIndexRoute
+  '/learn/$sectionId/': typeof LearnSectionIdIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,9 +78,9 @@ export interface FileRouteTypes {
     | '/'
     | '/design'
     | '/profile'
-    | '/learn'
+    | '/learn/'
     | '/learn/$sectionId/$lessonId'
-    | '/learn/$sectionId'
+    | '/learn/$sectionId/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -134,14 +134,14 @@ declare module '@tanstack/react-router' {
     '/learn/': {
       id: '/learn/'
       path: '/learn'
-      fullPath: '/learn'
+      fullPath: '/learn/'
       preLoaderRoute: typeof LearnIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/learn/$sectionId/': {
       id: '/learn/$sectionId/'
       path: '/learn/$sectionId'
-      fullPath: '/learn/$sectionId'
+      fullPath: '/learn/$sectionId/'
       preLoaderRoute: typeof LearnSectionIdIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
