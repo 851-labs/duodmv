@@ -1,9 +1,8 @@
 import { X } from "lucide-react";
 import { useState, useCallback, useEffect } from "react";
 
-import type { Lesson, Question } from "../../types";
-
 import { calculateLessonXp } from "../../lib/xp";
+import type { Lesson, Question } from "../../types";
 import { LessonComplete } from "../gamification/LessonComplete";
 import { MultipleChoice } from "./MultipleChoice";
 import { QuestionFeedback } from "./QuestionFeedback";

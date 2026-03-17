@@ -1,6 +1,5 @@
-import type { ButtonHTMLAttributes, ReactNode, Ref } from "react";
-
 import { clsx } from "clsx";
+import type { ButtonHTMLAttributes, ReactNode, Ref } from "react";
 import { forwardRef } from "react";
 
 type ButtonVariant = "primary" | "secondary" | "correct" | "incorrect" | "outline" | "ghost";

@@ -2,9 +2,8 @@ import clsx from "clsx";
 import { CheckCircle, XCircle, BookOpen } from "lucide-react";
 import { useRef } from "react";
 
-import type { Question } from "../../types";
-
 import { useHotkeyPress } from "../../lib/use-hotkey-press";
+import type { Question } from "../../types";
 import { Button } from "../ui/Button";
 
 interface QuestionFeedbackProps {

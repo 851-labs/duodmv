@@ -1,9 +1,8 @@
 import { X, ChevronRight, ChevronLeft } from "lucide-react";
 import { useState, useCallback, useRef } from "react";
 
-import type { LearnContent } from "../../types";
-
 import { useHotkeyPress } from "../../lib/use-hotkey-press";
+import type { LearnContent } from "../../types";
 import { Button } from "../ui/Button";
 import { LearnSlide } from "./LearnSlide";
 

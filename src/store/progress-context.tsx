@@ -1,12 +1,11 @@
 import { format } from "date-fns";
 import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from "react";
 
-import type { UserProgress, SectionProgress } from "../types";
-
 import { calculateCurrentHearts, useHeart as useHeartLib } from "../lib/hearts";
 import { storage } from "../lib/storage";
 import { checkAndUpdateStreak } from "../lib/streak";
 import { calculateLevel } from "../lib/xp";
+import type { UserProgress, SectionProgress } from "../types";
 
 interface ProgressContextValue {
   progress: UserProgress;

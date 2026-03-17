@@ -1,5 +1,4 @@
 import type { Lesson } from "../../types";
-
 import { section1Lessons } from "./section-01-license";
 import { section2Lessons } from "./section-02-permit";
 import { section3Lessons } from "./section-03-testing";

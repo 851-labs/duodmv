@@ -4,6 +4,7 @@ import { configure } from "onedollarstats";
 import { useEffect } from "react";
 
 import { ProgressProvider } from "../store/progress-context";
+
 import appCss from "../styles.css?url";
 
 async function fetchGitHubStars(): Promise<number | null> {
