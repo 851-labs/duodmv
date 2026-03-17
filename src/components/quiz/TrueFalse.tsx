@@ -2,9 +2,8 @@ import clsx from "clsx";
 import { Check, X } from "lucide-react";
 import { useState, useCallback, useRef } from "react";
 
-import type { TrueFalseQuestion } from "../../types";
-
 import { useHotkeyPress } from "../../lib/use-hotkey-press";
+import type { TrueFalseQuestion } from "../../types";
 
 interface TrueFalseProps {
   question: TrueFalseQuestion;

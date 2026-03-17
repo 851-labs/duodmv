@@ -1,8 +1,7 @@
 import { useState, useCallback, useMemo, useRef } from "react";
 
-import type { MultipleChoiceQuestion } from "../../types";
-
 import { useHotkeyPress } from "../../lib/use-hotkey-press";
+import type { MultipleChoiceQuestion } from "../../types";
 import { OptionButton } from "../ui/OptionButton";
 
 interface MultipleChoiceProps {

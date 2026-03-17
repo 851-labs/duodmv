@@ -1,7 +1,6 @@
 import { Lightbulb, AlertTriangle } from "lucide-react";
 
 import type { LearnContent } from "../../types";
-
 import { HandSignalsDiagram } from "../diagrams/HandSignalsDiagram";
 
 interface LearnSlideProps {
