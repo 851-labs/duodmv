@@ -10,7 +10,7 @@ function GitHubStars() {
 
   return (
     <a
-      href="https://github.com/851-labs/duodmv"
+      href="https://github.com/pondorasti/duodmv"
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center gap-1 text-zinc-400 hover:text-zinc-600 transition-colors"

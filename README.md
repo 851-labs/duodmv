@@ -8,10 +8,10 @@
   <a href="https://duodmv.851.sh/">
     <img src="https://img.shields.io/badge/Website-duodmv.851.sh-5b2bd4?style=flat" alt="Website">
   </a>
-  <a href="https://deepwiki.com/851-labs/duodmv">
-    <img src="https://img.shields.io/badge/DeepWiki-Docs-4b32c3?style=flat" alt="DeepWiki">
+  <a href="https://github.com/pondorasti/duodmv#readme">
+    <img src="https://img.shields.io/badge/Documentation-README-4b32c3?style=flat" alt="Documentation">
   </a>
-  <a href="LICENSE.md">
+  <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-blue?style=flat" alt="MIT License">
   </a>
 </div>
@@ -35,7 +35,7 @@
 
 ## License
 
-This project is released under the MIT License. See [LICENSE](LICENSE.md) for details.
+This project is released under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Support
 

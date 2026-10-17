@@ -10,7 +10,7 @@ import appCss from "../styles.css?url";
 async function fetchGitHubStars(): Promise<number | null> {
   try {
     // Use Shields.io which handles GitHub API rate limits and caching
-    const res = await fetch("https://img.shields.io/github/stars/851-labs/duodmv.json");
+    const res = await fetch("https://img.shields.io/github/stars/pondorasti/duodmv.json");
 
     if (!res.ok) {
       console.error("[GitHub Stars] Shields.io fetch failed:", res.status);
