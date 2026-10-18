@@ -8,6 +8,9 @@
   <a href="https://duodmv.851.sh/">
     <img src="https://img.shields.io/badge/Website-duodmv.851.sh-5b2bd4?style=flat" alt="Website">
   </a>
+  <a href="https://github.com/pondorasti/duodmv">
+    <img src="https://img.shields.io/badge/Source-GitHub-181717?style=flat&logo=github" alt="Source">
+  </a>
   <a href="https://github.com/pondorasti/duodmv#readme">
     <img src="https://img.shields.io/badge/Documentation-README-4b32c3?style=flat" alt="Documentation">
   </a>
